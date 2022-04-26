@@ -1,0 +1,1245 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper,left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+\usepackage{hyperref}
+\usepackage{CJKutf8}
+\usepackage{gbt7714}
+
+
+\title{\Huge{Computer System Learning Resources}\\ \huge{A Recommended List}}
+\author{Zhenbang You}
+\date{January 11, 2022}
+
+\begin{document}
+
+\maketitle
+
+\centerline{\large{Last Updated: April 25, 2022}}
+
+\vspace{20pt}
+
+The latest version can always be found at \href{https://www.overleaf.com/read/txqjnjxyxqqx
+}{https://www.overleaf.com/read/txqjnjxyxqqx
+}
+
+\section{Preliminary}
+
+\textbf{Disclaimer}
+\begin{itemize}
+    \item This text focuses on \emph{breath} rather than \emph{depth}.
+    \item This text mainly focuses on \emph{software systems}, with less concentration on topics such as \emph{VLSI}, \emph{storage systems}, and \emph{embedded systems}, although these are mentioned in some of the following resources.
+\end{itemize}
+
+\noindent
+\textbf{Directions}
+\begin{itemize}
+    \item The most fundamental components of computer systems are:
+    \begin{enumerate}
+        \item Computer Architecture
+        \item Operating Systems (OS)
+        \item Computer Networks
+        \item Compilers
+        \item Programming Languages (PL)
+    \end{enumerate}
+    Master them before moving on to other parts.
+    \item The resources in each section are list in an order \emph{suitable for learning}.
+    \begin{itemize}
+        \item If time is limited, you may just read the first (or the first few) books, and move on to the next section.
+        \item To understand some advanced books, knowledge of subsequent sections may be required.
+    \end{itemize}
+    \item The references help you identify the \emph{authors} rather than \emph{versions}.
+    \item Given the rapid development of computer science, always read the latest version.
+    \begin{itemize}
+        \item Tip: search \emph{Amazon} for the latest version. The version number in this text may be outdated with new publications.
+    \end{itemize}
+\end{itemize}
+
+\noindent
+\textbf{How to Read an Abstruse Book?}\\
+Three passes.
+\begin{enumerate}
+    \item Fast: get the main idea and leave out all the details.
+    \item Exhaustive: understanding the logic and virtually all the details; few really difficult points can be left out.
+    \item Deep: raise questions, and focus on interesting or difficult points.
+\end{enumerate}
+Here is a famous paper called ``How to Read a Paper" which discusses a similar issue:\\
+\href{https://web.stanford.edu/class/cs245/readings/how-to-read-a-paper.pdf}{https://web.stanford.edu/class/cs245/readings/how-to-read-a-paper.pdf}
+
+~
+
+\noindent
+\textbf{Why do you recommend so many resources about application?}\\
+Learn how to use it before learning how to build it.
+
+~
+
+\noindent
+\textbf{Prerequisites}
+\begin{itemize}
+    \item CSAPP (3rd Edition) \cite{bryant2015computer}
+    \item C/C++
+    \item Data structures and algorithms
+    \begin{itemize}
+        \item Introduction to Algorithms (4th Edition) \cite{cormen2009introduction}.
+        \item In addition to classical algorithms, four kinds of algorithms are widely used in computer systems and thus noteworthy:
+        \begin{itemize}
+            \item Randomized algorithms
+            \item Parallel and distributed algorithms
+            \item Approximation algorithms
+            \item Online algorithms
+        \end{itemize}
+    \end{itemize}
+    \item Probability
+\end{itemize}
+
+\noindent
+\textbf{What if I want more?}
+\begin{enumerate}
+    \item Search for advanced courses offered by top universities.
+    Meanwhile, you are likely to find lots of papers there!
+    \begin{itemize}
+        \item \textbf{How to find these courses?}
+        \begin{enumerate}
+            \item For a given university, search for its course list (note that the keyword you are searching for may not appear in the course names).\\
+            Example:
+            \begin{itemize}
+                \item Stanford:
+                \href{https://cs.stanford.edu/academicz/courses}{https://cs.stanford.edu/academicz/courses}
+                \item UC Berkeley:
+                \href{https://www2.eecs.berkeley.edu/Courses/CS/}{https://www2.eecs.berkeley.edu/Courses/CS/}
+                \item MIT:
+                \href{http://catalog.mit.edu/subjects/6/}{http://catalog.mit.edu/subjects/6/}
+            \end{itemize}
+            \item To save time by scanning the entire course list, you can find the curriculum or program sheet of its Bachelor's/Master's degree.
+            \item Familiarity with the naming convention of course numbers saves a lot of time.
+        \end{enumerate}
+        Besides, courses provide practice opportunities, which is key to learning computer systems.
+    \end{itemize}
+    
+    \item Find cross-cutting areas like machine learning systems.
+    You can always find cutting-edge technologies and research hotspots here.
+    Besides, computer systems are extremely powerful when different modules work together.
+    \begin{itemize}
+        \item Again, searching for advanced courses helps you discover these areas!
+    \end{itemize}
+\end{enumerate}
+
+\noindent
+\textbf{How to Avoid Forgetting?}
+\begin{itemize}
+    \item Repetition (multiple passes)
+    \item Practice
+    \item Questioning
+    \item Discussion
+\end{itemize}
+
+\section{Computer Architecture}
+\begin{enumerate}
+    \item Computer Organization and Design: The Hardware-Software Interface\\
+    (5th Edition \cite{patterson2013computerMIPS}/RISC-V Edition \cite{pattersoncomputerRV}/ARM Edition \cite{patterson2016computerARM})
+    \begin{itemize}
+        \item The original version is based on MIPS.
+        RISC-V version is recommended; after reading this version, you may proceed on ARM version which is a good textbook for learning ARM.
+    \end{itemize}
+    \item Digital Design and Computer Architecture\\
+    (2nd Edition \cite{harris2015digitalMIPS}/RISC-V Edition \cite{harris2021digitalRV}/ARM Edition \cite{harris2015digitalARM})
+    \begin{itemize}
+        \item You may just read Chap 1-5.
+        \item The original version is based on MIPS.
+    \end{itemize}
+    \item The RISC-V Reader An Open Architecture Atlas \cite{patterson2017risc}
+    \item Computer Architecture: A Quantitative Approach (6th Edition) \cite{hennessy2018computer}
+    \begin{itemize}
+        \item You may leave out appendices the first time you read this book.
+        \item Difficult as it may be, this book is just ``the second book for novices".
+        If you want to have a deep understanding of a specific topic, do go to read official tutorials/documentations such as those of NVIDIA.
+        \item When having some experiences on \textbf{parallel computing}, read corresponding chapters of this book again, you will surely gain some new understanding.
+    \end{itemize}
+    \item RISC-V Privileged Architecture (slides)\\
+    \href{https://riscv.org/wp-content/uploads/2018/05/riscv-privileged-BCN.v7-2.pdf}{https://riscv.org/wp-content/uploads/2018/05/riscv-privileged-BCN.v7-2.pdf}
+    \begin{itemize}
+        \item A wonderful slide on RISC-V privileged architecture, as well as the core problem ``what is the privileged architecture".
+        \item The video of this lecture can be found at\\ \href{https://www.youtube.com/watch?v=fxLXvrLN5jA}{https://www.youtube.com/watch?v=fxLXvrLN5jA}
+        \item Most of the textbooks on computer architecture discuss little about \textbf{privileged architecture}, resulting in great difficulties understanding the OS kernel.
+        Always keep in mind that \textbf{ISA}, i.e., the hardware-software interface, consists of both the unprivileged architecture and the privileged architecture.
+    \end{itemize}
+    \item RISC-V specifications\\
+    \href{https://riscv.org/technical/specifications/}{https://riscv.org/technical/specifications/}
+    \begin{itemize}
+        \item Elaborate specifications as they may be, they are indeed excellent textbooks for both neophytes and specialists!
+        \item Appendix A: RVWMO Explanatory Material of ``The RISC-V Instruction Set Manual Volume I: Unprivileged ISA" is a brilliant tutorial for \textbf{Memory Consistency}!
+    \end{itemize}
+    \item A New Golden Age for Computer Architecture (a Turing Lecture with full text)\\
+    \href{https://cacm.acm.org/magazines/2019/2/234352-a-new-golden-age-for-computer-architecture/fulltext}{https://cacm.acm.org/magazines/2019/2/234352-a-new-golden-age-for-computer-architecture/fulltext}
+    \begin{itemize}
+        \item The famous Turing Lecture by Hennessy and Patterson.
+        What wonderful insights of Masters!
+    \end{itemize}
+    \item Prerequisites:
+    \begin{itemize}
+        \item PL
+        \begin{itemize}
+            \item Java.
+        \end{itemize}
+    \end{itemize}
+    \item To practice you knowledge of computer architecture, there are generally two ways:
+    \begin{itemize}
+        \item VLSI,
+        \item Parallel computing.
+    \end{itemize}
+\end{enumerate}
+
+\section{Operating Systems (OS)}
+\begin{enumerate}
+    \item Operating Systems: Three Easy Pieces:
+    \href{https://pages.cs.wisc.edu/~remzi/OSTEP/}{https://pages.cs.wisc.edu/~remzi/OSTEP/}
+    \begin{itemize}
+        \item Due to the research interest of the authors, this book puts much emphasis on File Systems.
+        You may leave out some chapters of this part the first time you read it.
+        \item This is just an introductory-level textbook, read more after finish this!
+    \end{itemize}
+    \item Operating Systems Principles \& Practice (2nd Edition)
+    \begin{itemize}
+        \item Four volumes:
+        \begin{itemize}
+            \item Volume I: Kernels and Processes \cite{anderson2014operating1}
+            \item Volume II: Concurrency \cite{andersonoperating2}
+            \item Volume III: Memory Management \cite{andersonoperating3}
+            \item Volume IV: Persistent Storage \cite{andersonoperating4}
+        \end{itemize}
+    \end{itemize}
+    \item Operating Systems Concepts (10th Edition) \cite{peterson1985operating}
+    \begin{itemize}
+        \item Very up-to-date.
+        Can be an alternative to the previous one.
+        You do not need to read both.
+    \end{itemize}
+    \item xv6 source and text:
+    \href{https://pdos.csail.mit.edu/6.828/2021/xv6.html}{https://pdos.csail.mit.edu/6.828/2021/xv6.html}
+    \begin{itemize}
+        \item Hands-on experiences with a real OS is indispensable, and \textbf{xv6} is an excellent starting point!
+    \end{itemize}    
+    \item Stanford CS 140E Operating Systems Design and Implementation
+    \begin{itemize}
+        \item \textbf{Rust} version:
+        \href{https://cs140e.sergio.bz/}{https://cs140e.sergio.bz/}
+        \item \textbf{C} version:
+        \href{https://github.com/dddrrreee/cs140e-22win}{https://github.com/dddrrreee/cs140e-22win}
+    \end{itemize}
+    Uniqueness:
+    \begin{enumerate}
+        \item ``This is a \textbf{lab-based} class with no explicit lectures."
+        \item ``By the end of the class you will have built your own simple, clean OS for the widely-used, ARM-based raspberry pi --- including interrupts, threads, virtual memory, and a simple file system."
+        \item ``This course differs from most OS courses in that it uses \textbf{real hardware} instead of a fake simulator, and almost all of the code will be written by you."
+    \end{enumerate}
+    \item Stanford CS 240 Advanced Topics in Operating Systems:\\
+    \href{http://web.stanford.edu/class/cs240/}{http://web.stanford.edu/class/cs240/}
+    \item Stanford CS 240LX Advanced Systems Laboratory, Accelerated:\\
+    \href{https://github.com/dddrrreee/cs140e-22win}{https://github.com/dddrrreee/cs140e-22win}
+    
+    Uniqueness:
+    \begin{enumerate}
+        \item ``This is an implementation-heavy, lab-based class that covers similar topics as CS240, but by writing code versus discussing papers."
+        \item ``Our code will run "bare-metal" (without an operating system) on the widely-used ARM-based raspberry pi."
+    \end{enumerate}
+    \item Supplemental textbooks
+    \begin{enumerate}
+        \item Linux Kernel Development (4rd Edition) \cite{robert2018linux}
+        \item Understanding the Linux Kernel (3rd Edition) \cite{bovet2005understanding}
+        \item Linux Device Drivers (3rd Edition) \cite{rubini2001linux}
+        \item Understanding Linux network internals (1st Edition) \cite{benvenuti2006understanding}
+        \item Modern Operating Systems (4th Edition) \cite{tanenbaum2015modern}
+        \begin{itemize}
+            \item A little obsolete, and the logic is sometimes confusing.
+            However, the discussions of alternative designs are valuable, and lots of practical issues are explored, too.
+        \end{itemize}
+    \end{enumerate}
+    \item Prerequisites:
+    \begin{itemize}
+        \item Compulsory:
+        \begin{enumerate}
+        \item Computer Architecture (in particular, privileged architecture)
+        \item Data structures and algorithms
+        \end{enumerate}
+        \item PL
+        \begin{itemize}
+        \item \textbf{Java}: JVM, GC, Thread, Monitor.
+        \item \textbf{Go}: Goroutine, Channel, CSP (Communication Sequential Process), Asynchrony.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Suggestions}:
+    \begin{itemize}
+        \item four passes to learn \emph{OS}
+            \begin{enumerate}
+                \item How to use: user/programmer's perspective, top-down.
+                This pass is assisted by CSAPP and resources about \emph{Linux Programming}.
+                \item How to build (build a usable one): builder's perspective, bottom-up.
+                \item How to design (build a good one if there is no compatibility issues): both perspectives.
+                This pass can only be down with knowledge of all the major parts of computer systems.
+                \item Advanced and cross-cutting issues:
+                \emph{distributed systems}, \emph{cloud computing},...
+            \end{enumerate}
+        \item Always think about the interaction and cooperation between
+        \begin{itemize}
+            \item OS \& hardware,
+            \item OS \& computer networks,
+            \item OS \& PL,
+            \item OS \& DB.
+        \end{itemize}
+        Also think about whether their boundary can be and should be redefined.
+        
+        \textbf{DO NOT} overfit \emph{Linux}!
+        Not everything of it is reasonable and well-suited to the current need!
+    \end{itemize}
+
+\end{enumerate}
+
+\section{Computer Networks}
+\begin{enumerate}
+    \item Computer Networking: A Top Down Approach (8th Edition) \cite{kurosecomputer}
+    \begin{itemize}
+        \item I cannot find the reference of the latest version (8th Edition) on Google Scholar, so this citation refers to older version.
+        Note that the authors do not change.
+    \end{itemize}
+    \item Stanford CS 144 Introduction to Computer Networking:
+    \href{https://cs144.github.io/}{https://cs144.github.io/}
+    \item Stanford CS 244 Advanced Topics in Networking:
+    \href{https://2022-cs244.github.io/schedule/}{https://2022-cs244.github.io/schedule/}
+    \item Stanford CS 344 Topics in Computer Networks (a.k.a. Build an Internet Router):\\
+    \href{https://cs344-stanford.github.io/}{https://cs344-stanford.github.io/}
+    \item Books by W. Richard Stevens (as supplementary materials)
+    \begin{itemize}
+        \item UNIX Network Programming
+        \begin{itemize}
+            \item Volume 1, 3rd Edition: The Sockets Networking API \cite{stevens2018unixvolume1}
+            \item Volume 2, 2nd Edition: Interprocess Communications \cite{richard1999unixvolume2}
+        \end{itemize}
+        \item TCP/IP Illustrated
+        \begin{itemize}
+            \item Volume 1: The Protocols (2nd Edition) \cite{fall2011tcp}
+            \item Volume 2: The Implementation \cite{stevens1996tcp}
+            \item Volume 3: TCP for Transactions, HTTP, NNTP, and the UNIX Domain Protocols \cite{stevens2000tcp}
+        \end{itemize}
+    \end{itemize}
+    \item Prerequisites:
+    \begin{itemize}
+        \item Compulsory:
+            \begin{enumerate}
+            \item Operating Systems
+            \end{enumerate}
+        \item PL
+        \begin{itemize}
+            \item \textbf{Java}.
+            \item \textbf{Python}: Similar but much simpler socket interface than POSIX.
+            \item \textbf{Go}: RPC.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+
+\section{Compilers}
+Compilers should be associated with \textbf{PL} and \textbf{Computer Architecture}.
+\begin{enumerate}
+    \item Compilers: Principles, Techniques and Tools (2nd Edition) \cite{aho2007compilers}
+    \begin{itemize}
+        \item ``Dragon Book".
+        \item Well-known but a little obsolete; still wonderful for new-comers.
+    \end{itemize}
+    \item Modern Compiler Implementation in C \cite{appel2004modern}/Java (2nd Edition) \cite{appel2003modern}/ML \cite{appel1998modern}
+    \begin{itemize}
+        \item ``Tiger Book".
+    \end{itemize}
+    \item Advanced Compiler Design Implementation \cite{muchnick1997advanced}
+    \begin{itemize}
+        \item ``Whale Book".
+    \end{itemize}
+    \item Engineering a Compiler (2nd Edition) \cite{cooper2011engineering}
+    \item Stanford CS 143 Compilers:
+    \href{https://web.stanford.edu/class/cs143/}{https://web.stanford.edu/class/cs143/}
+    \item Stanford CS 243 Program Analysis and Optimization:\\
+    \href{https://suif.stanford.edu/~courses/cs243/}{https://suif.stanford.edu/~courses/cs243/}
+    \item Prerequisites:
+    \begin{itemize}
+        \item Compulsory:
+        \begin{enumerate}
+        \item TCS (Theoretical Computer Science)
+        \begin{enumerate}
+            \item Introduction to the Theory of Computation (3rd Edition) \cite{sipser1996introduction}
+        \end{enumerate}
+        \item Computer Architecture: ILP (Instruction-Level Parallelism), Memory Hierarchy
+        \item Data structures and algorithms
+    \end{enumerate}
+        \item Recommended:
+        \begin{enumerate}
+            \item Computer Architecture: DLP (Data-Level Parallelism), TLP (Thread-Level Parallelism)
+            \item Operating Systems: Thread, Context Switch
+        \end{enumerate}
+        \item PL
+        \begin{itemize}
+            \item \textbf{Java}.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+
+\section{Programming Languages (PL)}
+Abbreviations:
+\begin{itemize}
+    \item OOP: Object-Oriented Programming
+    \item FP: Functional Programming
+\end{itemize}
+\textbf{Language List}\\
+Unless specified explicitly, always try the latest version.
+\begin{itemize}
+    \item \textbf{C/C++} (Do learn the latest version of C++, or at least C++17)
+    \begin{itemize}
+        \item Tutorials
+        \begin{enumerate}
+            \item The C Programming Language (2nd Edition) \cite{ritchie1988c}
+            \begin{itemize}
+                \item ``\textbf{K \& R}"
+            \end{itemize}
+            \item The C++ Programming Language (4th Edition) \cite{stroustrup2013c++}
+        \end{enumerate}
+        \item Documentations
+        \begin{enumerate}
+            \item \href{https://cppreference.com/}{https://cppreference.com/}
+            \item Boost C++ Libraries:
+            \href{https://www.boost.org/}{https://www.boost.org/}
+        \begin{itemize}
+            \item Sometime \emph{standard C++ libraries} are not enough.
+            In this case, \emph{Boost} may provide additional useful functionality.
+            Besides, some functionality of \emph{Boost} may be incorporated into \emph{standard C++ libraries} in the future, as the past shows.
+        \end{itemize}
+        \end{enumerate}
+
+        \item Programming guidelines
+        \begin{itemize}
+            \item Scott Meyers ``Effective C++" book series
+            \begin{itemize}
+                \item Effective C++ (3rd Edition) \cite{meyers2005effective}
+                \item Effective Modern C++ (1st Edition) \cite{meyers2014effective}
+                \item Effective STL (1st Edition) \cite{meyers2001effective}
+            \end{itemize}
+            \item C++ Core Guidelines:\\ \href{https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines}{https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines}
+        \end{itemize}
+        \item Recommended IDE: VSCode on Linux (especially WSL).
+        \item Recommended compilers: \emph{latest} GCC and Clang.
+        \begin{itemize}
+            \item Currently, \textbf{OpenMP} support of \textbf{Clang 13} needs to be installed separately, which is not the case for \textbf{Clang 12}.
+            \item \textbf{GCC} can be built from source.
+            \item \textbf{Clang} can by downloaded directly from \href{https://releases.llvm.org/download.html}{https://releases.llvm.org/download.html}
+        \end{itemize}
+        \item Build tool: CMake (also works for CUDA C++).
+        \begin{itemize}
+            \item CMake Tutorial:
+            \href{https://cmake.org/cmake/help/latest/guide/tutorial/}{https://cmake.org/cmake/help/latest/guide/tutorial/}
+        \end{itemize}
+        \item \textbf{The coding style of C/C++ is much more important than that of other languages}, due to the legacy, the flexibility and the safety issues of this language.
+    \end{itemize}
+    \item \textbf{Java} (Java 17 is recommended, or at least, choose an LTS version)\\
+    Prerequisite languages: C++.\\
+    Pay attention to the comparison with C++, as well as JVM and JIT.
+    \begin{itemize}
+        \item Tutorials
+        \begin{enumerate}
+            \item Oracle online tutorial:
+        \href{https://docs.oracle.com/javase/tutorial/}{https://docs.oracle.com/javase/tutorial/}
+            \item Core Java (10th Edition). Two volumes:
+            \begin{itemize}
+                \item Volume I: Fundamentals \cite{gvero2013core1}
+                \item Volume II: Advanced Features \cite{tarimci2014core2}
+            \end{itemize}
+            \item Java 8 in Action: Lambdas, Streams, and Functional-style Programming (1st Edition) \cite{urma2014java}
+        \end{enumerate}
+        \item Documentations
+        \begin{enumerate}
+            \item \href{https://docs.oracle.com/javase/specs/}{https://docs.oracle.com/javase/specs/}
+        \end{enumerate}
+        \item Programming guidelines
+        \begin{itemize}
+            \item Effective Java (3rd Edition) \cite{bloch2008effective}
+        \end{itemize}
+
+        \item Recommended IDE: IntelliJ Idea
+        \item Build tool (applying to all languages on JVM) : \textbf{Maven} or \textbf{Gradle}.
+        \begin{itemize}
+            \item Maven in 5 Minutes:\\
+            \href{https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html}{https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html}
+            \item All documentations can be found at:\\
+            \href{https://maven.apache.org/}{https://maven.apache.org/}
+            \item Try \textbf{Maven} with \textbf{IntelliJ Idea}.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Scala}
+    (\textbf{Scala 2} is preferred over \textbf{Scala 3} at the moment)\\
+    Prerequisite languages: Java.\\
+    Noteworthy features: FP.
+    \begin{itemize}
+        \item Tutorials
+        \begin{enumerate}
+            \item Tour of Scala:
+            \href{https://docs.scala-lang.org/tour/tour-of-scala.html}{https://docs.scala-lang.org/tour/tour-of-scala.html}
+            \item Scala Book:
+            \href{https://docs.scala-lang.org/overviews/scala-book/introduction.html}{https://docs.scala-lang.org/overviews/scala-book/introduction.html}
+        \end{enumerate}
+        \item Documentations
+        \begin{itemize}
+            \item Guides and Overviews:
+            \href{https://docs.scala-lang.org/overviews/index.html}{https://docs.scala-lang.org/overviews/index.html}
+            \item All documentations:
+            \href{https://docs.scala-lang.org/}{https://docs.scala-lang.org/}
+                \begin{itemize}
+                    \item \textbf{Scala 3} documentations can also be found here!
+                \end{itemize}
+        \end{itemize}
+        \item Recommended IDE \& build tool: same as \textbf{Java}
+        \item Currently, the ecosystem of \textbf{Scala 2} is much better than that of \textbf{Scala 3}.
+        The development \textbf{Scala 3} is still at the early stage, but it is also recommended, especially in the long run.
+        \end{itemize}
+        
+    \item \textbf{Kotlin}
+    (\textbf{Kotlin/JVM} is recommended, with \textbf{Kotlin/Native} and \textbf{Kotlin/JS} being immature)\\
+    Prerequisite languages: Java, Scala.\\
+    Noteworthy features: null safety, modest FP.
+    \begin{itemize}
+        \item Tutorials
+        \begin{enumerate}
+            \item Get started with Kotlin:
+            \href{https://kotlinlang.org/docs/getting-started.html}{https://kotlinlang.org/docs/getting-started.html}
+            \item Kotlin Coroutines:\\
+            \href{https://github.com/Kotlin/KEEP/blob/master/proposals/coroutines.md}{https://github.com/Kotlin/KEEP/blob/master/proposals/coroutines.md}
+            \begin{itemize}
+                \item Wonderful article about the design of stackless coroutines!
+            \end{itemize}
+        \end{enumerate}
+        \item Documentations
+        \begin{enumerate}
+            \item        \href{https://kotlinlang.org/docs/}{https://kotlinlang.org/docs/}
+        \end{enumerate}
+        \item Recommended IDE \& build tool: same as \textbf{Java}
+    \end{itemize}
+    
+    \item \textbf{Go}\\
+    Prerequisite languages: C++, Java.\\
+    Noteworthy features: concurrent programming (goroutine + channel + asynchrony, GMP model), modest OOP (compare the OOP of Java and the OOP of Go).
+    \begin{itemize}
+        \item Turorials
+        \begin{enumerate}
+            \item A Tour of Go:
+            \href{https://go.dev/tour/welcome/1}{https://go.dev/tour/welcome/1}
+            \item Effective Go:
+            \href{https://go.dev/doc/effective\_go}{https://go.dev/doc/effective\_go}
+            \item Official tutorials (including those for generics, fuzzing and accessing a relational database:
+            \href{https://go.dev/doc/tutorial/}{https://go.dev/doc/tutorial/}
+            \item The Go Blog:
+            \href{https://go.dev/blog/}{https://go.dev/blog/}
+            \begin{itemize}
+                \item Lots of wonderful articles about the design of Go!
+            \end{itemize}        
+        \end{enumerate}
+        \item Documentations
+        \begin{enumerate}
+            \item All the documentations can be found at:
+            \href{https://go.dev/doc/}{https://go.dev/doc/}
+        \end{enumerate}
+        \item Recommended IDE: GoLand
+        \item Build tool:
+        \href{https://go.dev/doc/modules/gomod-ref}{https://go.dev/doc/modules/gomod-ref}
+    \end{itemize}
+    
+    \item \textbf{Rust}\\
+    Prerequisite languages: C++17, Go, a functional language (e.g., Scala, Haskell, OCaml).\\
+    Noteworthy features: ownership, borrow checker, various \textbf{safety}, modest OOP.\\
+    Do compare Rust with other languages.
+    \begin{itemize}
+        \item Tutorials
+        \begin{enumerate}
+            \item The Rust Programming Language:
+            \href{https://doc.rust-lang.org/book/}{https://doc.rust-lang.org/book/}
+            \begin{itemize}
+                \item Also a good book about the design of programming languages!
+            \end{itemize}
+            \item Rust by Example:
+            \href{https://doc.rust-lang.org/stable/rust-by-example/}{https://doc.rust-lang.org/stable/rust-by-example/}
+            \item Asynchronous Programming in Rust:
+            \href{https://rust-lang.github.io/async-book/}{https://rust-lang.github.io/async-book/}
+            \item The Rustonomicon:
+            \href{https://doc.rust-lang.org/nomicon/}{https://doc.rust-lang.org/nomicon/}
+            \begin{itemize}
+                \item This book is about ``Unsafe Rust".
+            \end{itemize}
+        \end{enumerate}
+        \item Documentations
+        \begin{enumerate}
+            \item The Rust Reference:
+            \href{https://doc.rust-lang.org/reference/}{https://doc.rust-lang.org/reference/}
+            \item \href{https://doc.rust-lang.org/beta/}{https://doc.rust-lang.org/beta/}
+        \end{enumerate}
+        \item Recommended IDE: IntelliJ Idea
+        \item Build Tool: Cargo.
+        \begin{itemize}
+            \item Its tutorial can be found in ``The Rust Programming Language".
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Haskell}\\
+    \emph{Purely functional language}.
+    \begin{itemize}
+        \item Tutorials
+        \begin{enumerate}
+            \item Get Started:
+            \href{https://www.haskell.org/}{https://www.haskell.org/}
+            \item Real World Haskell:
+            \href{http://book.realworldhaskell.org/read/}{http://book.realworldhaskell.org/read/}
+            \item Learn You a Haskell for Great Good!:
+            \href{http://learnyouahaskell.com/chapters}{http://learnyouahaskell.com/chapters}
+        \end{enumerate}
+        \item All the books, courses, tutorials, documentations and various kinds of resources can be found at:
+        \href{https://www.haskell.org/documentation/}{https://www.haskell.org/documentation/}
+    \end{itemize}
+    \item \textbf{OCaml}
+    \begin{itemize}
+        \item Tutorials:
+        \begin{enumerate}
+            \item Real World OCaml:
+            \href{https://dev.realworldocaml.org/}{https://dev.realworldocaml.org/}
+            \item Official tutorials: \href{https://ocaml.org/learn/tutorials/}{https://ocaml.org/learn/tutorials/}
+        \end{enumerate}
+        \item Documentations:
+        \begin{enumerate}
+            \item \href{https://ocaml.org/docs/}{https://ocaml.org/docs/}
+        \end{enumerate}        
+    \end{itemize}
+    \item Prerequisites (for understanding the design of programming languages):
+    \begin{itemize}
+        \item Compulsory:
+        \begin{enumerate}
+            \item Computer Architecture
+            \item Operating Systems
+            \item Compilers
+        \end{enumerate}
+        \item Recommended:
+        \begin{enumerate}
+            \item Computer Networks
+        \end{enumerate}
+    \end{itemize}
+    \item \textbf{Courses}
+        \begin{itemize}
+            \item Stanford CS 242 Programming Languages:
+            \begin{itemize}
+                \item Autumn:
+                \href{https://stanford-cs242.github.io/f19/}{https://stanford-cs242.github.io/f19/}
+                \item Winter:
+                \href{https://web.stanford.edu/class/cs242/materials.html}{https://web.stanford.edu/class/cs242/materials.html}
+            \end{itemize}
+            \item Stanford CS 151 Logic Programming:\\
+            \href{http://logicprogramming.stanford.edu/stanford/lessons.php}{http://logicprogramming.stanford.edu/stanford/lessons.php}
+        \end{itemize}
+    \item \textbf{Other textbooks}
+    \begin{enumerate}
+        \item Structure and Interpretation of Computer Programs (2nd Edition \cite{abelson1996structure}/JavaScript Edition \cite{abelson2022structure})
+        \begin{itemize}
+            \item The original version is based on \textbf{Scheme}, an Lisp dialect.
+            However, Lisp and its dialects are obsolete now.
+        \end{itemize}
+        \item Types and Programming Languages (1st Edition) \cite{pierce2002types}
+    \end{enumerate}
+    \item \textbf{Suggestions}:
+        \begin{itemize}
+            \item There is no need to master an entire PL in one shot; instead, study part of it every time you need it.
+            \item PLs develop rapidly. To catch up with the latest development, refer to online documentations/tutorials/blogs besides books.
+            \item Be sure you have mastered at least one \textbf{modern} language in each of the following paradigms:
+            \begin{itemize}
+                \item Procedural
+                \item Object-Oriented
+                \item Functional
+            \end{itemize}
+            Note that modern languages like \textbf{Go}, \textbf{Scala}, \textbf{Kotlin} and \textbf{Rust} can be greatly different than old ones like \textbf{Java} and \textbf{Python}.
+            As a special case, although modern \textbf{C++} (C++11 and later) is really modern, but there are inevitably a great number of legacies, so C++ can be considered as a mixture.
+            \item PL can be viewed from at least three perspectives:
+            \begin{itemize}
+                \item Computer systems
+                \item Software engineering
+                \item Theoretical computer science
+                \begin{itemize}
+                    \item e.g., relationship between programming paradigms and Church-Turing thesis.
+                \end{itemize}
+            \end{itemize}
+            Therefore, you can always find lots of cross-cutting issues in PL.
+            \item A complete list of \textbf{programming paradigms}:\\
+            \href{https://en.wikipedia.org/wiki/Programming\_paradigm}{https://en.wikipedia.org/wiki/Programming\_paradigm}
+            \item Pay attention to three kinds of \emph{safety}
+            \begin{itemize}
+                \item Type safety
+                \item Memory safety
+                \item Thread safety
+            \end{itemize}
+            \item Pay attention to the \emph{memory consistency model} (always called \emph{memory model} in this context) of each language, although this virtually has no impact on \emph{application-level programming}.
+            \item \emph{Concrete examples} always help a lot for understanding \emph{abstract concepts}, and this is also one of the reasons why you should master several languages.
+            \item Pay attention to the interoperation between a certain language with C/C++ (and languages on JVM with Java).
+            \item Only IDEs I have used will be listed here, so there may be other wonderful IDEs.
+        \end{itemize}
+\end{itemize}
+
+\section{Parallel Computing}
+\emph{Parallel computing} consists of three components:
+\begin{itemize}
+    \item Architecture (system)
+    \item Programming (application)
+    \item Algorithms (theory)
+\end{itemize}
+\emph{Parallel computing} is an natural extension to \emph{computer architecture}.\\
+\textbf{Special Notes}
+\begin{itemize}
+    \item Do read \emph{Computer Architecture: A Quantitative Approach (CAAQA)} before diving into this, and revisit that masterpiece after having some hands-on experience of parallel computing!
+    \item \emph{Parallel Computing} without \emph{Memory Optimization} is \textbf{ridiculous}!
+    \item Do learn how to analyze performance bottleneck, which is key to the success of parallel programs.
+    Knowledge like that of \emph{computer architecture} and \emph{operating systems} can be extremely helpful.
+    \item \emph{Parallel computing} should include \emph{distributed computing}; however, the latter is not involved in this section.
+\end{itemize}
+\textbf{Platforms}
+\begin{itemize}
+    \item \textbf{CUDA} (Category: DLP, GPU)
+    \begin{itemize}
+        \item CUDA by Example (1st Edition) \cite{sanders2010cuda}
+        \begin{itemize}
+            \item A little obsolete, but the ideas are still well-presented.
+            If your foundation is good enough, go to the following two documentations directly, and these two are highly recommended.
+        \end{itemize}
+        \item CUDA C++ Programming Guide:\\
+        \href{https://docs.nvidia.com/cuda/cuda-c-programming-guide/}{https://docs.nvidia.com/cuda/cuda-c-programming-guide/}
+        \item CUDA C++ Best Practices Guide:\\
+        \href{https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/}{https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/}
+        \item All documentations can be found at:
+        \href{https://docs.nvidia.com/cuda/}{https://docs.nvidia.com/cuda/}
+    \end{itemize}
+    CUDA is also fantastic for \emph{Asynchronous Programming} and \emph{Heterogeneous Programming}!
+    You can also have a taste of \emph{Compute Hierarchy} with CUDA!
+    \item \textbf{CPU intrinsics} (Category: DLP, CPU)
+    \begin{itemize}
+        \item \textbf{x86 intrinsics} (Category: DLP, multimedia SIMD instruction set extensions)\\
+        \href{https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html}{https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html}
+        \item \textbf{ARM SVE2 intrinsics} (Category: DLP, vector architecture)\\
+        \href{https://developer.arm.com/documentation/102340/0001/Program-with-SVE2}{https://developer.arm.com/documentation/102340/0001/Program-with-SVE2}
+        \item \textbf{ARM Neon intrinsics} (Category: DLP, multimedia SIMD instruction set extensions)\\
+        \href{https://developer.arm.com/documentation/102467/0100/Why-Neon-Intrinsics-}{https://developer.arm.com/documentation/102467/0100/Why-Neon-Intrinsics-}
+    \end{itemize}
+    \item \textbf{MPI} (Category: TLP, message passing)
+    \begin{itemize}
+        \item MPI Tutorial:
+        \href{https://mpitutorial.com/tutorials/}{https://mpitutorial.com/tutorials/}
+        \item YouTube video
+        \begin{itemize}
+            \item MPI Basics:
+            \href{https://www.youtube.com/watch?v=c0C9mQaxsD4}{https://www.youtube.com/watch?v=c0C9mQaxsD4}
+            \item MPI Advanced:
+            \href{https://www.youtube.com/watch?v=q9OfXis50Rg}{https://www.youtube.com/watch?v=q9OfXis50Rg}
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{OpenMP} (Catrgory: TLP, shared memory)
+    \begin{itemize}
+        \item Tim Mattson’s (Intel) “Introduction to OpenMP” (2013) on YouTube
+        \begin{itemize}
+            \item Video:\\
+            \href{https://www.youtube.com/playlist?list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG}{https://www.youtube.com/playlist?list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG}
+            \item Slides:\\
+            \href{https://www.openmp.org/wp-content/uploads/Intro\_To\_OpenMP\_Mattson.pdf}{https://www.openmp.org/wp-content/uploads/Intro\_To\_OpenMP\_Mattson.pdf}
+        \end{itemize}
+    \end{itemize}
+    For those familiar with \emph{pthread} \textbf{multithreading programming} in certain languages, it will be quite easy to learn \textbf{OpenMP}.
+\end{itemize}
+\textbf{Categories}\\
+The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
+\begin{itemize}
+    \item ILP (Instruction-Level Parallelism)\\
+    Mathematical model of ILP -- DAG (Directed Acyclic Graph):
+    \begin{itemize}
+        \item Node: a stage of a instruction.
+        \item Edge: dependency (data dependency, control dependency, name dependency) between a pair of nodes.
+    \end{itemize}
+    Goal:
+    eliminate dependencies (edges), and exploit the lack of dependencies between nodes.
+    \item DLP (Data-Level Parallelism)\\
+        The essence of DLP programming: \textbf{Vectorization}.
+        \begin{itemize}
+            \item To get some hands-on experiences with this, you may start with \textbf{PyTorch}, since this relieves you from some low-level details like remaining elements and memory hierarchy.
+            \begin{itemize}
+                \item Official tutorial: \href{https://pytorch.org/tutorials/}{https://pytorch.org/tutorials/}
+                \item Also, \textbf{PyTorch} is a convenient tool to exploit GPU for parallel computing.
+            \end{itemize}
+        \end{itemize}
+        
+    \item TLP (Thread-Level Parallelism)\\
+    The essence of TLP programming: \textbf{async} (concurrent control flow), \textbf{await} (synchronization).
+    \begin{itemize}
+        \item Concurrency mechanisms
+        \begin{enumerate}
+            \item Thread: C++, Java, pthread
+            \item Future/Promise: Scala
+            \item Stackful Coroutine: Go
+            \item Stackless Coroutine: Kotlin, Rust (async/await)
+        \end{enumerate}
+        \textbf{Aside}:
+        \begin{enumerate}
+            \item In essence, every kind of \emph{Concurrency} is an encapsulation of \emph{Asynchrony}.
+        Therefore, \emph{Concurrent Programming} can be seen as a subset of \emph{Asynchronous Programming}.
+            \begin{itemize}
+                \item Here is a good summary of \emph{Asynchronous programming techniques} provided in the tutorial of \emph{Kotlin}:
+            \href{https://kotlinlang.org/docs/async-programming.html}{https://kotlinlang.org/docs/async-programming.html}
+            \end{itemize}
+            \item The essence of \emph{Asynchronous Programming} is \textbf{async/await}, as well as \textbf{suspension points}.
+            \begin{itemize}
+                \item For \emph{Threads} and \emph{Stackful Coroutines}, every point is a suspension point, while for \emph{Stackless Coroutines}, only a fraction of points can be suspension points and they are declared explicitly.
+            \end{itemize}
+            \item For implementations, figure out what is ``\textbf{continuation}" and how it varies in \emph{Processes}, \emph{Threads}, \emph{Stackful Coroutines}, and \emph{Stackless Coroutines}.
+            Also think about the relation between \emph{continuation} and \emph{suspension points}.
+        \end{enumerate}
+
+        \item Synchronization mechanisms
+        \begin{itemize}
+            \item Shared memory
+            \begin{enumerate}
+                \item Mutex, Condition Variable: most languages.
+                \item Monitor: Java.
+                For C++, this can be readily emulated by \emph{RAII}.
+                \item Atomic variables/operations: most languages.
+                \item Barrier: most languages, as well as CUDA.
+                \item Read Write Lock: most languages.
+                This is especially useful in DLP.
+            \end{enumerate}
+            Many widely used mechanisms are not listed here.
+            \item Message passing
+            \begin{enumerate}
+                \item Channel + Select: Go, Kotlin.
+                \item Actor Model:
+                    \begin{itemize}
+                        \item Akka (with Java/Scala interface):\\ \href{https://doc.akka.io/docs/akka/current/typed/guide/introduction.html}{https://doc.akka.io/docs/akka/current/typed/guide/introduction.html}
+                        \item Kotlin:\\
+                        \href{https://kotlinlang.org/docs/shared-mutable-state-and-concurrency.html#actors}{https://kotlinlang.org/docs/shared-mutable-state-and-concurrency.html\#actors}
+                    \end{itemize}
+            \end{enumerate}
+            \item High-level encapsulations
+            \begin{enumerate}
+                \item Thread-safe collections
+                    \begin{itemize}
+                    \item Java: java.util.concurrent:\\
+                    \href{https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html}{https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util\\/concurrent/package-summary.html}
+                    \end{itemize}
+            \end{enumerate}
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+\textbf{Courses}
+\begin{itemize}
+    \item Stanford CS 149 Parallel Computing:
+    \href{https://gfxcourses.stanford.edu/cs149/fall21/}{https://gfxcourses.stanford.edu/cs149/fall21/}
+    \item Stanford CME 323 Distributed Algorithms and Optimization:\\
+    \href{https://stanford.edu/~rezab/classes/cme323/S20/}{https://stanford.edu/~rezab/classes/cme323/S20/}
+\end{itemize}
+\textbf{Prerequisites}
+    \begin{itemize}
+        \item Compulsory:
+        \begin{enumerate}
+        \item Computer Architecture
+        \item Compilers
+    \end{enumerate}
+        \item Recommended:
+        \begin{enumerate}
+            \item Operating Systems
+        \end{enumerate}
+    \end{itemize}
+
+\section{Database (DB)}
+\textbf{Special Notes}
+\begin{itemize}
+    \item Think about the relationship (cooperation and conflicts) between DB and OS.
+    Also, when facing the same issues (there are lots of them) like concurrency control, how do they handle them respectively?
+    \item \emph{Parallel and distributed databases} and \emph{NoSQL} are the hotspots nowadays.
+    Do place emphasis on them!
+    \item View DB from a full-stack perspective, that is, from systems, to applications, to theory (relation algebra).
+    Lots of knowledge you have learned elsewhere plays an important role here.
+    Also, you can find plenty of cross-cutting issues here.
+    \item Pay attention to the relationship between DB and big data/data mining.
+\end{itemize}
+
+\begin{enumerate}
+    \item Database System Concepts (7th Edition) \cite{silberschatz2002database}
+    \begin{itemize}
+        \item Chapter 2-11 is about \emph{applications}, while chapter 12-23 is about \emph{systems}.
+        \item As a beginner, you may read chapter 1-7, 12-19 first.        
+        \item When learning chapter 20-23, basic knowledge of \emph{distributed systems} can be quite helpful.
+        See ``Prerequisites" for more advice.
+        \item It is beneficial to reflect on Chapter 10-11 after gaining some experiences on big data/cloud computing (e.g., programming with Spark).
+        \item Although Chapter 3-5 does teach a lot of SQL and these are really helpful, you should refer to the following manuals if you want to learing more specifications, especially those specific to a certain implementation of SQL.
+        \item The contents of CMU 15-445 and Stanford CS 145, 245 are almost covered by this book.
+        \item Chapter 32 (an online chapter) is a good case study (\textbf{PostgreSQL}), thus highly recommended.
+    \end{itemize}
+    \item Courses
+    \begin{enumerate}
+        \item DB applications
+        \begin{itemize}
+            \item Stanford CS 145 Data Management and Data Systems:
+            \href{https://cs145-fa20.github.io/}{https://cs145-fa20.github.io/}
+        \end{itemize}
+        \item DB systems
+        \begin{itemize}
+            \item CMU 15-445/645 Intro to Database Systems:\\
+            \href{https://15445.courses.cs.cmu.edu/fall2019/schedule.html}{https://15445.courses.cs.cmu.edu/fall2019/schedule.html}
+            \item Stanford CS 245 Principles of Data-Intensive Systems:\\
+            \href{https://web.stanford.edu/class/cs245/}{https://web.stanford.edu/class/cs245/}
+        \end{itemize}
+            \item Advanced DB systems
+            \begin{itemize}
+                \item CMU 15-721 Advanced Database Systems:\\
+                \href{https://15721.courses.cs.cmu.edu/spring2020/schedule.html}{https://15721.courses.cs.cmu.edu/spring2020/schedule.html}        
+            \end{itemize}
+    \end{enumerate}
+
+    \item Programming languages and platforms
+    \begin{itemize}
+        \item SQL
+        \begin{itemize}
+            \item PostgreSQL
+            \begin{itemize}
+                \item Database System Concepts chapter 32:\\
+                \href{https://db-book.com/online-chapters-dir/32.pdf}{https://db-book.com/online-chapters-dir/32.pdf}
+                \item Tutorial:
+                \href{https://www.postgresqltutorial.com/}{https://www.postgresqltutorial.com/}
+                \item Documentation \& Manuals:
+                \href{https://www.postgresql.org/docs/}{https://www.postgresql.org/docs/}
+            \end{itemize}     
+            \item MySQL
+            \begin{itemize}
+                \item Tutorial:
+                \href{https://www.mysqltutorial.org/}{https://www.mysqltutorial.org/}
+                \item Reference manual:
+                \href{https://dev.mysql.com/doc/refman/8.0/en/}{https://dev.mysql.com/doc/refman/8.0/en/}
+            \end{itemize}
+            \item Which one should I choose?
+            \begin{itemize}
+                \item They are two most popular open source databases
+                \item Generally speaking, MySQL is still more popular for historic reasons, while PostgreSQL is more advanced and far more elegant.
+            \end{itemize}
+            \item Tips of using specific databases:\\
+            \href{https://db-book.com/university-lab-dir/db-tips.html}{https://db-book.com/university-lab-dir/db-tips.html}
+        \end{itemize}
+        \item NoSQL
+        \begin{itemize}
+            \item MongoDB
+            \begin{enumerate}
+                \item Get Started:
+                \href{https://www.mongodb.com/docs/guides/}{https://www.mongodb.com/docs/guides/}
+                \item Documentations:
+                \href{https://www.mongodb.com/docs/}{https://www.mongodb.com/docs/}
+            \end{enumerate}
+        \end{itemize}
+        \item Spark
+        \begin{itemize}
+            \item Quick Start:
+            \href{https://spark.apache.org/docs/latest/quick-start.html}{https://spark.apache.org/docs/latest/quick-start.html}
+        \end{itemize}
+        \item DB-Engines Ranking:
+            \href{https://db-engines.com/en/ranking}{https://db-engines.com/en/ranking}
+            \begin{itemize}
+                \item Popular database engines and lots of relevant information can be found here.
+            \end{itemize}        
+    \end{itemize}
+
+    \item Prerequisites:
+    \begin{itemize}
+        \item Compulsory:
+        \begin{enumerate}
+            \item Data structures and algorithms: those operating data on secondary storage are particularly important
+            \item Operating systems
+        \end{enumerate}
+        \item Recommended:
+        \begin{enumerate}
+            \item Computer architecture
+            \begin{itemize}
+                \item Lots of similar ideas in \emph{databases} can be found in \emph{computer architecture})
+            \end{itemize}
+            \item Computer networks
+            \begin{itemize}
+                \item required for learning \emph{parallel and distributed databases})
+            \end{itemize}
+        \end{enumerate}
+        \item A few words about \emph{distributed systems}
+        \begin{itemize}
+            \item It is quite hard to determine which one of the following should be learned first: \emph{parallel and distributed databases} and \emph{distributed systems}.
+            My personal feeling is, study of these two fields can be interleaved, since you often need knowledge of the other field when studying either one field.
+            As a always reasonable method, study them multiple times so that you will not miss important prerequisite knowledge, if the optimal order of learning is hard to figure out.
+        \end{itemize}
+        \item PL
+        \begin{itemize}
+            \item Java: JDBC.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+
+\section{Distributed Computing/Distributed Systems}
+\begin{enumerate}
+    \item MIT 6.824 Distributed Systems:
+    \href{https://pdos.csail.mit.edu/6.824/schedule.html}{https://pdos.csail.mit.edu/6.824/schedule.html}
+    \item Supplementary
+    \begin{enumerate}
+        \item Stanford CS 244B Distributed Systems:
+        \href{https://www.scs.stanford.edu/22sp-cs244b/}{https://www.scs.stanford.edu/22sp-cs244b/}
+        \item Stanford CS 251 Cryptocurrencies and Blockchain Technologies:\\
+        \href{https://cs251.stanford.edu/}{https://cs251.stanford.edu/}
+    \end{enumerate}
+    
+    \item Prerequisites:
+    \begin{itemize}
+        \item Compulsory:
+        \begin{enumerate}
+        \item Operating Systems
+        \item Computer Networks
+        \item Database        
+        \end{enumerate}
+        \item Recommended:
+        \begin{enumerate}
+        \item Computer Architecture
+        \item Programming Languages
+        \end{enumerate} 
+    \end{itemize}
+\end{enumerate}
+
+\section{Cloud Computing}
+\begin{enumerate}
+    \item CMU 15-719 Advanced Cloud Computing:\\
+    \href{https://www.cs.cmu.edu/~15719/old/spring2019/syllabus.html}{https://www.cs.cmu.edu/~15719/old/spring2019/syllabus.html}
+    \item Prerequisites:
+    \begin{itemize}
+        \item Compulsory:
+        \begin{enumerate}
+            \item Computer Architecture
+            \item Operating Systems
+            \item Computer Networks
+            \item Distributed Systems
+            \item Database
+        \end{enumerate}
+        \item Recommended:
+        \begin{enumerate}
+            \item Parallel Computing
+        \end{enumerate}
+    \end{itemize}
+    \item \textbf{Suggestions}
+    \begin{enumerate}
+        \item There are plenty of \emph{cross-cutting issues}.
+        Make sure the prerequisites are met before moving on.
+        \item When reading cutting-edge papers concerning \emph{OS}, \emph{computer network} or \emph{computer architecture}, you may encounter issues of \emph{cloud computing}.
+        At that moment, you had better have some basic knowledge about it before reading those papers.
+    \end{enumerate}
+\end{enumerate}
+
+\section{Big Data}
+\begin{enumerate}
+    \item Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems (1st Edition) \cite{kleppmann2017designing}
+    \item Prerequisites:
+    \begin{itemize}
+        \item Compulsory
+        \begin{enumerate}
+            \item Database
+            \item Distributed systems
+        \end{enumerate}
+    \end{itemize}
+\end{enumerate}
+
+\section{Software Engineering}
+\begin{itemize}
+    \item The Mythical Man-Month: Essays on Software Engineering (Anniversary Edition) \cite{brooks1995mythical}
+    \item A Philosophy of Software Design \cite{ousterhout2018philosophy}
+    \item Materials discussing \emph{best practice} are also valuable, which can be found at the \textbf{PL} section, as well as the \textbf{CUDA} subsection.
+\end{itemize}
+
+\section{Program Analysis}
+\begin{enumerate}
+    \item Software Foundations:
+        \href{https://softwarefoundations.cis.upenn.edu/}{https://softwarefoundations.cis.upenn.edu/}
+        \begin{itemize}
+            \item It consists of 6 volumes.
+            \item Volume 1 also teaches \textbf{Coq}.
+        \end{itemize}
+    \item Prerequisites:
+    \begin{itemize}
+        \item Compulsory:
+        \begin{enumerate}
+            \item Compilers
+            \item Programming languages
+        \end{enumerate}
+    \end{itemize}
+\end{enumerate}
+
+\section{Computer Security}
+Security issues are everywhere.
+New security issues arise with new computer technologies invented.
+\begin{enumerate}
+    \item Stanford CS 155 Computer and Network Security:
+    \href{https://cs155.stanford.edu/}{https://cs155.stanford.edu/}
+    \item Stanford CS 253 Web Security:
+    \href{https://web.stanford.edu/class/cs253/}{https://web.stanford.edu/class/cs253/}
+    \item Stanford CS 255 Introduction to Cryptography:
+    \href{https://crypto.stanford.edu/~dabo/cs255/}{https://crypto.stanford.edu/~dabo/cs255/}
+    \item Stanford CS 356 Topics in Computer and Network Security:
+    \href{https://cs356.stanford.edu/}{https://cs356.stanford.edu/}
+    \item Prerequisites:
+    \begin{itemize}
+        \item Compulsory:
+        \begin{enumerate}
+            \item Computer architecture
+            \item Operating systems
+            \item Computer networks
+            \item Programming languages
+        \end{enumerate}
+        Indeed, you can learn a lot about \emph{computer security} in all of these fields.
+        As a suggestion, do not leave out the \emph{security} part when learning them.
+    \end{itemize}
+\end{enumerate}
+
+\section{Instruction Set Architecture (ISA)}
+All of the following ISA can be learned by CSAPP or ``Computer Organization and Design: The Hardware/Software Interface".
+However, the following resources help you go further.
+\begin{itemize}
+    \item \textbf{x86}
+    \begin{itemize}
+        \item Intel® 64 and IA-32 Architectures Software Developer Manuals:\\
+        \href{https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html}{https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html}
+        \item AMD Developer Guides, Manuals \& ISA Documents:\\
+        \href{https://developer.amd.com/resources/developer-guides-manuals/}{https://developer.amd.com/resources/developer-guides-manuals/}
+    \end{itemize}
+    Make sure you are able to read both the ``Intel" format and the ``AT\&T" format.
+    \item \textbf{RISC-V}
+    \begin{itemize}
+        \item RISC-V Specifications:
+        \href{https://riscv.org/technical/specifications/}{https://riscv.org/technical/specifications/}
+        \begin{itemize}
+            \item Wonderful textbooks on computer architecture!
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{ARM}
+    \begin{itemize}
+        \item ARM® CPU Architecture Key Documents:\\
+        \href{https://developer.arm.com/architectures/cpu-architecture}{https://developer.arm.com/architectures/cpu-architecture}
+        \item Arm® Architecture Reference Manual Supplement Armv9, for Armv9-A architecture profile:
+        \href{https://developer.arm.com/documentation/ddi0608/latest}{https://developer.arm.com/documentation/ddi0608/latest}
+    \end{itemize}
+    \item \textbf{PTX}
+    \begin{itemize}
+        \item PTX ISA :: CUDA Toolkit Documentation:\\
+        \href{https://docs.nvidia.com/cuda/parallel-thread-execution/}{https://docs.nvidia.com/cuda/parallel-thread-execution/}
+    \end{itemize}
+    \item \textbf{Java Bytecode}
+    \begin{itemize}
+        \item Java Language and Virtual Machine Specifications:\\
+    \href{https://docs.oracle.com/javase/specs/}{https://docs.oracle.com/javase/specs/}
+    \end{itemize}
+\end{itemize}
+
+\section{Linux Programming}
+\begin{enumerate}
+    \item Linux man pages
+    \begin{itemize}
+        \item ``man" command in Linux shell, like ``man fork" or ``man 2 fork" where ``2" specifies the volume.
+        \item Linux man pages online:
+        \href{https://man7.org/linux/man-pages/}{https://man7.org/linux/man-pages/}
+    \end{itemize}
+    \item Advanced programming in the UNIX environment (3rd Edition) \cite{stevens1992advanced}
+\end{enumerate}
+
+\section{Linking and Loading}
+\begin{enumerate}
+    \item 
+    \begin{CJK}{UTF8}{gbsn}
+    程序员的自我修养: 链接, 装载与库 \cite{selfcultivation}
+    \end{CJK}
+    \item Linkers and Loaders (1st Edition) \cite{levine264linkers}
+    \item \textbf{Suggestions}
+    \begin{enumerate}
+        \item Do not just \emph{read books} or \emph{play with GCC/Clang}.
+        Do both together.
+        \item The first book plays a primary role, while the second is supplementary (however, I still recommend you read it).
+        \item These two books are relatively \textbf{obsolete} (sorry I did not find any relevant modern book).
+        Besides, there are lots of academic errors in the first book.
+        \item These two books cover lots of knowledge.
+        Pick the chapters you need.
+        There is no need to read every chapter.
+    \end{enumerate}
+\end{enumerate}
+
+\section{Tools}
+\begin{enumerate}
+    \item Git
+    \begin{itemize}
+        \item Git Magic:
+        \href{http://www-cs-students.stanford.edu/~blynn/gitmagic/book.pdf}{http://www-cs-students.stanford.edu/~blynn/gitmagic/book.pdf}
+        \item Official documentations:
+        \href{https://git-scm.com/doc}{https://git-scm.com/doc}
+    \end{itemize}
+    \item UNIX Makefile
+    \begin{itemize}
+        \item Makefile Tutorial By Example:
+        \href{https://makefiletutorial.com/}{https://makefiletutorial.com/}
+    \end{itemize}
+    \item Docker
+    \begin{itemize}
+        \item Official tutorials and documentations:
+        \href{https://docs.docker.com/}{https://docs.docker.com/}
+    \end{itemize}
+    \item Shell Script
+    \begin{itemize}
+        \item Shell Scripting Tutorial:
+        \href{https://www.shellscript.sh/}{https://www.shellscript.sh/}
+        \item The following two tutorials are basically the same and are written by the same author, with the former being more newbie-friendly:
+        \begin{itemize}
+            \item Bash Scripting Tutorial for Beginners:\\ \href{https://linuxconfig.org/bash-scripting-tutorial-for-beginners}{https://linuxconfig.org/bash-scripting-tutorial-for-beginners}
+            \item Bash Scripting Tutorial: \href{https://linuxconfig.org/bash-scripting-tutorial}{https://linuxconfig.org/bash-scripting-tutorial}
+        \end{itemize}
+        \item GNU Bash manual: \href{https://www.gnu.org/software/bash/manual/}{https://www.gnu.org/software/bash/manual/}
+    \end{itemize}
+\end{enumerate}
+
+\section{Coding Style}
+\begin{itemize}
+    \item Google Style Guides:
+    \href{https://google.github.io/styleguide/}{https://google.github.io/styleguide/}
+    \item Clang-Format Style Options:
+    \href{https://clang.llvm.org/docs/ClangFormatStyleOptions.html}{https://clang.llvm.org/docs/ClangFormatStyleOptions.html}
+    \begin{itemize}
+        \item \emph{VS Code} can automatically format your code with a ``.clang-format" file without installing anything!
+    \end{itemize}
+\end{itemize}
+
+\section{Miscellaneous}
+\begin{enumerate}
+    \item Intel® Product Specifications:
+    \href{https://ark.intel.com}{https://ark.intel.com}
+    \item GCC online documentation:
+    \href{https://gcc.gnu.org/onlinedocs/}{https://gcc.gnu.org/onlinedocs/}
+    \begin{itemize}
+        \item Optimize Options:
+        \href{https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html}{https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html}
+        \item Option Summary:
+        \href{https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html}{https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html}
+        \item Instrumentation Summary (including sanitizers and profilers):\\
+        \href{https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html}{https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html}
+    \end{itemize}
+    \item GDB documentation:
+    \href{https://www.sourceware.org/gdb/documentation/}{https://www.sourceware.org/gdb/documentation/}
+    \item GNU Manuals Online:
+    \href{https://www.gnu.org/manual/}{https://www.gnu.org/manual/}
+    \item Clang 12 documentation:
+    \href{https://releases.llvm.org/12.0.0/tools/clang/docs/index.html}{https://releases.llvm.org/12.0.0/tools/clang/docs/index.html}
+    \begin{itemize}
+        \item You may change the version number in the URL to get the documentations of other versions.
+    \end{itemize}
+    \item LLVM documentation:
+    \href{https://llvm.org/}{https://llvm.org/}
+    \begin{itemize}
+        \item Lots of remarkable projects can be found there!
+    \end{itemize}
+\end{enumerate}
+
+\bibliographystyle{abbrv}
+\bibliography{reference}
+
+\end{document}
