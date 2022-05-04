@@ -15,7 +15,7 @@
 
 \maketitle
 
-\centerline{\large{Last Updated: April 29, 2022}}
+\centerline{\large{Last Updated: May 4, 2022}}
 
 \vspace{20pt}
 
@@ -27,7 +27,7 @@ The latest version can always be found at \href{https://www.overleaf.com/read/tx
 
 \textbf{Disclaimer}
 \begin{itemize}
-    \item This text focuses on \emph{breath} rather than \emph{depth}.
+    \item This text focuses on \emph{breadth} rather than \emph{depth}.
     \item This text mainly focuses on \emph{software systems}, with less concentration on topics such as \emph{VLSI}, \emph{storage systems}, and \emph{embedded systems}, although these are mentioned in some of the following resources.
 \end{itemize}
 
@@ -425,6 +425,10 @@ Abbreviations:
     \item OOP: Object-Oriented Programming
     \item FP: Functional Programming
 \end{itemize}
+\textbf{Tips}
+\begin{enumerate}
+    \item Sometimes searching within a tutorial/documentation returns better result than searching \emph{Google}.
+\end{enumerate}
 \textbf{Language List}\\
 Unless specified explicitly, always try the latest version.
 \begin{itemize}
@@ -509,10 +513,10 @@ Unless specified explicitly, always try the latest version.
         \end{itemize}
     \end{itemize}
 
-    \item \textbf{Scala}
-    (\textbf{Scala 2} is preferred over \textbf{Scala 3} at the moment for the sake of ecosystem)\\
+    \item \textbf{Scala} (\emph{Scala 3} is here!)\\
     Prerequisite languages: Java.\\
-    Noteworthy features: FP.
+    Noteworthy features: FP.\\
+    Multi-paradigmatic languages like \emph{Scala} and \emph{OCaml} is great starting points to learn \emph{functional programming}, since your programming style can transition gradually from \emph{imperative programming} to \emph{functional programming}.
     \begin{itemize}
         \item Tutorials
         \begin{enumerate}
@@ -528,16 +532,16 @@ Unless specified explicitly, always try the latest version.
             \item All documentations:
             \href{https://docs.scala-lang.org/}{https://docs.scala-lang.org/}
                 \begin{itemize}
-                    \item \textbf{Scala 3} documentations can also be found here!
+                    \item \emph{Scala 3} documentations can also be found here!
                 \end{itemize}
         \end{itemize}
-        \item Recommended IDE \& build tool: same as \textbf{Java}
-        \item Currently, the ecosystem of \textbf{Scala 2} is much better than that of \textbf{Scala 3}.
-        The development \textbf{Scala 3} is still at the early stage, but it is also recommended, especially in the long run.
+        \item Recommended IDE \& build tool: same as \emph{Java}
+        \item Currently, the ecosystem of \emph{Scala 2} is better than that of \emph{Scala 3}.
+        The development \emph{Scala 3} is still at the early stage, but it is also recommended, especially in the long run.
         \end{itemize}
         
     \item \textbf{Kotlin}
-    (\textbf{Kotlin/JVM} is recommended, with \textbf{Kotlin/Native} and \textbf{Kotlin/JS} being immature)\\
+    (\emph{Kotlin/JVM} is recommended, with \emph{Kotlin/Native} and \emph{Kotlin/JS} being immature)\\
     Prerequisite languages: Java, Scala.\\
     Noteworthy features: null safety, modest FP.
     \begin{itemize}
@@ -555,10 +559,10 @@ Unless specified explicitly, always try the latest version.
         \begin{enumerate}
             \item        \href{https://kotlinlang.org/docs/}{https://kotlinlang.org/docs/}
         \end{enumerate}
-        \item Recommended IDE \& build tool: same as \textbf{Java}
+        \item Recommended IDE \& build tool: same as \emph{Java}
     \end{itemize}
     
-    \item \textbf{Go}\\
+    \item \textbf{Go} (\emph{Go 1.18} is here!)\\
     Prerequisite languages: C++, Java.\\
     Noteworthy features: concurrent programming (goroutine + channel + asynchrony, GMP model), modest OOP (compare the OOP of Java and the OOP of Go).
     \begin{itemize}
@@ -589,7 +593,8 @@ Unless specified explicitly, always try the latest version.
     \item \textbf{Rust}\\
     Prerequisite languages: C++17, Go, a functional language (e.g., Scala, Haskell, OCaml).\\
     Noteworthy features: ownership, borrow checker, various \textbf{safety}, modest OOP.\\
-    Do compare Rust with other languages.
+    Do compare Rust with other languages.\\
+    Do reflect on \emph{C++} when learning Rust.
     \begin{itemize}
         \item Tutorials
         \begin{enumerate}
@@ -620,13 +625,37 @@ Unless specified explicitly, always try the latest version.
             \item Its tutorial can be found in ``The Rust Programming Language".
         \end{itemize}
     \end{itemize}
+
+    \item \textbf{OCaml}\\
+    Familiarity with \emph{Scala} is very helpful.
+    
+    Comparison with \emph{Scala}:
+    \begin{enumerate}
+        \item \emph{Scala} is more like a hybrid of \emph{imperative programming} and \emph{functional programming}.
+        However, \emph{functional programming} and \emph{imperative programming} take the primary and secondary positions in \emph{OCaml} respectively.
+        \item \emph{Type inference} of \emph{OCaml} is even more powerful than that of \emph{Scala}, e.g., in \emph{Scala}, you need to specify the return value of recursive functions.
+    \end{enumerate}
+    If you have learned either one of them, I strongly recommend you learn the other.
+    \begin{itemize}
+        \item Tutorials:
+        \begin{enumerate}
+            \item Real World OCaml:
+            \href{https://dev.realworldocaml.org/}{https://dev.realworldocaml.org/}
+            \item The official tutorial and documentation:
+            \href{https://ocaml.org/docs}{https://ocaml.org/docs}
+        \end{enumerate}
+    \end{itemize}
+    
     \item \textbf{Haskell}\\
     \emph{Purely functional language}.
+    
+    Recommended learning order:
+    \emph{Scala} $\rightarrow$ \emph{OCaml} $\rightarrow$ \emph{Haskell}.
+    
+    \emph{Haskell} is known for its steep learning curve, an appropriate learning order provides you sufficient foundations to conquer it.
     \begin{itemize}
         \item Tutorials
         \begin{enumerate}
-            \item Get Started:
-            \href{https://www.haskell.org/}{https://www.haskell.org/}
             \item Real World Haskell:
             \href{http://book.realworldhaskell.org/read/}{http://book.realworldhaskell.org/read/}
             \item Learn You a Haskell for Great Good!:
@@ -634,35 +663,11 @@ Unless specified explicitly, always try the latest version.
         \end{enumerate}
         \item All the books, courses, tutorials, documentations and various kinds of resources can be found at:
         \href{https://www.haskell.org/documentation/}{https://www.haskell.org/documentation/}
-    \end{itemize}
-    \item \textbf{OCaml}\\
-    Familiarity with \emph{Scala} is very helpful.
-    \begin{itemize}
-        \item Tutorials:
-        \begin{enumerate}
-            \item Real World OCaml:
-            \href{https://dev.realworldocaml.org/}{https://dev.realworldocaml.org/}
-            \item Official tutorials: \href{https://ocaml.org/learn/tutorials/}{https://ocaml.org/learn/tutorials/}
-        \end{enumerate}
-        \item Documentations:
-        \begin{enumerate}
-            \item \href{https://ocaml.org/docs/}{https://ocaml.org/docs/}
-        \end{enumerate}        
-    \end{itemize}
-    \item Prerequisites (for understanding the design of programming languages):
-    \begin{itemize}
-        \item Compulsory:
-        \begin{enumerate}
-            \item Computer Architecture
-            \item Operating Systems
-            \item Compilers
-        \end{enumerate}
-        \item Recommended:
-        \begin{enumerate}
-            \item Computer Networks
-        \end{enumerate}
-    \end{itemize}
-    \item \textbf{Courses}
+    \end{itemize}    
+\end{itemize}
+\textbf{Principles of Programming Languages}
+\begin{itemize}
+    \item Courses
         \begin{itemize}
             \item Stanford CS 242 Programming Languages:
             \begin{itemize}
@@ -674,7 +679,7 @@ Unless specified explicitly, always try the latest version.
             \item Stanford CS 151 Logic Programming:\\
             \href{http://logicprogramming.stanford.edu/stanford/lessons.php}{http://logicprogramming.stanford.edu/stanford/lessons.php}
         \end{itemize}
-    \item \textbf{Textbooks}
+    \item Books
     \begin{enumerate}
         \item Structure and Interpretation of Computer Programs (2nd Edition \cite{abelson1996structure}/JavaScript Edition \cite{abelson2022structure})
         \begin{itemize}
@@ -682,19 +687,34 @@ Unless specified explicitly, always try the latest version.
             However, Lisp and its dialects are obsolete now.
         \end{itemize}
         \item Types and Programming Languages (1st Edition) \cite{pierce2002types}
+        \item Advanced Topics in Types and Programming Languages (1st Edition) \cite{pierce2004advanced}
     \end{enumerate}
-    \item \textbf{Suggestions}:
+    \item Prerequisites:
+    \begin{itemize}
+        \item Compulsory:
+        \begin{enumerate}
+            \item Computer Architecture
+            \item Operating Systems
+            \item Compilers
+        \end{enumerate}
+        \item Recommended:
+        \begin{enumerate}
+            \item Computer Networks
+        \end{enumerate}
+    \end{itemize}    
+\end{itemize}
+    \textbf{Suggestions}
         \begin{itemize}
-            \item There is no need to master an entire PL in one shot; instead, study part of it every time you need it.
+            \item No need to master an entire PL in one shot; instead, study part of it when needed.
             \item PLs develop rapidly. To catch up with the latest development, refer to online documentations/tutorials/blogs besides books.
-            \item Be sure you have mastered at least one \textbf{modern} language in each of the following paradigms:
+            \item Mastered at least one \emph{modern} language in each of the following paradigms:
             \begin{itemize}
                 \item Procedural
                 \item Object-Oriented
                 \item Functional
             \end{itemize}
-            Note that modern languages like \textbf{Go}, \textbf{Scala}, \textbf{Kotlin} and \textbf{Rust} can be greatly different than old ones like \textbf{Java} and \textbf{Python}.
-            As a special case, although modern \textbf{C++} (C++11 and later) is really modern, but there are inevitably a great number of legacies, so C++ can be considered as a mixture.
+            Note that modern languages like \emph{Go}, \emph{Scala}, \emph{Kotlin} and \emph{Rust} can be greatly different than old ones like \emph{Java} and \emph{Python}.
+            As a special case, although modern \emph{C++} (C++11 and later) is really modern, but there are inevitably a great number of legacies, so C++ can be considered as a mixture.
             \item PL can be viewed from at least three perspectives:
             \begin{itemize}
                 \item Computer systems
@@ -705,7 +725,7 @@ Unless specified explicitly, always try the latest version.
                 \end{itemize}
             \end{itemize}
             Therefore, you can always find lots of cross-cutting issues in PL.
-            \item A complete list of \textbf{programming paradigms}:\\
+            \item A complete list of \emph{programming paradigms}:\\
             \href{https://en.wikipedia.org/wiki/Programming\_paradigm}{https://en.wikipedia.org/wiki/Programming\_paradigm}
             \item Pay attention to three kinds of \emph{safety}
             \begin{itemize}
@@ -718,7 +738,6 @@ Unless specified explicitly, always try the latest version.
             \item Pay attention to the interoperation between a certain language with C/C++ (and languages on JVM with Java).
             \item Only IDEs I have used will be listed here, so there may be other wonderful IDEs.
         \end{itemize}
-\end{itemize}
 
 \section{Parallel Computing}
 \emph{Parallel computing} consists of three components:
@@ -1124,7 +1143,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         \href{https://softwarefoundations.cis.upenn.edu/}{https://softwarefoundations.cis.upenn.edu/}
         \begin{itemize}
             \item It consists of 6 volumes.
-            \item Volume 1 also teaches \textbf{Coq}.
+            \item Volume 1 also teaches \emph{Coq}.
         \end{itemize}
     \item Prerequisites:
     \begin{itemize}
@@ -1146,6 +1165,8 @@ New security issues arise with new computer technologies invented.
     \href{https://web.stanford.edu/class/cs253/}{https://web.stanford.edu/class/cs253/}
     \item Stanford CS 255 Introduction to Cryptography:
     \href{https://crypto.stanford.edu/~dabo/cs255/}{https://crypto.stanford.edu/~dabo/cs255/}
+    \item Stanford CS 350 Secure Compilation:\\
+    \href{https://theory.stanford.edu/~mp/mp/CS350-2019.html}{https://theory.stanford.edu/~mp/mp/CS350-2019.html}
     \item Stanford CS 355 Advanced Topics in Cryptography:\\
     \href{https://crypto.stanford.edu/cs355/22sp/}{https://crypto.stanford.edu/cs355/22sp/}
     \item Stanford CS 356 Topics in Computer and Network Security:
@@ -1158,6 +1179,10 @@ New security issues arise with new computer technologies invented.
             \item Operating systems
             \item Computer networks
             \item Programming languages
+        \end{enumerate}
+        \item Recommended:
+        \begin{enumerate}
+            \item Compilers
         \end{enumerate}
         Indeed, you can learn a lot about \emph{computer security} in all of these fields.
         As a suggestion, do not leave out the \emph{security} part when learning them.
@@ -1277,7 +1302,7 @@ However, the following resources help you go further.
     \end{itemize}
 \end{itemize}
 
-\section{Miscellaneous}
+\section{Miscellany}
 \begin{enumerate}
     \item Intel® Product Specifications:
     \href{https://ark.intel.com}{https://ark.intel.com}
@@ -1309,5 +1334,68 @@ However, the following resources help you go further.
 
 \bibliographystyle{abbrv}
 \bibliography{reference}
+
+\appendix
+\section{Key Programming Paradigms}
+(Tip: refer to \emph{Wikipedia} for more resources.)
+\subsection{Serial}
+\subsubsection{Non-structured}
+E.g., machine languages, assembly languages, early high-level languages with \emph{goto}.
+\subsubsection{Structured}
+\begin{enumerate}
+    \item Imperative
+    (Turing languages)
+    \begin{enumerate}
+        \item Procedural
+        \item Object-oriented
+    \end{enumerate}
+    \item Declarative
+    \begin{enumerate}
+        \item Functional
+        (Church languages)\\
+        (Development: untyped $\rightarrow$ typed)
+        \begin{enumerate}
+            \item Impure
+            \item Pure
+        \end{enumerate}
+        \item Logic
+        (Church languages)
+        \item Database
+    \end{enumerate}
+\end{enumerate}
+\emph{Multi-paradigmatic} languages are more and more popular.
+\subsection{Parallel}
+\subsubsection{Data-Level Parallelism}
+\begin{enumerate}
+    \item High level: vectorization
+    \item Low level: SIMT
+\end{enumerate}
+\subsubsection{Thread-Level Parallelism}
+\begin{enumerate}
+    \item Concurrency mechanism
+    \begin{enumerate}
+        \item High level: async/await
+        \item Low level:
+        \begin{enumerate}
+            \item multiprocessing
+            \item multithreading
+            \item coroutines
+            \begin{enumerate}
+                \item stackful
+                \item stackless
+            \end{enumerate}
+            \item futures, promises, and others
+            \item callbacks
+            \item reactive extensions
+        \end{enumerate}
+    \end{enumerate}
+    \item Synchronization mechanism
+    \begin{enumerate}
+        \item Shared memory
+        \item Message passing
+    \end{enumerate}
+\end{enumerate}
+\subsubsection{Distributed Computing}
+Map-reduce
 
 \end{document}
