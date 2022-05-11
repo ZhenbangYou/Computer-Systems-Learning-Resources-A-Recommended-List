@@ -15,7 +15,7 @@
 
 \maketitle
 
-\centerline{\large{Last Updated: May 4, 2022}}
+\centerline{\large{Last Updated: May 11, 2022}}
 
 \vspace{20pt}
 
@@ -27,7 +27,7 @@ The latest version can always be found at \href{https://www.overleaf.com/read/tx
 
 \textbf{Disclaimer}
 \begin{itemize}
-    \item This text focuses on \emph{breadth} rather than \emph{depth}.
+    \item This list focuses on \emph{breadth} rather than \emph{depth}.
     \item This text mainly focuses on \emph{software systems}, with less concentration on topics such as \emph{VLSI}, \emph{storage systems}, and \emph{embedded systems}, although these are mentioned in some of the following resources.
 \end{itemize}
 
@@ -43,6 +43,8 @@ The latest version can always be found at \href{https://www.overleaf.com/read/tx
         \item Programming Languages (PL)
     \end{enumerate}
     Master them before moving on to other parts.
+    
+    Section 2-9 is the core of this list.
     \item The resources in each section are list in an order \emph{suitable for learning}.
     \begin{itemize}
         \item If time is limited, you may just read the first (or the first few) books, and move on to the next section.
@@ -155,7 +157,7 @@ Learn how to use it before learning how to build it.
     (5th Edition \cite{patterson2013computerMIPS}/RISC-V Edition \cite{pattersoncomputerRV}/ARM Edition \cite{patterson2016computerARM})
     \begin{itemize}
         \item The original version is based on MIPS.
-        RISC-V version is recommended; after reading this version, you may proceed on ARM version which is a good textbook for learning ARM.
+        RISC-V version is recommended; after reading this version, you may proceed on ARM version which is a good book for learning ARM.
     \end{itemize}
     \item Digital Design and Computer Architecture\\
     (2nd Edition \cite{harris2015digitalMIPS}/RISC-V Edition \cite{harris2021digitalRV}/ARM Edition \cite{harris2015digitalARM})
@@ -183,7 +185,7 @@ Learn how to use it before learning how to build it.
     \item RISC-V specifications:
     \href{https://riscv.org/technical/specifications/}{https://riscv.org/technical/specifications/}
     \begin{itemize}
-        \item Elaborate specifications as they may be, they are indeed excellent textbooks for both neophytes and specialists!
+        \item Elaborate specifications as they may be, they are indeed excellent books for both neophytes and specialists!
         \item Appendix A: RVWMO Explanatory Material of ``The RISC-V Instruction Set Manual Volume I: Unprivileged ISA" is a brilliant tutorial for \textbf{Memory Consistency}!
     \end{itemize}
     \item A New Golden Age for Computer Architecture (a Turing Lecture with full text)\\
@@ -207,6 +209,7 @@ Learn how to use it before learning how to build it.
 \end{enumerate}
 
 \section{Operating Systems (OS)}
+\subsection{Principles of Operating Systems}
 \begin{enumerate}
     \item Books
         \begin{enumerate}
@@ -215,7 +218,7 @@ Learn how to use it before learning how to build it.
         \begin{itemize}
             \item Due to the research interest of the authors, this book puts much emphasis on File Systems.
             You may leave out some chapters of this part the first time you read it.
-            \item This is just an introductory-level textbook, read more after finish this!
+            \item This is just an introductory-level book, read more after finish this!
         \end{itemize}
         \item Operating Systems Principles \& Practice (2nd Edition)
         \begin{itemize}
@@ -320,6 +323,17 @@ Learn how to use it before learning how to build it.
 
 \end{enumerate}
 
+\subsection{Linux Programming}
+\begin{enumerate}
+    \item Linux man pages
+    \begin{itemize}
+        \item ``man" command in Linux shell, like ``man fork" or ``man 2 fork" where ``2" specifies the volume.
+        \item Linux man pages online:
+        \href{https://man7.org/linux/man-pages/}{https://man7.org/linux/man-pages/}
+    \end{itemize}
+    \item Advanced programming in the UNIX environment (3rd Edition) \cite{stevens1992advanced}
+\end{enumerate}
+
 \section{Computer Networks}
 \begin{enumerate}
     \item Books
@@ -347,6 +361,8 @@ Learn how to use it before learning how to build it.
         \href{https://cs144.github.io/}{https://cs144.github.io/}
         \item Stanford CS 244 Advanced Topics in Networking:\\
         \href{https://2022-cs244.github.io/schedule/}{https://2022-cs244.github.io/schedule/}
+        \item Stanford CS 249I The Modern Internet:
+        \href{https://cs249i.stanford.edu/}{https://cs249i.stanford.edu/}
         \item Stanford CS 344 Topics in Computer Networks (a.k.a. Build an Internet Router):\\
         \href{https://cs344-stanford.github.io/}{https://cs344-stanford.github.io/}
     \end{enumerate}
@@ -425,12 +441,14 @@ Abbreviations:
     \item OOP: Object-Oriented Programming
     \item FP: Functional Programming
 \end{itemize}
+
+\subsection{Language List}
 \textbf{Tips}
 \begin{enumerate}
     \item Sometimes searching within a tutorial/documentation returns better result than searching \emph{Google}.
+    \item Unless specified explicitly, always try the latest version.
 \end{enumerate}
-\textbf{Language List}\\
-Unless specified explicitly, always try the latest version.
+
 \begin{itemize}
     \item \textbf{C/C++} (Do learn the latest version of C++, or at least C++17)
     \begin{itemize}
@@ -613,6 +631,11 @@ Unless specified explicitly, always try the latest version.
                 \item This book is about ``Unsafe Rust".
             \end{itemize}
         \end{enumerate}
+        \item Courses
+        \begin{enumerate}
+            \item CS 110L Safety in Systems Programming:\\
+            \href{https://web.stanford.edu/class/cs110l/}{https://web.stanford.edu/class/cs110l/}
+        \end{enumerate}
         \item Documentations
         \begin{enumerate}
             \item The Rust Reference:
@@ -665,7 +688,7 @@ Unless specified explicitly, always try the latest version.
         \href{https://www.haskell.org/documentation/}{https://www.haskell.org/documentation/}
     \end{itemize}    
 \end{itemize}
-\textbf{Principles of Programming Languages}
+\subsection{Principles of Programming Languages}
 \begin{itemize}
     \item Courses
         \begin{itemize}
@@ -673,8 +696,10 @@ Unless specified explicitly, always try the latest version.
             \begin{itemize}
                 \item Autumn:
                 \href{https://stanford-cs242.github.io/f19/}{https://stanford-cs242.github.io/f19/}
+                (preferred)
                 \item Winter:
                 \href{https://web.stanford.edu/class/cs242/materials.html}{https://web.stanford.edu/class/cs242/materials.html}
+                (supplementary)
             \end{itemize}
             \item Stanford CS 151 Logic Programming:\\
             \href{http://logicprogramming.stanford.edu/stanford/lessons.php}{http://logicprogramming.stanford.edu/stanford/lessons.php}
@@ -694,12 +719,13 @@ Unless specified explicitly, always try the latest version.
         \item Compulsory:
         \begin{enumerate}
             \item Computer Architecture
-            \item Operating Systems
             \item Compilers
+            \item One OOP language  (\emph{Java} is OK, but \emph{C++}/\emph{Python} is not enough), one FP language.
+            Some basic knowledge is sufficient.
         \end{enumerate}
         \item Recommended:
         \begin{enumerate}
-            \item Computer Networks
+            \item Operating systems
         \end{enumerate}
     \end{itemize}    
 \end{itemize}
@@ -755,7 +781,7 @@ Unless specified explicitly, always try the latest version.
     Knowledge like that of \emph{computer architecture} and \emph{operating systems} can be extremely helpful.
     \item \emph{Parallel computing} should include \emph{distributed computing}; however, the latter is not involved in this section.
 \end{itemize}
-\textbf{Platforms}
+\subsection{Platforms}
 \begin{itemize}
     \item \textbf{CUDA} (Category: DLP, GPU)
     \begin{itemize}
@@ -806,7 +832,7 @@ Unless specified explicitly, always try the latest version.
     \end{itemize}
     For those familiar with \emph{pthread}, it is quite easy to learn \textbf{OpenMP}.
 \end{itemize}
-\textbf{Categories}\\
+\subsection{Categories}\\
 The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
 \begin{itemize}
     \item ILP (Instruction-Level Parallelism)\\
@@ -887,7 +913,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         \end{itemize}
     \end{itemize}
 \end{itemize}
-\textbf{Courses}
+\subsection{Principles of Parallel Computing}
 \begin{itemize}
     \item Stanford CS 149 Parallel Computing:
     \href{https://gfxcourses.stanford.edu/cs149/fall21/}{https://gfxcourses.stanford.edu/cs149/fall21/}
@@ -934,7 +960,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         See ``Prerequisites" for more advice.
         \item Reflect on Chapter 10-11 after gaining some experiences on big data/cloud computing (e.g., programming with Spark).
         \item Although Chapter 3-5 does teach a lot of SQL and these are really helpful, you should refer to the following manuals if you want to learing more specifications, especially those specific to a certain implementation of SQL.
-        \item CMU 15-445 and Stanford CS 145, 245 are almost covered by this book.
+        \item CMU 15-445 and Stanford CS 145, 245 are mostly covered by this book.
         \item Recommended online chapters
         \begin{enumerate}
             \item Chapter 27: Formal-Relational Query Languages.
@@ -993,6 +1019,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
             \begin{enumerate}
                 \item They are two most popular open source databases.
                 \item Generally speaking, MySQL is still more popular for historic reasons, while PostgreSQL is more advanced and far more elegant.
+                \item The syntax of \emph{MySQL} is wierd sometimes.
             \end{enumerate}
             \item Tips of using specific databases:\\
             \href{https://db-book.com/university-lab-dir/db-tips.html}{https://db-book.com/university-lab-dir/db-tips.html}
@@ -1085,6 +1112,9 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         \begin{enumerate}
         \item Computer Architecture
         \item Programming Languages
+        \begin{itemize}
+            \item A little experiences with \emph{functional programming} are quite helpful for learning \emph{distributed computing}.
+        \end{itemize}
         \end{enumerate} 
     \end{itemize}
 \end{enumerate}
@@ -1189,6 +1219,27 @@ New security issues arise with new computer technologies invented.
     \end{itemize}
 \end{enumerate}
 
+\section{Web}
+These are mostly \emph{application} stuff.
+But these contents are frequently involved in the modern computer world, therefore, I add this section in case we may need them sometimes.
+\begin{enumerate}
+    \item Stanford CS 142 Web Applications:\\
+    \href{https://web.stanford.edu/class/cs142/index.html}{https://web.stanford.edu/class/cs142/index.html}
+    \item Stanford CS 192X Web Programming Fundamentals:\\
+    \href{https://web.stanford.edu/class/archive/cs/cs193x/cs193x.1176/lectures/}{https://web.stanford.edu/class/archive/cs/cs193x/cs193x.1176/lectures/}
+    \item Find more tutorials and references at \emph{W3Schools}:
+    \href{https://www.w3schools.com/}{https://www.w3schools.com/}
+    \item Prerequisites:
+    \begin{itemize}
+        \item Recommended:
+        \begin{enumerate}
+            \item Operating systems
+            \item Computer networks
+            \item Database
+        \end{enumerate}
+    \end{itemize}
+\end{enumerate}
+
 \section{Instruction Set Architecture (ISA)}
 All of the following ISA can be learned by CSAPP or ``Computer Organization and Design: The Hardware/Software Interface".
 However, the following resources help you go further.
@@ -1206,7 +1257,7 @@ However, the following resources help you go further.
         \item RISC-V Specifications:
         \href{https://riscv.org/technical/specifications/}{https://riscv.org/technical/specifications/}
         \begin{itemize}
-            \item Wonderful textbooks on computer architecture!
+            \item Wonderful books on computer architecture!
         \end{itemize}
     \end{itemize}
     \item \textbf{ARM}
@@ -1228,16 +1279,6 @@ However, the following resources help you go further.
     \end{itemize}
 \end{itemize}
 
-\section{Linux Programming}
-\begin{enumerate}
-    \item Linux man pages
-    \begin{itemize}
-        \item ``man" command in Linux shell, like ``man fork" or ``man 2 fork" where ``2" specifies the volume.
-        \item Linux man pages online:
-        \href{https://man7.org/linux/man-pages/}{https://man7.org/linux/man-pages/}
-    \end{itemize}
-    \item Advanced programming in the UNIX environment (3rd Edition) \cite{stevens1992advanced}
-\end{enumerate}
 
 \section{Linking and Loading}
 \begin{enumerate}
@@ -1265,8 +1306,13 @@ However, the following resources help you go further.
     \begin{itemize}
         \item Git Magic:
         \href{http://www-cs-students.stanford.edu/~blynn/gitmagic/book.pdf}{http://www-cs-students.stanford.edu/~blynn/gitmagic/book.pdf}
+        \item GitHub Get started:
+        \href{https://docs.github.com/en/get-started/quickstart/hello-world}{https://docs.github.com/en/get-started/quickstart/hello-world}
+        \item GitHub Documentations:
+        \href{https://docs.github.com}{https://docs.github.com}
         \item Official documentations:
         \href{https://git-scm.com/doc}{https://git-scm.com/doc}
+        \item \emph{GitHub Desktop} is recommended.
     \end{itemize}
     \item UNIX Makefile
     \begin{itemize}
