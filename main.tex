@@ -15,7 +15,7 @@
 
 \maketitle
 
-\centerline{\large{Last Updated: May 11, 2022}}
+\centerline{\large{Last Updated: May 27, 2022}}
 
 \vspace{20pt}
 
@@ -445,8 +445,14 @@ Abbreviations:
 \subsection{Language List}
 \textbf{Tips}
 \begin{enumerate}
+    \item You need not only \emph{compilers}, \emph{libraries} and \emph{IDE}, but also \emph{build tools}, \emph{debuggers}, \emph{test tools}, \emph{linters}, and even \emph{sanitizers}, \emph{profilers}, \emph{formatters}, etc.
+    Development toolchains matter.
+    \item Frameworks are key components of the ecosystem of a PL.
+    Success of some PL highly relies on the its frameworks.
     \item Sometimes searching within a tutorial/documentation returns better result than searching \emph{Google}.
     \item Unless specified explicitly, always try the latest version.
+    \item Only IDEs I have used will be listed here, so there may be other wonderful IDEs.
+    Generally speaking, JetBrains and VSCode are always good choices (except that the VSCode support for JVM is awful).
 \end{enumerate}
 
 \begin{itemize}
@@ -491,10 +497,16 @@ Abbreviations:
         \end{itemize}
         \item Build tool: CMake (also works for CUDA C++).
         \begin{itemize}
-            \item CMake Tutorial:
+            \item \textbf{CMake} Tutorial:
             \href{https://cmake.org/cmake/help/latest/guide/tutorial/}{https://cmake.org/cmake/help/latest/guide/tutorial/}
         \end{itemize}
-        \item \textbf{The coding style of C/C++ is much more important than that of other languages}, due to the legacy, the flexibility and the safety issues of this language.
+        \item \textbf{GoogleTest} User’s Guide:
+        \href{https://google.github.io/googletest/}{https://google.github.io/googletest/}
+        \item Linter: \textbf{Clang-Tidy}:
+        \href{https://clang.llvm.org/extra/clang-tidy/}{https://clang.llvm.org/extra/clang-tidy/}
+        \begin{itemize}
+            \item The coding style of C/C++ is much more important than that of other languages, due to the legacy, the flexibility and the safety issues of this language.
+        \end{itemize}
     \end{itemize}
     \item \textbf{Java} (Java 17 is recommended, or at least, choose an LTS version)\\
     Prerequisite languages: C++.\\
@@ -529,6 +541,8 @@ Abbreviations:
             \href{https://maven.apache.org/}{https://maven.apache.org/}
             \item Try \textbf{Maven} with \textbf{IntelliJ Idea}.
         \end{itemize}
+        \item \textbf{Spring}:
+        \href{https://spring.io/quickstart}{https://spring.io/quickstart}
     \end{itemize}
 
     \item \textbf{Scala} (\emph{Scala 3} is here!)\\
@@ -595,7 +609,9 @@ Abbreviations:
             \item The Go Blog:
             \href{https://go.dev/blog/}{https://go.dev/blog/}
             \begin{itemize}
-                \item Lots of wonderful articles about the design of Go!
+                \item Lots of wonderful articles about the design of Go!\\
+                For example, ``Getting to Go: The Journey of Go's Garbage Collector":\\
+                \href{https://go.dev/blog/ismmkeynote}{https://go.dev/blog/ismmkeynote}
             \end{itemize}        
         \end{enumerate}
         \item Documentations
@@ -657,6 +673,7 @@ Abbreviations:
         \item \emph{Scala} is more like a hybrid of \emph{imperative programming} and \emph{functional programming}.
         However, \emph{functional programming} and \emph{imperative programming} take the primary and secondary positions in \emph{OCaml} respectively.
         \item \emph{Type inference} of \emph{OCaml} is even more powerful than that of \emph{Scala}, e.g., in \emph{Scala}, you need to specify the return value of recursive functions.
+        \item Arguments are passed by \emph{reference} in \emph{Scala}, and by \emph{value} in \emph{OCaml}.
     \end{enumerate}
     If you have learned either one of them, I strongly recommend you learn the other.
     \begin{itemize}
@@ -687,6 +704,26 @@ Abbreviations:
         \item All the books, courses, tutorials, documentations and various kinds of resources can be found at:
         \href{https://www.haskell.org/documentation/}{https://www.haskell.org/documentation/}
     \end{itemize}    
+    \item \textbf{JavaScript/TypeScript}\\
+    The improvement of \emph{TypeScript} over \emph{JavaScript} is well worth studying.\\
+    Pay attention to its \emph{asynchronous programming} techniques:
+    \begin{enumerate}
+        \item callbacks,
+        \item promises (async), await.
+    \end{enumerate}
+\begin{itemize}
+    \item Tutorials   
+    \begin{itemize}
+        \item JavaScript tutorial:
+        \href{https://www.w3schools.com/js/}{https://www.w3schools.com/js/}
+        \item TypeScript tutorial:
+        \href{https://www.w3schools.com/typescript/}{https://www.w3schools.com/typescript/}
+        \item Node.js official turorial:
+        \href{https://nodejs.dev/learn}{https://nodejs.dev/learn}
+    \end{itemize}
+    \item Recommended IDE: VSCode
+\end{itemize}
+
 \end{itemize}
 \subsection{Principles of Programming Languages}
 \begin{itemize}
@@ -711,6 +748,8 @@ Abbreviations:
             \item The original version is based on \textbf{Scheme}, an Lisp dialect.
             However, Lisp and its dialects are obsolete now.
         \end{itemize}
+        \item Foundations for Programming Languages
+        \cite{mitchell1996foundations}
         \item Types and Programming Languages (1st Edition) \cite{pierce2002types}
         \item Advanced Topics in Types and Programming Languages (1st Edition) \cite{pierce2004advanced}
     \end{enumerate}
@@ -762,7 +801,6 @@ Abbreviations:
             \item Pay attention to the \emph{memory consistency model} (always called \emph{memory model} in this context) of each language, although this virtually has no impact on \emph{application-level programming}.
             \item \emph{Concrete examples} always help a lot for understanding \emph{abstract concepts}, and this is also one of the reasons why you should master several languages.
             \item Pay attention to the interoperation between a certain language with C/C++ (and languages on JVM with Java).
-            \item Only IDEs I have used will be listed here, so there may be other wonderful IDEs.
         \end{itemize}
 
 \section{Parallel Computing}
@@ -947,6 +985,8 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
 \end{itemize}
 
 \begin{enumerate}
+    \item Books
+    \begin{enumerate}
     \item Database System Concepts (7th Edition) \cite{silberschatz2002database}
     \begin{itemize}
         \item Partition:
@@ -974,6 +1014,12 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
             A good case study.
         \end{enumerate}
     \end{itemize}
+    \item Supplementary
+        \begin{enumerate}
+            \item Database Systems: The Complete Book
+            \cite{garcia2008database}
+        \end{enumerate}
+    \end{enumerate}
     \item Courses
     \begin{enumerate}
         \item DB applications
@@ -1163,7 +1209,9 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
 \section{Software Engineering}
 \begin{itemize}
     \item The Mythical Man-Month: Essays on Software Engineering (Anniversary Edition) \cite{brooks1995mythical}
-    \item A Philosophy of Software Design \cite{ousterhout2018philosophy}
+    \item A Philosophy of Software Design (2nd Edition) \cite{ousterhout2018philosophy}
+    \item Write Great Code, Volume 3: Engineering Software
+    \cite{hyde2020writegreatcode}
     \item Materials discussing \emph{best practice} are also valuable, which can be found at the \textbf{PL} section, as well as the \textbf{CUDA} subsection.
 \end{itemize}
 
@@ -1187,7 +1235,9 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
 
 \section{Computer Security}
 Security issues are everywhere.
-New security issues arise with new computer technologies invented.
+New security issues and arise with new computer technologies invented.
+
+\emph{Threat models} are likely to differ with field varying (e.g., hardware vs OS), leading to distinct technologies.
 \begin{enumerate}
     \item Stanford CS 155 Computer and Network Security:
     \href{https://cs155.stanford.edu/}{https://cs155.stanford.edu/}
@@ -1201,6 +1251,8 @@ New security issues arise with new computer technologies invented.
     \href{https://crypto.stanford.edu/cs355/22sp/}{https://crypto.stanford.edu/cs355/22sp/}
     \item Stanford CS 356 Topics in Computer and Network Security:
     \href{https://cs356.stanford.edu/}{https://cs356.stanford.edu/}
+    \item Meltdown and Spectre:
+    \href{https://meltdownattack.com/}{https://meltdownattack.com/}
     \item Prerequisites:
     \begin{itemize}
         \item Compulsory:
@@ -1213,9 +1265,10 @@ New security issues arise with new computer technologies invented.
         \item Recommended:
         \begin{enumerate}
             \item Compilers
+            \item Database
         \end{enumerate}
         Indeed, you can learn a lot about \emph{computer security} in all of these fields.
-        As a suggestion, do not leave out the \emph{security} part when learning them.
+        Pay special attention to \emph{security} issues when diving in these fields.
     \end{itemize}
 \end{enumerate}
 
@@ -1442,6 +1495,10 @@ E.g., machine languages, assembly languages, early high-level languages with \em
     \end{enumerate}
 \end{enumerate}
 \subsubsection{Distributed Computing}
-Map-reduce
+\begin{enumerate}
+    \item Map-Reduce
+    \item Transforms-Actions (Spark)
+\end{enumerate}
+
 
 \end{document}
