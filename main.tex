@@ -15,7 +15,7 @@
 
 \maketitle
 
-\centerline{\large{Last Updated: May 27, 2022}}
+\centerline{\large{Last Updated: June 15, 2022}}
 
 \vspace{20pt}
 
@@ -509,7 +509,7 @@ Abbreviations:
         \end{itemize}
     \end{itemize}
     \item \textbf{Java} (Java 17 is recommended, or at least, choose an LTS version)\\
-    Prerequisite languages: C++.\\
+    Prerequisite languages: none.\\
     Pay attention to the comparison with C++, as well as JVM and JIT.
     \begin{itemize}
         \item Tutorials
@@ -521,7 +521,7 @@ Abbreviations:
                 \item Volume I: Fundamentals \cite{gvero2013core1}
                 \item Volume II: Advanced Features \cite{tarimci2014core2}
             \end{itemize}
-            \item Java 8 in Action: Lambdas, Streams, and Functional-style Programming (1st Edition) \cite{urma2014java}
+
         \end{enumerate}
         \item Documentations
         \begin{enumerate}
@@ -545,8 +545,8 @@ Abbreviations:
         \href{https://spring.io/quickstart}{https://spring.io/quickstart}
     \end{itemize}
 
-    \item \textbf{Scala} (\emph{Scala 3} is here!)\\
-    Prerequisite languages: Java.\\
+    \item \textbf{Scala} (\emph{Scala 3} is out!)\\
+    Prerequisite languages: Java (if you find \emph{Scala} too difficult to learn, try \emph{Kotlin} first).\\
     Noteworthy features: FP.\\
     Multi-paradigmatic languages like \emph{Scala} and \emph{OCaml} is great starting points to learn \emph{functional programming}, since your programming style can transition gradually from \emph{imperative programming} to \emph{functional programming}.
     \begin{itemize}
@@ -556,6 +556,7 @@ Abbreviations:
             \href{https://docs.scala-lang.org/tour/tour-of-scala.html}{https://docs.scala-lang.org/tour/tour-of-scala.html}
             \item Scala Book:
             \href{https://docs.scala-lang.org/overviews/scala-book/introduction.html}{https://docs.scala-lang.org/overviews/scala-book/introduction.html}
+
         \end{enumerate}
         \item Documentations
         \begin{itemize}
@@ -574,7 +575,7 @@ Abbreviations:
         
     \item \textbf{Kotlin}
     (\emph{Kotlin/JVM} is recommended, with \emph{Kotlin/Native} and \emph{Kotlin/JS} being immature)\\
-    Prerequisite languages: Java, Scala.\\
+    Prerequisite languages: none.\\
     Noteworthy features: null safety, modest FP.
     \begin{itemize}
         \item Tutorials
@@ -594,8 +595,8 @@ Abbreviations:
         \item Recommended IDE \& build tool: same as \emph{Java}
     \end{itemize}
     
-    \item \textbf{Go} (\emph{Go 1.18} is here!)\\
-    Prerequisite languages: C++, Java.\\
+    \item \textbf{Go} (\emph{Go 1.18} is out!)\\
+    Prerequisite languages: none.\\
     Noteworthy features: concurrent programming (goroutine + channel + asynchrony, GMP model), modest OOP (compare the OOP of Java and the OOP of Go).
     \begin{itemize}
         \item Turorials
@@ -665,7 +666,8 @@ Abbreviations:
         \end{itemize}
     \end{itemize}
 
-    \item \textbf{OCaml}\\
+    \item \textbf{OCaml} (\emph{OCaml} 5.0 with \emph{multicore support} is coming!)\\
+    Prerequisite languages: none.\\
     Familiarity with \emph{Scala} is very helpful.
     
     Comparison with \emph{Scala}:
@@ -673,7 +675,6 @@ Abbreviations:
         \item \emph{Scala} is more like a hybrid of \emph{imperative programming} and \emph{functional programming}.
         However, \emph{functional programming} and \emph{imperative programming} take the primary and secondary positions in \emph{OCaml} respectively.
         \item \emph{Type inference} of \emph{OCaml} is even more powerful than that of \emph{Scala}, e.g., in \emph{Scala}, you need to specify the return value of recursive functions.
-        \item Arguments are passed by \emph{reference} in \emph{Scala}, and by \emph{value} in \emph{OCaml}.
     \end{enumerate}
     If you have learned either one of them, I strongly recommend you learn the other.
     \begin{itemize}
@@ -687,8 +688,8 @@ Abbreviations:
     \end{itemize}
     
     \item \textbf{Haskell}\\
-    \emph{Purely functional language}.
-    
+    \emph{Purely functional language}.\\
+    Prerequisite languages: none.\\
     Recommended learning order:
     \emph{Scala} $\rightarrow$ \emph{OCaml} $\rightarrow$ \emph{Haskell}.
     
@@ -705,6 +706,7 @@ Abbreviations:
         \href{https://www.haskell.org/documentation/}{https://www.haskell.org/documentation/}
     \end{itemize}    
     \item \textbf{JavaScript/TypeScript}\\
+    Prerequisite languages: none.\\
     The improvement of \emph{TypeScript} over \emph{JavaScript} is well worth studying.\\
     Pay attention to its \emph{asynchronous programming} techniques:
     \begin{enumerate}
@@ -725,6 +727,24 @@ Abbreviations:
 \end{itemize}
 
 \end{itemize}
+\subsection{Functional Programming}
+\begin{itemize}
+    \item Books
+    \begin{itemize}
+    \item Structure and Interpretation of Computer Programs (2nd Edition \cite{abelson1996structure}/JavaScript Edition \cite{abelson2022structure})
+        \begin{itemize}
+            \item The original version is based on \textbf{Scheme}, an Lisp dialect.
+            However, Lisp and its dialects are obsolete now.
+            But the book is still well worth recommending.
+            \item The significance of the book goes well beyond teaching us functional programming.
+        \end{itemize}
+    \item Functional Programming in Scala
+            \cite{chiusano2014functional}
+    \item Java 8 in Action: Lambdas, Streams, and Functional-style Programming (1st Edition) \cite{urma2014java}
+    \item All books of \emph{Haskell} and \emph{OCaml}.
+\end{itemize}
+\end{itemize}
+
 \subsection{Principles of Programming Languages}
 \begin{itemize}
     \item Courses
@@ -743,11 +763,6 @@ Abbreviations:
         \end{itemize}
     \item Books
     \begin{enumerate}
-        \item Structure and Interpretation of Computer Programs (2nd Edition \cite{abelson1996structure}/JavaScript Edition \cite{abelson2022structure})
-        \begin{itemize}
-            \item The original version is based on \textbf{Scheme}, an Lisp dialect.
-            However, Lisp and its dialects are obsolete now.
-        \end{itemize}
         \item Foundations for Programming Languages
         \cite{mitchell1996foundations}
         \item Types and Programming Languages (1st Edition) \cite{pierce2002types}
@@ -1065,7 +1080,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
             \begin{enumerate}
                 \item They are two most popular open source databases.
                 \item Generally speaking, MySQL is still more popular for historic reasons, while PostgreSQL is more advanced and far more elegant.
-                \item The syntax of \emph{MySQL} is wierd sometimes.
+                \item \emph{MySQL}'s syntax is relatively weird and the error and its error reporting is relatively vague and even misleading.
             \end{enumerate}
             \item Tips of using specific databases:\\
             \href{https://db-book.com/university-lab-dir/db-tips.html}{https://db-book.com/university-lab-dir/db-tips.html}
@@ -1329,6 +1344,18 @@ However, the following resources help you go further.
     \begin{itemize}
         \item Java Language and Virtual Machine Specifications:\\
     \href{https://docs.oracle.com/javase/specs/}{https://docs.oracle.com/javase/specs/}
+    \end{itemize}
+    \item \textbf{WebAssembly}\\
+    Strictly speaking, it is not an ISA, but they share a lot in common, and it is well worth studying, so I put it here.
+    \begin{itemize}
+        \item Official website:
+        \href{https://webassembly.org/}{https://webassembly.org/}
+        \item Specification:
+        \href{https://webassembly.github.io/spec/core/index.html}{https://webassembly.github.io/spec/core/index.html}
+        \item Bringing the Web up to Speed with WebAssembly:\\
+        \href{https://people.mpi-sws.org/~rossberg/papers/Haas,\%20Rossberg,\%20Schuff,\%20Titzer,\%20Gohman,\%20Wagner,\%20Zakai,\%20Bastien,\%20Holman\%20-\%20Bringing\%20the\%20Web\%20up\%20to\%20Speed\%20with\%20WebAssembly.pdf}{https://people.mpi-sws.org/~rossberg/papers/Haas,\%20Rossberg,\%20Schuff,\\
+        \%20Titzer,\%20Gohman,\%20Wagner,\%20Zakai,\%20Bastien,\%20Holman\%20-\\
+        \%20Bringing\%20the\%20Web\%20up\%20to\%20Speed\%20with\%20WebAssembly.pdf}
     \end{itemize}
 \end{itemize}
 
