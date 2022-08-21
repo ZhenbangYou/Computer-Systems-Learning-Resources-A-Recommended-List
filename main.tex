@@ -15,13 +15,11 @@
 
 \maketitle
 
-\centerline{\large{Last Updated: June 15, 2022}}
+\centerline{\large{Last Updated: August 21, 2022}}
 
 \vspace{20pt}
 
-The latest version can always be found at \href{https://www.overleaf.com/read/txqjnjxyxqqx
-}{https://www.overleaf.com/read/txqjnjxyxqqx
-}
+The latest version can always be found at \href{https://www.overleaf.com/read/txqjnjxyxqqx}{https://www.overleaf.com/read/txqjnjxyxqqx}
 
 \section{Preliminary}
 
@@ -546,8 +544,10 @@ Abbreviations:
     \end{itemize}
 
     \item \textbf{Scala} (\emph{Scala 3} is out!)\\
-    Prerequisite languages: Java (if you find \emph{Scala} too difficult to learn, try \emph{Kotlin} first).\\
-    Noteworthy features: FP.\\
+    Prerequisite languages: Java (if you find \emph{Scala} too difficult to learn, try \emph{Kotlin} first).
+    
+    Noteworthy features: FP.
+    
     Multi-paradigmatic languages like \emph{Scala} and \emph{OCaml} is great starting points to learn \emph{functional programming}, since your programming style can transition gradually from \emph{imperative programming} to \emph{functional programming}.
     \begin{itemize}
         \item Tutorials
@@ -569,13 +569,15 @@ Abbreviations:
                 \end{itemize}
         \end{itemize}
         \item Recommended IDE \& build tool: same as \emph{Java}
-        \item Currently, the ecosystem of \emph{Scala 2} is better than that of \emph{Scala 3}.
-        The development \emph{Scala 3} is still at the early stage, but it is also recommended, especially in the long run.
+        \item For PL study, try \emph{Scala 3}.
+        For the sake of ecosystem, currently \emph{Scala 2} is preferred.
         \end{itemize}
         
     \item \textbf{Kotlin}
-    (\emph{Kotlin/JVM} is recommended, with \emph{Kotlin/Native} and \emph{Kotlin/JS} being immature)\\
-    Prerequisite languages: none.\\
+    Prerequisite languages: none.
+    
+    Try \emph{Scala} and \emph{Kotlin} together.
+    
     Noteworthy features: null safety, modest FP.
     \begin{itemize}
         \item Tutorials
@@ -674,19 +676,70 @@ Abbreviations:
     \begin{enumerate}
         \item \emph{Scala} is more like a hybrid of \emph{imperative programming} and \emph{functional programming}.
         However, \emph{functional programming} and \emph{imperative programming} take the primary and secondary positions in \emph{OCaml} respectively.
-        \item \emph{Type inference} of \emph{OCaml} is even more powerful than that of \emph{Scala}, e.g., in \emph{Scala}, you need to specify the return value of recursive functions.
+        \item \emph{Type inference} of \emph{OCaml} is even more powerful than that of \emph{Scala}, e.g., in \emph{Scala}, you need to specify the types of function arguments and the return types of recursive functions.
+        \item \emph{ML}, the ancestor of \emph{OCaml}, is a programming language that won his creator a Turing Award, for it is ``the first language to include polymorphic type inference together with a type-safe exception-handling mechanism".
     \end{enumerate}
     If you have learned either one of them, I strongly recommend you learn the other.
+    
     \begin{itemize}
         \item Tutorials:
         \begin{enumerate}
             \item Real World OCaml:
             \href{https://dev.realworldocaml.org/}{https://dev.realworldocaml.org/}
+            \begin{itemize}
+                \item \emph{OCaml} is one of few PL that attach great importance to \textbf{performance}, which is especially rare in \emph{functional language}.
+                Fortunately, this book also gives introduction to the implementation of \emph{OCaml}, in particular, temporal and spatial cost.
+                These contents are really instructive, in that functional programmers often know little about these.
+                \item This book is written by people at Jane Street.
+                Therefore, the book turns out to be practical rather than theoretical or mathematical as you may expect books about FP will do.
+            \end{itemize}
             \item The official tutorial and documentation:
             \href{https://ocaml.org/docs}{https://ocaml.org/docs}
         \end{enumerate}
+        \item Build tool:
+        dune
+        \begin{itemize}
+            \item \href{https://dune.readthedocs.io/en/stable/}{https://dune.readthedocs.io/en/stable/}
+        \end{itemize}
+        \item Recommended IDE:
+        VSCode
+        \item Notes:
+        \begin{enumerate}
+            \item OCaml on Windows is not recommended.
+        \end{enumerate}
     \end{itemize}
     
+    \item \textbf{F\#}
+    
+    \emph{F\#} is quite similar to \emph{OCaml}, and it runs on the \emph{.NET} platform.
+    Due to their similarity, once you have mastered either of them, it will be easy to learn the other.
+    
+    \emph{Which one to learn first? OCaml or F\#?}
+    
+    Either can be a good choice.
+    Personally, I recommend \emph{OCaml}.
+    
+    Compared with \emph{OCaml}, \emph{F\#} has less stale syntax and more modern features.
+    However, the type inference and the module system of \emph{OCaml} is more powerful, and the syntax of \emph{OCaml} is stricter and cleaner.
+    That is why \emph{OCaml} is a better choice for beginners to study \emph{functional programming} and cultivate good programming habbits.
+    
+    \begin{itemize}
+        \item Tutorials
+        \begin{enumerate}
+            \item Beginning F\# (Video Series):\\
+            \href{https://www.youtube.com/playlist?list=PLdo4fOcmZ0oUFghYOp89baYFBTGxUkC7Z}{https://www.youtube.com/playlist?list=PLdo4fOcmZ0oUFghYOp89baYFBTGxUkC7Z}
+            \item Other learning materials from F\# Software Foundation:\\
+            \href{https://fsharp.org/learn/}{https://fsharp.org/learn/}
+            \item Other learning materials from Microsoft:\\
+            \href{https://dotnet.microsoft.com/en-us/learn/fsharp}{https://dotnet.microsoft.com/en-us/learn/fsharp}
+        \end{enumerate}
+        \item Documentations
+        \begin{enumerate}
+            \item F\# documentation:\\
+        \href{https://docs.microsoft.com/en-us/dotnet/fsharp/}{https://docs.microsoft.com/en-us/dotnet/fsharp/}
+        \end{enumerate}
+    \end{itemize}
+
     \item \textbf{Haskell}\\
     \emph{Purely functional language}.\\
     Prerequisite languages: none.\\
@@ -704,6 +757,7 @@ Abbreviations:
         \end{enumerate}
         \item All the books, courses, tutorials, documentations and various kinds of resources can be found at:
         \href{https://www.haskell.org/documentation/}{https://www.haskell.org/documentation/}
+        \item \emph{Haskell Wiki} is very helpful and instructive!
     \end{itemize}    
     \item \textbf{JavaScript/TypeScript}\\
     Prerequisite languages: none.\\
@@ -715,13 +769,27 @@ Abbreviations:
     \end{enumerate}
 \begin{itemize}
     \item Tutorials   
-    \begin{itemize}
-        \item JavaScript tutorial:
+    \begin{enumerate}
+        \item W3Schools JavaScript tutorial:
         \href{https://www.w3schools.com/js/}{https://www.w3schools.com/js/}
-        \item TypeScript tutorial:
+        \item JavaScript at the Mozilla Web Docs:\\
+        \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide}{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide}
+        \item W3Schools TypeScript tutorial:
         \href{https://www.w3schools.com/typescript/}{https://www.w3schools.com/typescript/}
-        \item Node.js official turorial:
+        \item The TypeScript Handbook:\\
+        \href{https://www.typescriptlang.org/docs/handbook/intro.html}{https://www.typescriptlang.org/docs/handbook/intro.html}
+        \item Node.js official tutorial:
         \href{https://nodejs.dev/learn}{https://nodejs.dev/learn}
+    \end{enumerate}
+    \item Books
+    \begin{enumerate}
+        \item JavaScript: The Good Parts
+        \cite{crockford2008javascript}
+    \end{enumerate}
+    \item Documentations
+    \begin{itemize}
+        \item TypeScript Documentation:
+        \href{https://www.typescriptlang.org/docs/}{https://www.typescriptlang.org/docs/}
     \end{itemize}
     \item Recommended IDE: VSCode
 \end{itemize}
@@ -730,7 +798,12 @@ Abbreviations:
 \subsection{Functional Programming}
 \begin{itemize}
     \item Books
+    
     \begin{itemize}
+        \item Recommended for green hands
+        
+        \emph{These books teach not only the syntax of FP, but (and more importantly) how to design software in the functional style, as well as the background and the origin of those functional features.}
+        \begin{enumerate}
     \item Structure and Interpretation of Computer Programs (2nd Edition \cite{abelson1996structure}/JavaScript Edition \cite{abelson2022structure})
         \begin{itemize}
             \item The original version is based on \textbf{Scheme}, an Lisp dialect.
@@ -739,9 +812,22 @@ Abbreviations:
             \item The significance of the book goes well beyond teaching us functional programming.
         \end{itemize}
     \item Functional Programming in Scala
-            \cite{chiusano2014functional}
-    \item Java 8 in Action: Lambdas, Streams, and Functional-style Programming (1st Edition) \cite{urma2014java}
-    \item All books of \emph{Haskell} and \emph{OCaml}.
+    \cite{chiusano2014functional}
+            \begin{itemize}
+                \item The 1st version is based on \emph{Scala 2}, while the second version is based on \emph{Scala 3}.
+                Except for this, these two versions are basically the same.
+            \end{itemize}
+        \end{enumerate}
+        \item Other books
+            \begin{enumerate}
+                \item Java 8 in Action: Lambdas, Streams, and Functional-style Programming (1st Edition) \cite{urma2014java}
+                \item All books about \emph{Haskell} and \emph{OCaml}.
+            \end{enumerate}
+    \end{itemize}
+
+    \begin{itemize}
+
+
 \end{itemize}
 \end{itemize}
 
@@ -774,12 +860,13 @@ Abbreviations:
         \begin{enumerate}
             \item Computer Architecture
             \item Compilers
-            \item One OOP language  (\emph{Java} is OK, but \emph{C++}/\emph{Python} is not enough), one FP language.
-            Some basic knowledge is sufficient.
-        \end{enumerate}
-        \item Recommended:
-        \begin{enumerate}
             \item Operating systems
+            \item One OOP language  (\emph{Java} is OK, but \emph{C++}/\emph{Python} is not enough), one FP language.
+            Basic knowledge suffices.
+            \begin{itemize}
+                \item Personally, I recommend \emph{Scala} + \emph{Rust}.
+                They cover almost all the programming paradigms in modern and frequently used languages.
+            \end{itemize}
         \end{enumerate}
     \end{itemize}    
 \end{itemize}
@@ -1224,6 +1311,8 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
 \section{Software Engineering}
 \begin{itemize}
     \item The Mythical Man-Month: Essays on Software Engineering (Anniversary Edition) \cite{brooks1995mythical}
+    \item Design Patterns: Elements of Reusable Object-Oriented Software
+    \cite{gamma1995design}
     \item A Philosophy of Software Design (2nd Edition) \cite{ousterhout2018philosophy}
     \item Write Great Code, Volume 3: Engineering Software
     \cite{hyde2020writegreatcode}
