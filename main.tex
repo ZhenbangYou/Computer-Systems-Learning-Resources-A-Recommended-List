@@ -15,7 +15,7 @@
 
 \maketitle
 
-\centerline{\large{Last Updated: September 8, 2022}}
+\centerline{\large{Last Updated: October 26, 2022}}
 
 \vspace{20pt}
 
@@ -398,7 +398,10 @@ Compilers should be associated with \emph{PL} and \emph{Computer Architecture}.
         \begin{itemize}
             \item ``Whale Book".
         \end{itemize}
-        \item Engineering a Compiler (2nd Edition) \cite{cooper2011engineering}    
+        \item Engineering a Compiler (2nd Edition) \cite{cooper2011engineering}    \item Essentials of Compilation: An Incremental Approach
+
+        \href{https://jeapostrophe.github.io/courses/2018/spring/406/notes/book.pdf}{https://jeapostrophe.github.io/courses/2018/spring/406/notes/book.pdf}
+        
     \end{enumerate}
     
     \item Courses
@@ -409,6 +412,12 @@ Compilers should be associated with \emph{PL} and \emph{Computer Architecture}.
         \href{https://suif.stanford.edu/~courses/cs243/}{https://suif.stanford.edu/~courses/cs243/}
     \end{enumerate}
 
+    \item Programming suggestions
+    \begin{enumerate}
+        \item Try functional languages, especially \emph{OCaml}.
+        \item Lexer and parser can be generated automatically  via some tools, e.g. Lex \& Yacc in \emph{C/C++} \cite{levine1992lex}, OCamllex \& Menhir in  \emph{OCaml} (\href{https://dev.realworldocaml.org/parsing-with-ocamllex-and-menhir.html}{https://dev.realworldocaml.org/parsing-with-ocamllex-and-menhir.html}).
+    \end{enumerate}
+    
 
     \item Prerequisites:
     \begin{itemize}
@@ -464,14 +473,29 @@ Abbreviations:
 
 \textbf{Tips}
 \begin{enumerate}
-    \item You need not only \emph{compilers}, \emph{libraries} and \emph{IDE}, but also \emph{build tools}, \emph{debuggers}, \emph{test tools}, \emph{linters}, and even \emph{sanitizers}, \emph{profilers}, \emph{formatters}, etc.
-    Development toolchains matter.
-    \item Frameworks are key components of the ecosystem of a PL.
+    \item \textbf{General tips for choosing an IDE}:
+    \begin{enumerate}
+        \item For languages running on \emph{JVM}, choose \emph{JetBrains}.
+        \item If \emph{JetBrains} has a specific software for the language your target language, prefer it.
+        \item Otherwise, \emph{VS Code} is always a nice choice.
+    \end{enumerate}
+        Only IDEs I have used will be listed here, so there may be other wonderful IDEs.
+    \item \textbf{General tips for choosing platforms for \emph{Windows} users}:
+    \begin{enumerate}
+        \item For languages on \emph{.NET}, \emph{Windows} is obviously the best.
+        \item Otherwise, \emph{WSL2} is at least not worse than \emph{Windows}.
+        \item For old AOT (ahead-of-time) compiled languages like \emph{C/C++}, \emph{OCaml}, and \emph{Haskell}, \emph{Windows} may be a disaster (lots of compatibility issues).
+        \item For JIT (just-in-time) compiled languages and modern AOT compiled languages such as \emph{Go} and \emph{Rust}, it does not matter which one you choose.
+        \item \emph{Python} is a special case where the compatibility of \emph{Windows} is not good enough sometimes.
+    \end{enumerate}
+    \item \textbf{Development toolchains matter.}
+    
+    You need not only \emph{compilers}, \emph{libraries} and \emph{IDE}, but also \emph{build tools}, \emph{debuggers}, \emph{test tools}, \emph{linters}, and even \emph{sanitizers}, \emph{profilers}, \emph{formatters}, etc.
+    
+    \item \textbf{Frameworks} are key components of the ecosystem of a PL.
     Success of some PL highly relies on the its frameworks.
-    \item Sometimes searching within a tutorial/documentation returns better result than searching \emph{Google}.
+    \item Sometimes \textbf{searching within a tutorial/documentation} gives better answer than \emph{Google}.
     \item Unless specified explicitly, always try the latest version.
-    \item Only IDEs I have used will be listed here, so there may be other wonderful IDEs.
-    Generally speaking, JetBrains and VSCode are always good choices (except that the VSCode support for JVM is awful).
 \end{enumerate}
 
 \begin{itemize}
@@ -517,11 +541,17 @@ Abbreviations:
             \item \textbf{GCC} can be built from source.
             \item \textbf{Clang} can by downloaded directly from \href{https://releases.llvm.org/download.html}{https://releases.llvm.org/download.html}
         \end{itemize}
-        \item Build tool: CMake (also works for CUDA C++).
+        \item Build tool: 
         \begin{itemize}
-            \item \textbf{CMake} Tutorial:
-            \href{https://cmake.org/cmake/help/latest/guide/tutorial/}{https://cmake.org/cmake/help/latest/guide/tutorial/}
+            \item CMake (also works for CUDA C++).
+                \begin{itemize}
+                \item \textbf{CMake} Tutorial:
+                \href{https://cmake.org/cmake/help/latest/guide/tutorial/}{https://cmake.org/cmake/help/latest/guide/tutorial/}
+                \end{itemize}
+            \item GNU make:
+            \href{https://www.gnu.org/software/make/manual/make.html}{https://www.gnu.org/software/make/manual/make.html}
         \end{itemize}
+        
         \item \textbf{GoogleTest} User’s Guide:
         \href{https://google.github.io/googletest/}{https://google.github.io/googletest/}
         \item Linter: \textbf{Clang-Tidy}:
@@ -529,6 +559,15 @@ Abbreviations:
         \begin{itemize}
             \item The coding style of C/C++ is much more important than that of other languages, due to the legacy, the flexibility and the safety issues of this language.
         \end{itemize}
+        \item IDE setup guidelines:
+        \begin{enumerate}
+            \item VSCode. For Windows user, choose WSL.
+            \item Latest G++/Clang++.
+            \item VSCode extension: Clangd.
+            \item Two files: .clang-format, .clang-tidy.
+            \item compiledb (to ensure the intellisense works).
+            \item Makefile (can be generated by CMake).
+        \end{enumerate}
     \end{itemize}
     
     
@@ -573,6 +612,9 @@ Abbreviations:
     \end{itemize}
 
     \item \textbf{Scala} (\emph{Scala 3} is out!)\\
+    
+    \emph{Scala} borrows more from \emph{Haskell} than \emph{OCaml}.
+    
     Prerequisite languages: Java (if you find \emph{Scala} too difficult to learn, try \emph{Kotlin} first).
     
     Noteworthy features: FP.
@@ -730,7 +772,9 @@ Abbreviations:
     \begin{enumerate}
         \item \emph{Scala} is more like a hybrid of \emph{imperative programming} and \emph{functional programming}.
         However, \emph{functional programming} and \emph{imperative programming} take the primary and secondary positions in \emph{OCaml} respectively.
+        
         \item \emph{Type inference} of \emph{OCaml} is even more powerful than that of \emph{Scala}, e.g., in \emph{Scala}, you need to specify the types of function arguments and the return types of recursive functions.
+        
         \item \emph{Scala} allows \emph{implicit casting}, which is absolutely impossible in \emph{OCaml}.
         The type system of \emph{OCaml} is rather strict and rigor.
     \end{enumerate}
@@ -771,7 +815,7 @@ Abbreviations:
         VSCode
         \item Notes:
         \begin{enumerate}
-            \item OCaml on Windows is not recommended.
+            \item If you are using Windows, please consider WSL2 for \emph{OCaml}.
         \end{enumerate}
     \end{itemize}
     
@@ -809,32 +853,51 @@ Abbreviations:
             \item F\# documentation:\\
         \href{https://docs.microsoft.com/en-us/dotnet/fsharp/}{https://docs.microsoft.com/en-us/dotnet/fsharp/}
         \end{enumerate}
+        \item Recommended IDE: VSCode
     \end{itemize}
 
     \item \textbf{Haskell}\\
     \emph{Purely functional language}.\\
     Prerequisite languages: none.\\
     Recommended learning order:
-    \emph{Scala} $\rightarrow$ \emph{OCaml} $\rightarrow$ \emph{Haskell}.
+    \emph{OCaml/F\#} $\rightarrow$ \emph{Scala} $\rightarrow$ \emph{Haskell}.
     
     Key differences between \emph{OCaml} and \emph{Haskell}:
     \begin{enumerate}
         \item Purity,
         \item Laziness.
+        \item \emph{Haskell} supports \emph{type classes} and \emph{type families}.
+        \item \emph{OCaml} is more rigorous, e.g., partial functions are allowed in \emph{Haskell} while prohibited in \emph{OCaml}.
     \end{enumerate}
     
     \emph{Haskell} is known for its steep learning curve, an appropriate learning order provides you sufficient foundations to conquer it.
     \begin{itemize}
         \item Tutorials
         \begin{enumerate}
-            \item Real World Haskell:
-            \href{http://book.realworldhaskell.org/read/}{http://book.realworldhaskell.org/read/}
             \item Learn You a Haskell for Great Good!:
             \href{http://learnyouahaskell.com/chapters}{http://learnyouahaskell.com/chapters}
+            \begin{itemize}
+                \item For beginners, this one is better than Real World Haskell.
+            \end{itemize}
+            \item Real World Haskell:
+            \href{http://book.realworldhaskell.org/read/}{http://book.realworldhaskell.org/read/}
         \end{enumerate}
         \item All the books, courses, tutorials, documentations and various kinds of resources can be found at:
         \href{https://www.haskell.org/documentation/}{https://www.haskell.org/documentation/}
         \item \emph{Haskell Wiki} is very helpful and instructive!
+        \item Build tools:
+        \begin{itemize}
+            \item Stack (\textbf{preferred}):
+            \href{https://docs.haskellstack.org/en/stable/}{https://docs.haskellstack.org/en/stable/}
+            \item Cabal (\textbf{not recommended}):
+            \href{https://www.haskell.org/cabal/}{https://www.haskell.org/cabal/}
+            
+        \end{itemize}
+        \item Recommended IDE: VSCode
+        \item Notes:
+            \begin{enumerate}
+                \item If you are using Windows, please consider WSL2 for \emph{OCaml}.
+            \end{enumerate}
     \end{itemize}    
     \item \textbf{JavaScript/TypeScript}\\
     Prerequisite languages: none.\\
@@ -895,6 +958,8 @@ Abbreviations:
                 Except for this, these two versions are basically the same.
             \end{itemize}
         \end{enumerate}
+        \item Purely Functional Data Structures
+        \cite{okasaki1999purely}
         \item Other books
             \begin{enumerate}
                 \item Java 8 in Action: Lambdas, Streams, and Functional-style Programming (1st Edition) \cite{urma2014java}
@@ -933,6 +998,8 @@ Abbreviations:
             \item Based on \emph{OCaml}.
         \end{itemize}
         \item Advanced Topics in Types and Programming Languages (1st Edition) \cite{pierce2004advanced}
+        \item Practical foundations for programming languages (2nd Edition)
+        \cite{harper2016practical}
     \end{enumerate}
     \item Prerequisites:
     \begin{itemize}
@@ -1400,6 +1467,9 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
     \item The Mythical Man-Month: Essays on Software Engineering (Anniversary Edition) \cite{brooks1995mythical}
     \item Design Patterns: Elements of Reusable Object-Oriented Software
     \cite{gamma1995design}
+    \begin{itemize}
+        \item The authors are often referred to as the \textbf{Gang of Four (GoF)}.
+    \end{itemize}
     \item A Philosophy of Software Design (2nd Edition) \cite{ousterhout2018philosophy}
     \item Write Great Code, Volume 3: Engineering Software
     \cite{hyde2020writegreatcode}
