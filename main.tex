@@ -15,7 +15,7 @@
 
 \maketitle
 
-\centerline{\large{Last Updated: October 26, 2022}}
+\centerline{\large{Last Updated: December 9, 2022}}
 
 \vspace{20pt}
 
@@ -462,11 +462,11 @@ Abbreviations:
         \item Purely functional languages like \emph{Haskell} is also not appropriate.
         Think about the effort needed to understand \emph{monad}!
         \item \emph{Scala} is not good too, due to its complex syntax, although being fairly modern.
-        \item The only remaining choice seems to be \emph{ML} family, of which \emph{OCaml} is the most popular, thus the best one.
-        \item However, starting from \emph{OCaml} sounds a little horrendous.
+        \item The only remaining choice seems to be \emph{ML} family, of which \emph{OCaml} and \emph{F\#} are both great. \emph{F\#} is more modern and easier to learn, and the OOP in F\# is more mature.
+        \item However, starting from \emph{ML} family sounds a little horrendous.
         \item Consider learning \emph{Kotlin} first, for its simplicity and modernity, and being functional enough except the lack of full support for pattern matching.
     \end{enumerate}
-    \item With the foundations of \emph{Kotlin} and \emph{OCaml}, it is easy to learn virtually all the mainstream languages like \emph{Java}, \emph{TypeScript}, and even \emph{Scala} (although this one obviously requires more effort than the previous two); besides, you can also advance towards \emph{Rust} (time-consuming!), and after that, the legendary \emph{C++}.
+    \item With the foundations of \emph{Kotlin} and \emph{OCaml/F\#}, it is easy to learn virtually all the mainstream languages like \emph{Java}, \emph{TypeScript}, and even \emph{Scala} (although this one obviously requires more effort than the previous two); besides, you can also advance towards \emph{Rust} (time-consuming!), and after that, the legendary \emph{C++}.
     If \emph{Rust} is too hard for you, try \emph{Go} first.
 \end{enumerate}
 
@@ -610,6 +610,14 @@ Abbreviations:
         \item \textbf{Spring}:
         \href{https://spring.io/quickstart}{https://spring.io/quickstart}
     \end{itemize}
+    
+    \item \textbf{C\#}
+    
+    For the sake of learning, C\# is a (much) better alternative Java, and it is also the key to .NET ecosystem.
+    \begin{enumerate}
+        \item Microsoft C\# documentation:
+        \href{https://learn.microsoft.com/en-us/dotnet/csharp/}{https://learn.microsoft.com/en-us/dotnet/csharp/}
+    \end{enumerate}
 
     \item \textbf{Scala} (\emph{Scala 3} is out!)\\
     
@@ -619,7 +627,7 @@ Abbreviations:
     
     Noteworthy features: FP.
     
-    Multi-paradigmatic languages like \emph{Scala} and \emph{OCaml} is great starting points to learn \emph{functional programming}, since your programming style can transition gradually from \emph{imperative programming} to \emph{functional programming}.
+    Multi-paradigmatic languages like \emph{Scala}, \emph{OCaml} and \emph{F\#} are great starting points to learn \emph{functional programming}, since your programming style can transition gradually from \emph{imperative programming} to \emph{functional programming}.
     \begin{itemize}
         \item Tutorials
         \begin{enumerate}
@@ -755,6 +763,8 @@ Abbreviations:
         \begin{itemize}
             \item Personnaly, I prefer \emph{VSCode}, in that its analyzer runs faster and does better in type inference.
         \end{itemize}
+        \item \emph{Tokio}: Asynchronous Rust runtime:
+        \href{https://tokio.rs/}{https://tokio.rs/}
         \item Build Tool: Cargo.
         \begin{itemize}
             \item Its tutorial can be found in ``The Rust Programming Language".
@@ -826,13 +836,8 @@ Abbreviations:
     
     \emph{Which one to learn first? OCaml or F\#?}
     
-    Either can be a good choice.
-    Personally, I recommend \emph{OCaml}.
-    
-    Compared with \emph{OCaml}, \emph{F\#} has less stale syntax and more modern features.
-    However, the type inference and the module system of \emph{OCaml} is more powerful, and the syntax of \emph{OCaml} is stricter and cleaner.
-    That is why \emph{OCaml} is a better choice for beginners to study \emph{functional programming} and cultivate good programming habbits.
-    
+    Either can be a good choice. For beginners, they are both good alternatives to each other. F\# is more modern, thus handier and free from the stale syntax of OCaml.
+
     \begin{itemize}
         \item Tutorials
         \begin{enumerate}
@@ -840,6 +845,8 @@ Abbreviations:
             \href{https://www.youtube.com/playlist?list=PLdo4fOcmZ0oUFghYOp89baYFBTGxUkC7Z}{https://www.youtube.com/playlist?list=PLdo4fOcmZ0oUFghYOp89baYFBTGxUkC7Z}
             \item F\# for Fun and Profit:\\
             \href{https://fsharpforfunandprofit.com/site-contents/}{https://fsharpforfunandprofit.com/site-contents/}
+            \item F\# Language Guide:
+            \href{https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/}{https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/}
         \end{enumerate}
         \item Other learning materials
         \begin{enumerate}
@@ -853,11 +860,30 @@ Abbreviations:
             \item F\# documentation:\\
         \href{https://docs.microsoft.com/en-us/dotnet/fsharp/}{https://docs.microsoft.com/en-us/dotnet/fsharp/}
         \end{enumerate}
+        \item F\# has nice support for asynchronous and concurrent programming:
+        \begin{itemize}
+            \item \emph{async}:\\
+            \href{https://learn.microsoft.com/en-us/dotnet/fsharp/tutorials/async}{https://learn.microsoft.com/en-us/dotnet/fsharp/tutorials/async}
+            \item \emph{task}:\\
+            \href{https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/task-expressions}{https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/task-expressions}
+            \item \emph{MailboxProcessor} (actor model):\\
+            \href{https://fsharpforfunandprofit.com/posts/concurrency-actor-model/}{https://fsharpforfunandprofit.com/posts/concurrency-actor-model/}
+        \end{itemize}
         \item Recommended IDE: VSCode
     \end{itemize}
 
     \item \textbf{Haskell}\\
     \emph{Purely functional language}.\\
+
+    Notable features:
+    \begin{enumerate}
+        \item purity \& laziness,
+        \item type class \& type system,
+        \item monad \& algebraic design.
+    \end{enumerate}
+    
+    Knowledge of programming language theory does help appreciating the elegance of this wonderful language. Personally, I could not understand some of the most elegant design until taking Stanford CS 242.
+    
     Prerequisite languages: none.\\
     Recommended learning order:
     \emph{OCaml/F\#} $\rightarrow$ \emph{Scala} $\rightarrow$ \emph{Haskell}.
@@ -879,6 +905,8 @@ Abbreviations:
             \begin{itemize}
                 \item For beginners, this one is better than Real World Haskell.
             \end{itemize}
+            \item Wikibooks has really nice passages about Haskell, including tutorials for beginners and advanced topics for experienced Haskell programmers:\\
+            \href{https://en.wikibooks.org/wiki/Haskell}{https://en.wikibooks.org/wiki/Haskell}
             \item Real World Haskell:
             \href{http://book.realworldhaskell.org/read/}{http://book.realworldhaskell.org/read/}
         \end{enumerate}
@@ -893,6 +921,11 @@ Abbreviations:
             \href{https://www.haskell.org/cabal/}{https://www.haskell.org/cabal/}
             
         \end{itemize}
+        \item The type system of Haskell is a nice example to study \emph{Curry-Howard Isomorphism}. Here is a great article about this:\\
+        \href{https://en.wikibooks.org/wiki/Haskell/The_Curry%E2%80%93Howard_isomorphism#:~:text=The%20Curry%E2%80%93Howard%20isomorphism%2C%20hereafter,value%20that%20has%20that%20type.}{https://en.wikibooks.org/wiki/Haskell/The\_Curry\%E2\%80\%93Howard\_isomorphism\\
+        #:~:text=  The\%20Curry\%E2\%80\%93Howard\%20isomorphism\%2C\%20hereafter,value\\
+        \%20that\%20has\%20that\%20type.}
+        
         \item Recommended IDE: VSCode
         \item Notes:
             \begin{enumerate}
@@ -934,6 +967,28 @@ Abbreviations:
     \item Recommended IDE: VSCode
 \end{itemize}
 
+\item \emph{Lean}
+
+Both a theorem prover and a programming language.
+
+\begin{enumerate}
+    \item Lean Documentation:
+    \href{https://leanprover.github.io/about/}{https://leanprover.github.io/about/}
+    \item Recommended IDE: VSCode
+\end{enumerate}
+
+\item Other theorem provers worth trying
+\begin{itemize}
+    \item \emph{Coq}, based on \emph{OCaml}
+    \begin{itemize}
+        \item \href{https://coq.inria.fr/}{https://coq.inria.fr/}
+    \end{itemize}
+    \item \emph{Agda}, based on \emph{Haskell}
+    \begin{itemize}
+        \item \href{https://wiki.portal.chalmers.se/agda/pmwiki.php}{https://wiki.portal.chalmers.se/agda/pmwiki.php}
+    \end{itemize}
+\end{itemize}
+
 \end{itemize}
 \subsection{Functional Programming}
 \begin{itemize}
@@ -966,6 +1021,13 @@ Abbreviations:
                 \item All books about \emph{Haskell} and \emph{OCaml}.
             \end{enumerate}
     \end{itemize}
+    \item Suggested learning order in terms of languages
+    \begin{enumerate}
+        \item Start from \emph{OCaml/F\#}. This is the cleanest one. Personally, I think \emph{F\#} is better.
+        \item Move on to \emph{Scala}. It has a lot more features and programming paradigms than \emph{OCaml/F\#}, thus harder to learn and prone to get confused. However, \textbf{trait} (\textbf{type class} in \emph{Haskell}) is very helpful for learning functional design, which is missing in \emph{OCaml} but present in \emph{F\#} (although it can be emulated by modules in \emph{OCaml}). Besides, since \emph{Scala} derives from \emph{Haskell}, it is helpful for you to learn the latter.
+        \item At this point, you may try some languages with lots of functional features like \emph{Rust}.
+        \item Then you can start challenge yourself with the legendary \emph{Haskell}. If your foundation of the previous stuffs is solid enough, it will not be so scary for you to learn this language. From the perspective of the programming language theory, it does possess some nice properties like \emph{termination} (if any evaluation order leads to termination, then natural order, adopted by \emph{Haskell}, will terminate).
+        \end{enumerate}
 \end{itemize}
 
 \subsection{Principles of Programming Languages}
@@ -974,17 +1036,57 @@ Abbreviations:
         \begin{itemize}
             \item Stanford CS 242 Programming Languages:
             \begin{itemize}
-                \item Autumn:
-                \href{https://stanford-cs242.github.io/f19/}{https://stanford-cs242.github.io/f19/}
-                (preferred)
-                \item Winter:
-                \href{https://web.stanford.edu/class/cs242/materials.html}{https://web.stanford.edu/class/cs242/materials.html}
-                (supplementary)
+                \item Will Crichton:
+                \href{https://stanford-cs242.github.io/f19/}{https://stanford-cs242.github.io/f19/} (more practical, more open-source materials like lecture notes and assignments)
+                    \begin{itemize}
+                        \item Languages used:
+                        OCaml, WASM, Rust
+                    \end{itemize}
+                \item Alex Aiken:
+                \href{https://web.stanford.edu/class/cs242/materials.html}{https://web.stanford.edu/class/cs242/materials.html} (more theoretical, better breadth and depth)
+                    \begin{itemize}
+                        \item Languages suggested being learned before this course:
+                        OCaml, Haskell, Rust
+                        \item Languages used:
+                        \begin{enumerate}
+                            \item C++, Java: mainstream OOP languages
+                            \item OCaml, Haskell: statically typed functional languages; monad in Haskell
+                            \item Python, JavaScript: mainstream dynamically typed languages
+                            \item Rust: ownership (to implement type states)
+                            \item Racket: call/cc to make use of continuations
+                            \item Lean: theorem prover
+                            \item NumPy: array programming with combinators
+                        \end{enumerate}
+                        \item Other languages useful for understanding the background:
+                        \begin{enumerate}
+                            \item Go: channel
+                            \item TypeScript: gradual typing
+                            \item Kotlin: coroutine
+                        \end{enumerate}
+                        \item Prerequisites:
+                        \begin{itemize}
+                            \item Compulsory:
+                            \begin{enumerate}
+                                \item Propositional Logic
+                                \item Functional Programming
+                            \end{enumerate}
+                            \item Recommended:
+                            \begin{enumerate}
+                                \item Compilers
+                                \item Programming Language Implementation
+                            \end{enumerate}
+                            \item Weakly Recommended:
+                            \begin{enumerate}
+                                \item Operating Systems
+                                \item Computer Architecture
+                                \item Theoretical Computer Science
+                            \end{enumerate}
+                            \item The background of this course is extremely profound, and thus the comprehensive knowledge of computer science, in particular, programming languages of different paradigms, does make a difference.
+                        \end{itemize}
+
+                    \end{itemize}
             \end{itemize}
-            \begin{itemize}
-                \item Three languages are used:
-                OCaml, WASM, Rust
-            \end{itemize}
+
             \item Stanford CS 151 Logic Programming:\\
             \href{http://logicprogramming.stanford.edu/stanford/lessons.php}{http://logicprogramming.stanford.edu/stanford/lessons.php}
         \end{itemize}
@@ -1011,7 +1113,7 @@ Abbreviations:
             \item One OOP language  (\emph{Java} is OK, but \emph{C++}/\emph{Python} is not enough), one FP language.
             Basic knowledge suffices.
             \begin{itemize}
-                \item Personally, I recommend \emph{Scala/OCaml} + \emph{Rust}.
+                \item Personally, I recommend \emph{Scala/OCaml/F\#} (personally I think F\# is the best) + \emph{Rust}.
                 They cover almost all the programming paradigms in modern and frequently used languages.
             \end{itemize}
         \end{enumerate}
@@ -1070,7 +1172,7 @@ Abbreviations:
 \end{itemize}
 \subsection{Platforms}
 \begin{itemize}
-    \item \textbf{CUDA} (Category: DLP, GPU)
+    \item \textbf{CUDA} (Category: data parallel (logically), GPU)
     \begin{itemize}
         \item CUDA by Example (1st Edition) \cite{sanders2010cuda}
         \begin{itemize}
@@ -1081,12 +1183,22 @@ Abbreviations:
         \href{https://docs.nvidia.com/cuda/cuda-c-programming-guide/}{https://docs.nvidia.com/cuda/cuda-c-programming-guide/}
         \item CUDA C++ Best Practices Guide:\\
         \href{https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/}{https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/}
+        \item Thrust:
+        \href{https://docs.nvidia.com/cuda/thrust/index.html}{https://docs.nvidia.com/cuda/thrust/index.html}
+            \begin{itemize}
+                \item STL in CUDA, providing some high-level abstractions.
+            \end{itemize}
         \item All documentations can be found at:
         \href{https://docs.nvidia.com/cuda/}{https://docs.nvidia.com/cuda/}
     \end{itemize}
     CUDA is also fantastic for \emph{Asynchronous Programming} and \emph{Heterogeneous Programming}!
     You can also have a taste of \emph{Compute Hierarchy} with CUDA!
-    \item \textbf{CPU intrinsics} (Category: DLP, CPU)
+    \item Intel ISPC (Category: data parallel (logically), CPU)
+    \begin{itemize}
+        \item Intel ISPC User's Guide:
+        \href{https://ispc.github.io/ispc.html}{https://ispc.github.io/ispc.html}
+    \end{itemize}
+    \item \textbf{CPU intrinsics} (Category: data parallel (logically), CPU)
     \begin{itemize}
         \item \textbf{x86 intrinsics} (Category: DLP, multimedia SIMD instruction set extensions)\\
         \href{https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html}{https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html}
@@ -1095,7 +1207,7 @@ Abbreviations:
         \item \textbf{ARM Neon intrinsics} (Category: DLP, multimedia SIMD instruction set extensions)\\
         \href{https://developer.arm.com/documentation/102467/0100/Why-Neon-Intrinsics-}{https://developer.arm.com/documentation/102467/0100/Why-Neon-Intrinsics-}
     \end{itemize}
-    \item \textbf{MPI} (Category: TLP, message passing)
+    \item \textbf{MPI} (Category: task parallel (logically), message passing)
     \begin{itemize}
         \item MPI Tutorial:
         \href{https://mpitutorial.com/tutorials/}{https://mpitutorial.com/tutorials/}
@@ -1107,7 +1219,7 @@ Abbreviations:
             \href{https://www.youtube.com/watch?v=q9OfXis50Rg}{https://www.youtube.com/watch?v=q9OfXis50Rg}
         \end{itemize}
     \end{itemize}
-    \item \textbf{OpenMP} (Catrgory: TLP, shared memory)
+    \item \textbf{OpenMP} (Catrgory: data parallel (logically), shared memory)
     \begin{itemize}
         \item Tim Mattson’s (Intel) “Introduction to OpenMP” (2013) on YouTube
         \begin{itemize}
@@ -1145,19 +1257,15 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
     \begin{itemize}
         \item Concurrency mechanisms
         \begin{enumerate}
-            \item Thread: C++, Java, pthread
-            \item Future/Promise: Scala
+            \item Thread: nearly all mainstrean languages support this, e.g., C++ std::thread/jthread, Java, pthread
+            \item Future/Promise: most of mainstrean languages support this,  e.g., Scala, C++, Java
             \item Stackful Coroutine: Go
-            \item Stackless Coroutine: Kotlin, Rust (async/await)
+            \item Stackless Coroutine: Kotlin, Rust (async/await, Tokio), F\# (async/task), Haskell
         \end{enumerate}
         \textbf{Aside}:
         \begin{enumerate}
-            \item In essence, every kind of \emph{Concurrency} is an encapsulation of \emph{Asynchrony}.
-        Therefore, \emph{Concurrent Programming} can be seen as a subset of \emph{Asynchronous Programming}.
-            \begin{itemize}
                 \item Here is a good summary of \emph{Asynchronous programming techniques} provided in the tutorial of \emph{Kotlin}:
             \href{https://kotlinlang.org/docs/async-programming.html}{https://kotlinlang.org/docs/async-programming.html}
-            \end{itemize}
             \item The essence of \emph{Asynchronous Programming} is \emph{async/await}, as well as \emph{suspension points}.
             \begin{itemize}
                 \item For \emph{Threads} and \emph{Stackful Coroutines}, every point is a suspension point, while for \emph{Stackless Coroutines}, only a fraction of points can be suspension points and they are declared explicitly.
@@ -1174,9 +1282,9 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
                 \item Monitor: Java.
                 For C++, this can be readily emulated by \emph{RAII}.
                 \item Atomic variables/operations: most languages.
-                \item Barrier: most languages, as well as CUDA.
+                \item Barrier: most languages, especially popular in data parallel programming like CUDA.
                 \item Read Write Lock: most languages.
-                This is especially useful in DLP.
+                \item Software Transactional Memory: Haskell.
             \end{enumerate}
             Many widely used mechanisms are not listed here.
             \item Message passing
@@ -1187,6 +1295,8 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
                         \item Akka (with Java/Scala interface):\\ \href{https://doc.akka.io/docs/akka/current/typed/guide/introduction.html}{https://doc.akka.io/docs/akka/current/typed/guide/introduction.html}
                         \item Kotlin:\\
                         \href{https://kotlinlang.org/docs/shared-mutable-state-and-concurrency.html#actors}{https://kotlinlang.org/docs/shared-mutable-state-and-concurrency.html\#actors}
+                        \item F\# MailboxProcessor:\\
+                        \href{https://fsharpforfunandprofit.com/posts/concurrency-actor-model/}{https://fsharpforfunandprofit.com/posts/concurrency-actor-model/}
                     \end{itemize}
             \end{enumerate}
             \item High-level encapsulations
@@ -1211,6 +1321,16 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
 \begin{itemize}
     \item Stanford CS 149 Parallel Computing:
     \href{https://gfxcourses.stanford.edu/cs149/fall21/}{https://gfxcourses.stanford.edu/cs149/fall21/}
+    \begin{itemize}
+        \item Programming languages and platforms used:
+        \begin{enumerate}
+            \item C++ and std::thread
+            \item ISPC
+            \item CUDA
+            \item OpenMP
+            \item AVX intrinsics
+        \end{enumerate}
+    \end{itemize}
     \item Stanford CME 323 Distributed Algorithms and Optimization:\\
     \href{https://stanford.edu/~rezab/classes/cme323/S20/}{https://stanford.edu/~rezab/classes/cme323/S20/}
 \end{itemize}
@@ -1219,11 +1339,12 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         \item Compulsory:
         \begin{enumerate}
         \item Computer Architecture
-        \item Compilers
     \end{enumerate}
         \item Recommended:
         \begin{enumerate}
+            \item \textbf{Functional Programming} (strongly recommended)
             \item Operating Systems
+            \item Compilers
         \end{enumerate}
     \end{itemize}
 
@@ -1500,6 +1621,8 @@ New security issues and arise with new computer technologies invented.
 
 \emph{Threat models} are likely to differ with field varying (e.g., hardware vs OS), leading to distinct technologies.
 \begin{enumerate}
+    \item UC Berkeley CS 161 Computer Security:
+    \href{https://sp22.cs161.org/}{https://sp22.cs161.org/}
     \item Stanford CS 155 Computer and Network Security:
     \href{https://cs155.stanford.edu/}{https://cs155.stanford.edu/}
     \item Stanford CS 253 Web Security:
@@ -1737,16 +1860,17 @@ E.g., machine languages, assembly languages, early high-level languages with \em
 \end{enumerate}
 \emph{Multi-paradigmatic} languages are more and more popular.
 \subsection{Parallel}
-\subsubsection{Data-Level Parallelism}
+\subsubsection{Data Parallel}
 \begin{enumerate}
     \item High level: vectorization
     \item Low level: SIMT
+    \item Synchronization mechanisms: barriers
 \end{enumerate}
-\subsubsection{Thread-Level Parallelism}
+\subsubsection{Task Parallel}
 \begin{enumerate}
     \item Concurrency mechanism
     \begin{enumerate}
-        \item High level: async/await
+        \item High level: async/await (a.k.a., future monad)
         \item Low level:
         \begin{enumerate}
             \item multiprocessing
@@ -1761,10 +1885,11 @@ E.g., machine languages, assembly languages, early high-level languages with \em
             \item reactive extensions
         \end{enumerate}
     \end{enumerate}
-    \item Synchronization mechanism
+    \item Synchronization mechanisms
     \begin{enumerate}
         \item Shared memory
         \item Message passing
+        \item Lock-free programming (e.g., using atomic operations)
     \end{enumerate}
 \end{enumerate}
 \subsubsection{Distributed Computing}
