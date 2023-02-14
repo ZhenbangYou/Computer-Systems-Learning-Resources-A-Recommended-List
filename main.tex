@@ -15,7 +15,11 @@
 
 \maketitle
 
+<<<<<<< HEAD
+\centerline{\large{Last Updated: February 14, 2023}}
+=======
 \centerline{\large{Last Updated: December 9, 2022}}
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
 
 \vspace{20pt}
 
@@ -381,7 +385,21 @@ Learn how to use it before learning how to build it.
 \end{enumerate}
 
 \section{Compilers}
-Compilers should be associated with \emph{PL} and \emph{Computer Architecture}.
+
+The position of compilers in computer systems:
+\begin{enumerate}
+    \item \emph{Compilers} and \emph{programming languages} jointly construct the foundation of \emph{software}.
+    \item Techniques in several areas are heavily exploited in compilers:
+    \begin{enumerate}
+        \item Computer Architecture
+        \item Programming Languages
+        \item Theoretical Computer Science (mainly automata)
+        \item Discrete Mathematics
+    \end{enumerate}
+    \item Compilers play important roles in hardware-software codesign, since they are the bridge between hardware and programming languages.
+    \item Never regard compilers merely as translation tools from programming languages to assembly code. In a broad sense, any automatic technique can be viewed as part of compiler techniques (and automation is based on formalization).
+\end{enumerate}
+
 \begin{enumerate}
     \item Books
     \begin{enumerate}
@@ -398,10 +416,18 @@ Compilers should be associated with \emph{PL} and \emph{Computer Architecture}.
         \begin{itemize}
             \item ``Whale Book".
         \end{itemize}
+<<<<<<< HEAD
+        \item Engineering a Compiler (2nd Edition) \cite{cooper2011engineering}    
+        \item Essentials of Compilation: An Incremental Approach\\
+            \href{https://jeapostrophe.github.io/courses/2018/spring/406/notes/book.pdf}{https://jeapostrophe.github.io/courses/2018/spring/406/notes/book.pdf}
+        \item Implementing Funtional Languages: a tutorial\\
+        \href{https://www.microsoft.com/en-us/research/wp-content/uploads/1992/01/student.pdf}{https://www.microsoft.com/en-us/research/wp-content/uploads/1992/01/student.pdf}
+=======
         \item Engineering a Compiler (2nd Edition) \cite{cooper2011engineering}    \item Essentials of Compilation: An Incremental Approach
 
         \href{https://jeapostrophe.github.io/courses/2018/spring/406/notes/book.pdf}{https://jeapostrophe.github.io/courses/2018/spring/406/notes/book.pdf}
         
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
     \end{enumerate}
     
     \item Courses
@@ -410,14 +436,57 @@ Compilers should be associated with \emph{PL} and \emph{Computer Architecture}.
         \href{https://web.stanford.edu/class/cs143/}{https://web.stanford.edu/class/cs143/}
         \item Stanford CS 243 Program Analysis and Optimization:\\
         \href{https://suif.stanford.edu/~courses/cs243/}{https://suif.stanford.edu/~courses/cs243/}
+        \item Stanford CS 343D Domain-Specific Programming Models and Compilers:\\
+        \href{https://cs343d.github.io/}{https://cs343d.github.io/}
     \end{enumerate}
 
+<<<<<<< HEAD
+    \item Programming suggestions:\\
+    Try functional languages!\\
+    \emph{Pattern matching}, \emph{combinators}, \emph{monadic design}, and powerful \emph{type systems} (in particular, \emph{algebraic data types}) are all your good friends!
+
+    \item Parser Generators
+    \begin{enumerate}
+        \item C/C++: Lex \& Yacc \cite{levine1992lex}
+        \item OCaml: OCamllex \& Menhir\\
+        \href{https://dev.realworldocaml.org/parsing-with-ocamllex-and-menhir.html}{https://dev.realworldocaml.org/parsing-with-ocamllex-and-menhir.html}
+        \item Haskell: Parser Combinators\\
+        There are various of them in Haskell.\\
+        Some tutorials:
+        \begin{enumerate}
+            \item Real World Haskell: \\
+            \href{https://book.realworldhaskell.org/read/using-parsec.html}{https://book.realworldhaskell.org/read/using-parsec.html}
+            \item Wikibook: \\
+            \href{https://wiki.haskell.org/Parsing_a_simple_imperative_language}{https://wiki.haskell.org/Parsing\_a\_simple\_imperative\_language}
+        \end{enumerate}
+        \item F\#: FsLex \& FsYacc\\
+        Tutorial from Wikibook:\\
+        \href{https://en.wikibooks.org/wiki/F_Sharp_Programming/Lexing_and_Parsing}{https://en.wikibooks.org/wiki/F\_Sharp\_Programming/Lexing\_and\_Parsing}
+        \item Scala: Scala Parser Combinators\\
+        \href{https://github.com/scala/scala-parser-combinators}{https://github.com/scala/scala-parser-combinators}
+        \item ANTLR\\
+        \href{https://www.antlr.org/about.html}{https://www.antlr.org/about.html}
+    \end{enumerate}
+    These tools are convenient, but writing lexers and parsers manually is also a lot of fun!
+
+    \item LLVM
+    \begin{enumerate}
+        \item Kaleidoscope Tutorial\\
+        \href{https://llvm.org/docs/tutorial/index.html}{https://llvm.org/docs/tutorial/index.html}
+        \item LLVM Documentation Home\\
+        \href{https://llvm.org/docs/}{https://llvm.org/docs/}
+        \item LLVM for Graduate Student\\
+        \href{https://www.cs.cornell.edu/~asampson/blog/llvm.html}{https://www.cs.cornell.edu/~asampson/blog/llvm.html}
+    \end{enumerate}    
+    Special note: renowned as LLVM is, it is indeed not very convenient. Besides, its APIs lack back compatibility.
+=======
     \item Programming suggestions
     \begin{enumerate}
         \item Try functional languages, especially \emph{OCaml}.
         \item Lexer and parser can be generated automatically  via some tools, e.g. Lex \& Yacc in \emph{C/C++} \cite{levine1992lex}, OCamllex \& Menhir in  \emph{OCaml} (\href{https://dev.realworldocaml.org/parsing-with-ocamllex-and-menhir.html}{https://dev.realworldocaml.org/parsing-with-ocamllex-and-menhir.html}).
     \end{enumerate}
     
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
 
     \item Prerequisites:
     \begin{itemize}
@@ -426,6 +495,9 @@ Compilers should be associated with \emph{PL} and \emph{Computer Architecture}.
         \item TCS (Theoretical Computer Science)
         \begin{enumerate}
             \item Introduction to the Theory of Computation (3rd Edition) \cite{sipser1996introduction}
+            \begin{itemize}
+                \item Chapter 1 and 2 are enough.
+            \end{itemize}
         \end{enumerate}
         \item Computer Architecture: ILP (Instruction-Level Parallelism), Memory Hierarchy
         \item Data structures and algorithms
@@ -443,7 +515,14 @@ Compilers should be associated with \emph{PL} and \emph{Computer Architecture}.
 \end{enumerate}
 
 \section{Programming Languages (PL)}
-Abbreviations:
+
+When talking about \emph{PL}, we are actually dealing with two things:
+\begin{itemize}
+    \item programming,
+    \item verification.
+\end{itemize}
+
+\noindent Abbreviations:
 \begin{itemize}
     \item OOP: Object-Oriented Programming
     \item FP: Functional Programming
@@ -451,6 +530,11 @@ Abbreviations:
 
 \subsection{Language List}
 
+<<<<<<< HEAD
+\subsubsection{Programming Language List}
+
+=======
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
 \textbf{Suggestions for Learning Order}
 
 \begin{enumerate}
@@ -484,8 +568,13 @@ Abbreviations:
     \begin{enumerate}
         \item For languages on \emph{.NET}, \emph{Windows} is obviously the best.
         \item Otherwise, \emph{WSL2} is at least not worse than \emph{Windows}.
+<<<<<<< HEAD
+        \item For old AOT (ahead-of-time) compiled languages like \emph{C/C++}, \emph{OCaml}, \emph{Windows} may be a disaster (lots of compatibility issues).
+        \item For JIT (just-in-time) compiled languages and modern AOT compiled languages such as \emph{Go} and \emph{Rust}, it does not matter which one you choose (luckily, \emph{Haskell} is also good on \emph{Windows}).
+=======
         \item For old AOT (ahead-of-time) compiled languages like \emph{C/C++}, \emph{OCaml}, and \emph{Haskell}, \emph{Windows} may be a disaster (lots of compatibility issues).
         \item For JIT (just-in-time) compiled languages and modern AOT compiled languages such as \emph{Go} and \emph{Rust}, it does not matter which one you choose.
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
         \item \emph{Python} is a special case where the compatibility of \emph{Windows} is not good enough sometimes.
     \end{enumerate}
     \item \textbf{Development toolchains matter.}
@@ -689,7 +778,7 @@ Abbreviations:
             \href{https://go.dev/tour/welcome/1}{https://go.dev/tour/welcome/1}
             \item Effective Go:
             \href{https://go.dev/doc/effective\_go}{https://go.dev/doc/effective\_go}
-            \item Official tutorials (including those for generics, fuzzing and accessing a relational database:
+            \item Official tutorials (including those for generics, fuzzing and accessing a relational databases:
             \href{https://go.dev/doc/tutorial/}{https://go.dev/doc/tutorial/}
         \end{enumerate}
         \item Documentations
@@ -721,7 +810,11 @@ Abbreviations:
     
     \emph{A extremely high-performance, memory-safe language without garbage collection}
     
+<<<<<<< HEAD
+    Most of the features of Rust can be found in either \emph{C++} or \emph{OCaml}; therefore, solid foundations of these two languages does help you understand the design of Rust.
+=======
     Most of the features of Rust can be found in either \emph{C++} or \em{OCaml}; therefore, solid foundations of these two languages does help you understand the design of Rust.
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
     
     Which one to learn first, C++ or Rust?
     Due to the popularity of C++, most people were exposed to it before hearing of Rust.
@@ -771,7 +864,11 @@ Abbreviations:
         \end{itemize}
     \end{itemize}
 
+<<<<<<< HEAD
+    \item \textbf{OCaml} (\emph{OCaml} 5.0 with \emph{multicore support} has been released!)
+=======
     \item \textbf{OCaml} (\emph{OCaml} 5.0 with \emph{multicore support} is coming!)
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
     
     \emph{ML}, the ancestor of \emph{OCaml}, is a programming language that won his creator a Turing Award, for it is ``the first language to include polymorphic type inference together with a type-safe exception-handling mechanism".
     
@@ -817,10 +914,11 @@ Abbreviations:
             \href{https://cs51.io/}{https://cs51.io/}
         \end{itemize}
         \item Build tool:
-        dune
+        \emph{dune}.
         \begin{itemize}
             \item \href{https://dune.readthedocs.io/en/stable/}{https://dune.readthedocs.io/en/stable/}
         \end{itemize}
+        \item Package manager and version management tool: \emph{opam}.
         \item Recommended IDE:
         VSCode
         \item Notes:
@@ -873,6 +971,8 @@ Abbreviations:
     \end{itemize}
 
     \item \textbf{Haskell}\\
+    \emph{GHC} recommended.
+    
     \emph{Purely functional language}.\\
 
     Notable features:
@@ -882,7 +982,13 @@ Abbreviations:
         \item monad \& algebraic design.
     \end{enumerate}
     
+<<<<<<< HEAD
+    Knowledge of \emph{programming language theory} does help. Personally, I could not understand some of the most elegant design until taking Stanford CS 242.
+
+    Elementary knowledge of \emph{abstract algebra} helps a lot for learning algebraic design in Haskell.
+=======
     Knowledge of programming language theory does help appreciating the elegance of this wonderful language. Personally, I could not understand some of the most elegant design until taking Stanford CS 242.
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
     
     Prerequisite languages: none.\\
     Recommended learning order:
@@ -892,8 +998,12 @@ Abbreviations:
     \begin{enumerate}
         \item Purity,
         \item Laziness.
+<<<<<<< HEAD
+        \item Haskell has a far more complex and advanced type system, while OCaml has a more complex module system.
+=======
         \item \emph{Haskell} supports \emph{type classes} and \emph{type families}.
         \item \emph{OCaml} is more rigorous, e.g., partial functions are allowed in \emph{Haskell} while prohibited in \emph{OCaml}.
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
     \end{enumerate}
     
     \emph{Haskell} is known for its steep learning curve, an appropriate learning order provides you sufficient foundations to conquer it.
@@ -904,6 +1014,35 @@ Abbreviations:
             \href{http://learnyouahaskell.com/chapters}{http://learnyouahaskell.com/chapters}
             \begin{itemize}
                 \item For beginners, this one is better than Real World Haskell.
+<<<<<<< HEAD
+            \end{itemize}\
+            \item Real World Haskell:
+            \href{http://book.realworldhaskell.org/read/}{http://book.realworldhaskell.org/read/}
+            \item \emph{Wikibooks} has really nice passages about Haskell, including tutorials for beginners and advanced topics for experienced Haskell programmers:\\
+            \href{https://en.wikibooks.org/wiki/Haskell}{https://en.wikibooks.org/wiki/Haskell}
+            \item \emph{HaskellWiki} is really helpful.
+        \end{enumerate}
+        \item All the books, courses, tutorials, documentations and various kinds of resources can be found at:
+        \href{https://www.haskell.org/documentation/}{https://www.haskell.org/documentation/}
+        \item Frequently used websites:
+        \begin{itemize}
+            \item Hackage
+            \item HaskellWiki
+            \item Wikibook
+            \item Hoogle
+        \end{itemize}
+        \item GHC User’s Guide:\\
+        \href{https://downloads.haskell.org/ghc/latest/docs/users_guide}{https://downloads.haskell.org/ghc/latest/docs/users\_guide}
+        \begin{itemize}
+            \item GHC has many important extensions that can be found here.
+        \end{itemize}
+        \item Toolchain management tool: \emph{GHCup}
+        \begin{itemize}
+            \item Do not change the version of any tool outside ghcup!
+            \item To make \emph{VSCode} work for us, the version of \emph{GHC} specified in \emph{stack} must be compatible with the \emph{GHC} versions supported by the \emph{Haskell Language Server}, and this specific version of \emph{GHC} should be installed within \emph{GHCup}, though it is not necessary to set it as default.
+            Besides, the latency of initialization when opening a project is substantial, thus patience required.
+        \end{itemize}
+=======
             \end{itemize}
             \item Wikibooks has really nice passages about Haskell, including tutorials for beginners and advanced topics for experienced Haskell programmers:\\
             \href{https://en.wikibooks.org/wiki/Haskell}{https://en.wikibooks.org/wiki/Haskell}
@@ -913,10 +1052,17 @@ Abbreviations:
         \item All the books, courses, tutorials, documentations and various kinds of resources can be found at:
         \href{https://www.haskell.org/documentation/}{https://www.haskell.org/documentation/}
         \item \emph{Haskell Wiki} is very helpful and instructive!
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
         \item Build tools:
         \begin{itemize}
             \item Stack (\textbf{preferred}):
             \href{https://docs.haskellstack.org/en/stable/}{https://docs.haskellstack.org/en/stable/}
+<<<<<<< HEAD
+            \begin{itemize}
+                \item Most of the time you just need to deal with stack.
+            \end{itemize}
+=======
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
             \item Cabal (\textbf{not recommended}):
             \href{https://www.haskell.org/cabal/}{https://www.haskell.org/cabal/}
             
@@ -925,6 +1071,11 @@ Abbreviations:
         \href{https://en.wikibooks.org/wiki/Haskell/The_Curry%E2%80%93Howard_isomorphism#:~:text=The%20Curry%E2%80%93Howard%20isomorphism%2C%20hereafter,value%20that%20has%20that%20type.}{https://en.wikibooks.org/wiki/Haskell/The\_Curry\%E2\%80\%93Howard\_isomorphism\\
         #:~:text=  The\%20Curry\%E2\%80\%93Howard\%20isomorphism\%2C\%20hereafter,value\\
         \%20that\%20has\%20that\%20type.}
+<<<<<<< HEAD
+        \item A History of Haskell:\\
+        \href{https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/history.pdf}{https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/history.pdf}
+=======
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
         
         \item Recommended IDE: VSCode
         \item Notes:
@@ -932,7 +1083,7 @@ Abbreviations:
                 \item If you are using Windows, please consider WSL2 for \emph{OCaml}.
             \end{enumerate}
     \end{itemize}    
-    \item \textbf{JavaScript/TypeScript}\\
+    \item \textbf{JavaScript/TypeScript/AssemblyScript}\\
     Prerequisite languages: none.\\
     The improvement of \emph{TypeScript} over \emph{JavaScript} is well worth studying.\\
     Pay attention to its \emph{asynchronous programming} techniques:
@@ -953,6 +1104,8 @@ Abbreviations:
         \href{https://www.typescriptlang.org/docs/handbook/intro.html}{https://www.typescriptlang.org/docs/handbook/intro.html}
         \item Node.js official tutorial:
         \href{https://nodejs.dev/learn}{https://nodejs.dev/learn}
+        \item The AssemblyScript Book:\\
+        \href{https://www.assemblyscript.org/introduction.html}{https://www.assemblyscript.org/introduction.html}
     \end{enumerate}
     \item Books
     \begin{enumerate}
@@ -965,6 +1118,7 @@ Abbreviations:
         \href{https://www.typescriptlang.org/docs/}{https://www.typescriptlang.org/docs/}
     \end{itemize}
     \item Recommended IDE: VSCode
+    \item Resources related to \emph{WASM} can be found \emph{here}\ref{WASM}.
 \end{itemize}
 
 \item \emph{Lean}
@@ -990,6 +1144,38 @@ Both a theorem prover and a programming language.
 \end{itemize}
 
 \end{itemize}
+
+\subsubsection{Theorem Prover List}
+\begin{enumerate}
+\item \textbf{Lean}
+
+Mainly a theorem prover, also a programming language (though not so handy as languages designed to be a programming language).
+
+\begin{enumerate}
+    \item Lean Documentation:
+    \href{https://leanprover.github.io/about/}{https://leanprover.github.io/about/}
+    \item Recommended IDE: VSCode
+    \item Tutorial of Lean3:\\
+    \href{https://leanprover.github.io/theorem_proving_in_lean/}{https://leanprover.github.io/theorem_proving_in_lean/}
+    \item Version management tool: \emph{elan}
+    \item Recommended IDE: VSCode
+\end{enumerate}
+
+\item \textbf{Coq}
+
+    Based on \emph{OCaml}.
+    \begin{itemize}
+        \item \href{https://coq.inria.fr/}{https://coq.inria.fr/}
+    \end{itemize}
+
+\item \textbf{Agda}
+
+    Based on \emph{Haskell}.
+    \begin{itemize}
+        \item \href{https://wiki.portal.chalmers.se/agda/pmwiki.php}{https://wiki.portal.chalmers.se/agda/pmwiki.php}
+    \end{itemize}
+\end{enumerate}
+    
 \subsection{Functional Programming}
 \begin{itemize}
     \item Books
@@ -1030,7 +1216,8 @@ Both a theorem prover and a programming language.
         \end{enumerate}
 \end{itemize}
 
-\subsection{Principles of Programming Languages}
+\subsection{Programming Languages Theory}
+It is not only about \emph{programming}, but also about \emph{verification}.
 \begin{itemize}
     \item Courses
         \begin{itemize}
@@ -1062,6 +1249,10 @@ Both a theorem prover and a programming language.
                             \item Go: channel
                             \item TypeScript: gradual typing
                             \item Kotlin: coroutine
+<<<<<<< HEAD
+                            \item Scala: a complicated type system supporting most OOP and FP features
+=======
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
                         \end{enumerate}
                         \item Prerequisites:
                         \begin{itemize}
@@ -1259,7 +1450,11 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         \begin{enumerate}
             \item Thread: nearly all mainstrean languages support this, e.g., C++ std::thread/jthread, Java, pthread
             \item Future/Promise: most of mainstrean languages support this,  e.g., Scala, C++, Java
+<<<<<<< HEAD
+            \item Stackful Coroutine: Go, Haskell
+=======
             \item Stackful Coroutine: Go
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
             \item Stackless Coroutine: Kotlin, Rust (async/await, Tokio), F\# (async/task), Haskell
         \end{enumerate}
         \textbf{Aside}:
@@ -1348,7 +1543,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         \end{enumerate}
     \end{itemize}
 
-\section{Database (DB)}
+\section{Databases (DB)}
 \textbf{Special Notes}
 \begin{itemize}
     \item Think about the relationship (cooperation and conflicts) between DB and OS.
@@ -1364,7 +1559,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
 \begin{enumerate}
     \item Books
     \begin{enumerate}
-    \item Database System Concepts (7th Edition) \cite{silberschatz2002database}
+    \item Databases System Concepts (7th Edition) \cite{silberschatz2002database}
     \begin{itemize}
         \item Partition:
         \begin{itemize}
@@ -1393,7 +1588,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
     \end{itemize}
     \item Supplementary
         \begin{enumerate}
-            \item Database Systems: The Complete Book
+            \item Databases Systems: The Complete Book
             \cite{garcia2008database}
         \end{enumerate}
     \end{enumerate}
@@ -1406,14 +1601,14 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         \end{itemize}
         \item DB systems
         \begin{itemize}
-            \item CMU 15-445/645 Intro to Database Systems:\\
+            \item CMU 15-445/645 Intro to Databases Systems:\\
             \href{https://15445.courses.cs.cmu.edu/fall2019/schedule.html}{https://15445.courses.cs.cmu.edu/fall2019/schedule.html}
             \item Stanford CS 245 Principles of Data-Intensive Systems:\\
             \href{https://web.stanford.edu/class/cs245/}{https://web.stanford.edu/class/cs245/}
         \end{itemize}
             \item Advanced DB systems
             \begin{itemize}
-                \item CMU 15-721 Advanced Database Systems:\\
+                \item CMU 15-721 Advanced Databases Systems:\\
                 \href{https://15721.courses.cs.cmu.edu/spring2020/schedule.html}{https://15721.courses.cs.cmu.edu/spring2020/schedule.html}        
             \end{itemize}
     \end{enumerate}
@@ -1424,7 +1619,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         \begin{itemize}
             \item PostgreSQL
             \begin{enumerate}
-                \item Database System Concepts chapter 32:\\
+                \item Databases System Concepts chapter 32:\\
                 \href{https://db-book.com/online-chapters-dir/32.pdf}{https://db-book.com/online-chapters-dir/32.pdf}
                 \item Tutorial:
                 \href{https://www.postgresqltutorial.com/}{https://www.postgresqltutorial.com/}
@@ -1465,7 +1660,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         \item DB-Engines Ranking:
             \href{https://db-engines.com/en/ranking}{https://db-engines.com/en/ranking}
             \begin{itemize}
-                \item Popular database engines and lots of relevant information can be found here.
+                \item Popular databases engines and lots of relevant information can be found here.
             \end{itemize}        
         \item Advice:
         \begin{enumerate}
@@ -1529,7 +1724,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         \begin{enumerate}
         \item Operating Systems
         \item Computer Networks
-        \item Database        
+        \item Databases        
         \end{enumerate}
         \item Recommended:
         \begin{enumerate}
@@ -1554,7 +1749,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
             \item Operating Systems
             \item Computer Networks
             \item Distributed Systems
-            \item Database
+            \item Databases
         \end{enumerate}
         \item Recommended:
         \begin{enumerate}
@@ -1577,7 +1772,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
     \begin{itemize}
         \item Compulsory
         \begin{enumerate}
-            \item Database
+            \item Databases
             \item Distributed systems
         \end{enumerate}
     \end{itemize}
@@ -1598,6 +1793,7 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
 \end{itemize}
 
 \section{Program Analysis}
+Can be regarded as part of \emph{compilers techniques} in a broad sense.
 \begin{enumerate}
     \item Software Foundations:
         \href{https://softwarefoundations.cis.upenn.edu/}{https://softwarefoundations.cis.upenn.edu/}
@@ -1615,12 +1811,40 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
     \end{itemize}
 \end{enumerate}
 
-\section{Computer Security}
+\section{Computer Security \& Cryptography}
 Security issues are everywhere.
 New security issues and arise with new computer technologies invented.
 
 \emph{Threat models} are likely to differ with field varying (e.g., hardware vs OS), leading to distinct technologies.
+
+Basic knowledge of \emph{memory safety} of programming languages helps.
+
 \begin{enumerate}
+<<<<<<< HEAD
+    \item Textbooks
+    \begin{enumerate}
+        \item A Graduate Course in
+Applied Cryptography\\
+        \href{https://toc.cryptobook.us/}{https://toc.cryptobook.us/}
+    \end{enumerate}
+    \item Courses
+    \begin{enumerate}
+        \item UC Berkeley CS 161 Computer Security:
+        \href{https://sp22.cs161.org/}{https://sp22.cs161.org/}
+        \item Stanford CS 155 Computer and Network Security:
+        \href{https://cs155.stanford.edu/}{https://cs155.stanford.edu/}
+        \item Stanford CS 253 Web Security:
+        \href{https://web.stanford.edu/class/cs253/}{https://web.stanford.edu/class/cs253/}
+        \item Stanford CS 255 Introduction to Cryptography:
+        \href{https://crypto.stanford.edu/~dabo/cs255/}{https://crypto.stanford.edu/~dabo/cs255/}
+        \item Stanford CS 350 Secure Compilation:\\
+        \href{https://theory.stanford.edu/~mp/mp/CS350-2019.html}{https://theory.stanford.edu/~mp/mp/CS350-2019.html}
+        \item Stanford CS 355 Advanced Topics in Cryptography:\\
+        \href{https://crypto.stanford.edu/cs355/22sp/}{https://crypto.stanford.edu/cs355/22sp/}
+        \item Stanford CS 356 Topics in Computer and Network Security:
+        \href{https://cs356.stanford.edu/}{https://cs356.stanford.edu/}    \end{enumerate}
+
+=======
     \item UC Berkeley CS 161 Computer Security:
     \href{https://sp22.cs161.org/}{https://sp22.cs161.org/}
     \item Stanford CS 155 Computer and Network Security:
@@ -1635,21 +1859,24 @@ New security issues and arise with new computer technologies invented.
     \href{https://crypto.stanford.edu/cs355/22sp/}{https://crypto.stanford.edu/cs355/22sp/}
     \item Stanford CS 356 Topics in Computer and Network Security:
     \href{https://cs356.stanford.edu/}{https://cs356.stanford.edu/}
+>>>>>>> 15f5bc26879d7eeafcfa4c1cf21deb16940139db
     \item Meltdown and Spectre:
     \href{https://meltdownattack.com/}{https://meltdownattack.com/}
     \item Prerequisites:
     \begin{itemize}
         \item Compulsory:
         \begin{enumerate}
-            \item Computer architecture
             \item Operating systems
             \item Computer networks
-            \item Programming languages
+            \item (Basic) Probability (for cryptography)
+            \item (Basic) Number Theory (for cryptography)
         \end{enumerate}
         \item Recommended:
         \begin{enumerate}
+            \item Computer architecture
+            \item Programming languages
             \item Compilers
-            \item Database
+            \item Databases
         \end{enumerate}
         Indeed, you can learn a lot about \emph{computer security} in all of these fields.
         Pay special attention to \emph{security} issues when diving in these fields.
@@ -1672,7 +1899,7 @@ But these contents are frequently involved in the modern computer world, therefo
         \begin{enumerate}
             \item Operating systems
             \item Computer networks
-            \item Database
+            \item Databases
         \end{enumerate}
     \end{itemize}
 \end{enumerate}
@@ -1713,8 +1940,13 @@ However, the following resources help you go further.
     \begin{itemize}
         \item Java Language and Virtual Machine Specifications:\\
     \href{https://docs.oracle.com/javase/specs/}{https://docs.oracle.com/javase/specs/}
+    \begin{itemize}
+        \item CLick "The Java Virtual Machine Specification"
     \end{itemize}
-    \item \textbf{WebAssembly}\\
+    \item List of Java bytecode instructions (Wikipedia):\\
+    \href{https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions}{https://en.wikipedia.org/wiki/List\_of\_Java\_bytecode\_instructions}
+    \end{itemize}
+    \item \textbf{WebAssembly}\label{WASM}\\
     Strictly speaking, it is not an ISA, but they share a lot in common, and it is well worth studying, so I put it here.
     \begin{itemize}
         \item Official website:
@@ -1855,7 +2087,7 @@ E.g., machine languages, assembly languages, early high-level languages with \em
         \end{enumerate}
         \item Logic
         (Church languages)
-        \item Database
+        \item Databases
     \end{enumerate}
 \end{enumerate}
 \emph{Multi-paradigmatic} languages are more and more popular.
