@@ -7,7 +7,7 @@
 \usepackage{gbt7714}
 
 
-\title{\Huge{Computer Systems Learning Resources}\\ \huge{A Recommended List}}
+\title{\Huge{Computer Systems Learning Resources}\\ \huge{A Recommendation List}}
 \author{Zhenbang You}
 \date{January 11, 2022}
 
@@ -15,7 +15,7 @@
 
 \maketitle
 
-\centerline{\large{Last Updated: February 14, 2023}}
+\centerline{\large{Last Updated: February 3, 2024}}
 
 \vspace{20pt}
 
@@ -42,7 +42,7 @@ The latest version can always be found at \href{https://www.overleaf.com/read/tx
     \end{enumerate}
     Master them before moving on to other parts.
     
-    Section 2-9 is the core of this list.
+    Section 2-10 is the core of this list.
     \item The resources in each section are list in an order \emph{suitable for learning}.
     \begin{itemize}
         \item If time is limited, you may just read the first (or the first few) books, and move on to the next section.
@@ -56,7 +56,7 @@ The latest version can always be found at \href{https://www.overleaf.com/read/tx
 \end{itemize}
 
 \noindent
-\textbf{How to Read an Abstruse Book?}\\
+\textbf{How to Read a Book?}\\
 Three passes.
 \begin{enumerate}
     \item Fast: get the main idea and leave out all the details.
@@ -82,13 +82,6 @@ Learn how to use it before learning how to build it.
     \item Data Structures and Algorithms
     \begin{itemize}
         \item Introduction to Algorithms (4th Edition) \cite{cormen2009introduction}.
-        \item In addition to classical algorithms, four kinds of algorithms are widely used in computer systems and thus noteworthy:
-        \begin{itemize}
-            \item Randomized algorithms
-            \item Parallel and distributed algorithms
-            \item Approximation algorithms
-            \item Online algorithms
-        \end{itemize}
     \end{itemize}
     \item Probability
     \begin{itemize}
@@ -96,6 +89,12 @@ Learn how to use it before learning how to build it.
     \end{itemize}
     \item Logic, Automata and Complexity
 \end{itemize}
+
+\noindent
+\textbf{Special Note about Prerequisites}:
+
+The motivation of specifying prerequisites is to help you figure out good learning roadmap.
+Even if you do not satisfy prerequisites, you can still learn the topic; however, in this case, if you have difficulties during learning, you may refer to prerequisites to see whether you need learn something else first.
 
 \noindent
 \textbf{What if I want more?}
@@ -286,7 +285,6 @@ Learn how to use it before learning how to build it.
         \item Compulsory:
         \begin{enumerate}
         \item Computer Architecture (in particular, privileged architecture)
-        \item Data structures and algorithms
         \end{enumerate}
         \item PL
         \begin{itemize}
@@ -430,9 +428,14 @@ The position of compilers in computer systems:
         \href{https://cs343d.github.io/}{https://cs343d.github.io/}
     \end{enumerate}
 
-    \item Programming suggestions:\\
-    Try functional languages!\\
-    \emph{Pattern matching}, \emph{combinators}, \emph{monadic design}, and powerful \emph{type systems} (in particular, \emph{algebraic data types}) are all your good friends!
+    \item Programming suggestions:
+    \begin{enumerate}
+        \item Try functional languages!\\
+        \emph{Pattern matching}, \emph{combinators}, \emph{monadic design}, and powerful \emph{type systems} (in particular, \emph{algebraic data types}) are all your good friends!
+        \item There are two kinds of (domain-specific) languages: internal and external, and the latter means a language embedded in another host language.
+        It can be quite fun to write a compiler for an internal (domain-specific) language.
+        Good choices for host languages: Scala, Haskell, C++.
+    \end{enumerate}
 
     \item Parser Generators
     \begin{enumerate}
@@ -476,22 +479,36 @@ The position of compilers in computer systems:
 
     Apart from C/C++, LLVM also has bindings for other languages like OCaml, Haskell, Rust, Go, C\#, F\#, Node.js, Go, Python.
 
+    \item Some interesting open-source compiler-related projects:
+    \begin{enumerate}
+        \item Halide/TVM
+        \item TACO
+        \item LLVM/MLIR
+        \item XLA
+        \item QEMU
+    \end{enumerate}
+
     \item Prerequisites:
     \begin{itemize}
         \item Compulsory:
         \begin{enumerate}
-        \item TCS (Theoretical Computer Science)
-        \begin{enumerate}
-            \item Introduction to the Theory of Computation (3rd Edition) \cite{sipser1996introduction}
-            \begin{itemize}
-                \item Chapter 1 and 2 are enough.
-            \end{itemize}
-        \end{enumerate}
         \item Computer Architecture: ILP (Instruction-Level Parallelism), Memory Hierarchy
-        \item Data structures and algorithms
+        \begin{enumerate}
+            \item This is compulsory only when you want to learn compiler optimizations.
+        \end{enumerate}
+        
     \end{enumerate}
         \item Recommended:
         \begin{enumerate}
+            \item TCS (Theoretical Computer Science)
+            \begin{enumerate}
+            \item Introduction to the Theory of Computation (3rd Edition) \cite{sipser1996introduction}
+            \begin{itemize}
+                \item Chapter 1 and 2 are enough.
+                For compilers, understanding how to use these automata is enough.
+                No need to worry about proofs.
+            \end{itemize}
+        \end{enumerate}
             \item Computer Architecture: DLP (Data-Level Parallelism), TLP (Thread-Level Parallelism)
             \item Operating Systems: Thread, Context Switch
         \end{enumerate}
@@ -555,7 +572,7 @@ When talking about \emph{PL}, we are actually dealing with two things:
         \item Otherwise, \emph{WSL2} is at least not worse than \emph{Windows}.
         \item For old AOT (ahead-of-time) compiled languages like \emph{C/C++}, \emph{OCaml}, \emph{Windows} may be a disaster (lots of compatibility issues).
         \item For JIT (just-in-time) compiled languages and modern AOT compiled languages such as \emph{Go} and \emph{Rust}, it does not matter which one you choose (luckily, \emph{Haskell} is also good on \emph{Windows}).
-        \item \emph{Python} is a special case where the compatibility of \emph{Windows} is not good enough sometimes.
+        \item \emph{Python} is a special case where the compatibility of \emph{Windows} is not good enough sometimes for some packages.
     \end{enumerate}
     \item \textbf{Development toolchains matter.}
     
@@ -608,6 +625,10 @@ When talking about \emph{PL}, we are actually dealing with two things:
         \begin{itemize}
             \item Currently, \textbf{OpenMP} support of \textbf{Clang 13} needs to be installed separately, which is not the case for \textbf{Clang 12}.
             \item \textbf{GCC} can be built from source.
+            \begin{itemize}
+                \item Source code address:
+                \href{https://github.com/gcc-mirror/gcc/tags}{https://github.com/gcc-mirror/gcc/tags}
+            \end{itemize}
             \item \textbf{Clang} can by downloaded directly from \href{https://releases.llvm.org/download.html}{https://releases.llvm.org/download.html}
         \end{itemize}
         \item Build tool: 
@@ -695,7 +716,7 @@ When talking about \emph{PL}, we are actually dealing with two things:
     
     \emph{Scala} borrows more from \emph{Haskell} than \emph{OCaml}.
     
-    Prerequisite languages: Java (if you find \emph{Scala} too difficult to learn, try \emph{Kotlin} first).
+    Prerequisite languages: none (if you find \emph{Scala} too difficult to learn, try \emph{Kotlin} first).
     
     Noteworthy features: FP.
     
@@ -835,11 +856,18 @@ When talking about \emph{PL}, we are actually dealing with two things:
         \begin{itemize}
             \item Personnaly, I prefer \emph{VSCode}, in that its analyzer runs faster and does better in type inference.
         \end{itemize}
-        \item \emph{Tokio}: Asynchronous Rust runtime:
-        \href{https://tokio.rs/}{https://tokio.rs/}
+        \item Some nice crates (Rust's name for packages):
+        \begin{enumerate}
+            \item Thread-level parallelism:
+            rayon.
+            \item Asynchronous programming:
+            futures + tokio/async-std/smol.
+        \end{enumerate}
         \item Build Tool: Cargo.
         \begin{itemize}
-            \item Its tutorial can be found in ``The Rust Programming Language".
+            \item The Cargo Book:
+            \href{https://doc.rust-lang.org/cargo/}{https://doc.rust-lang.org/cargo/}
+            \item Its tutorial can also be found in ``The Rust Programming Language".
         \end{itemize}
     \end{itemize}
 
@@ -1021,7 +1049,8 @@ When talking about \emph{PL}, we are actually dealing with two things:
         \item The type system of Haskell is a nice example to study \emph{Curry-Howard Isomorphism}. Here is a great article about this:\\
         \href{https://en.wikibooks.org/wiki/Haskell/The_Curry%E2%80%93Howard_isomorphism#:~:text=The%20Curry%E2%80%93Howard%20isomorphism%2C%20hereafter,value%20that%20has%20that%20type.}{https://en.wikibooks.org/wiki/Haskell/The\_Curry\%E2\%80\%93Howard\_isomorphism\\
         #:~:text=  The\%20Curry\%E2\%80\%93Howard\%20isomorphism\%2C\%20hereafter,value\\
-        \%20that\%20has\%20that\%20type.}
+        \%20that\%20has\%20that\%20type.
+        }
         \item A History of Haskell:\\
         \href{https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/history.pdf}{https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/history.pdf}
         
@@ -1062,12 +1091,30 @@ When talking about \emph{PL}, we are actually dealing with two things:
     \end{enumerate}
     \item Documentations
     \begin{itemize}
+        \item JavaScript: MDN Web Docs
         \item TypeScript Documentation:
         \href{https://www.typescriptlang.org/docs/}{https://www.typescriptlang.org/docs/}
     \end{itemize}
     \item Recommended IDE: VSCode
     \item Resources related to \emph{WASM} can be found \emph{here}\ref{WASM}.
 \end{itemize}
+\item \textbf{Swift}
+\begin{enumerate}
+    \item Official documentations:
+    \href{https://www.swift.org/documentation/}{https://www.swift.org/documentation/}
+\end{enumerate}
+\item \textbf{Julia}
+
+Easy to learn, easy to write, with high performance.
+
+A nice language for \emph{scientific computing} and \emph{fast prototyping}, with native support for \emph{GPU programming and distributed programming}, as well as nice support for \emph{just-in-time (JIT)} compilation and \emph{gradual typing}.
+
+Do not \textbf{overuse} it, e.g., I don't think it is suitable for large projects.
+
+\begin{enumerate}
+    \item Official documentation:
+    \href{https://docs.julialang.org/en/v1/}{https://docs.julialang.org/en/v1/}
+\end{enumerate}
 
 \end{itemize}
 
@@ -1101,6 +1148,47 @@ Mainly a theorem prover, also a programming language (though not so handy as lan
         \item \href{https://wiki.portal.chalmers.se/agda/pmwiki.php}{https://wiki.portal.chalmers.se/agda/pmwiki.php}
     \end{itemize}
 \end{enumerate}
+
+\subsubsection{Other Languages}
+\textbf{There is no clear boundary between PLs and libraries. Therefore, many libraries can be considered domain-specific languages (DSLs) and thus recommended below.}
+
+There are also some languages worth noticing or even learning.
+There belong to various programming paradigm, and have significant impact in the history of programming languages.
+
+\subsubsection*{Array Programming}
+\begin{itemize}
+    \item APL, K
+    \begin{itemize}
+        \item Numpy can be seen as their modern descendent.
+        Some DSLs derived from Numpy like PyTorch and JAX are also good choices.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Logic Programming}
+\begin{itemize}
+    \item Prolog, Datalog, Epilog
+\end{itemize}
+
+\subsubsection*{Tensor Algebra}
+\begin{itemize}
+    \item Dense Tensor Algebra: Halide, TVM
+    \item Sparse Tensor Algebra: TACO (\href{http://tensor-compiler.org/}{http://tensor-compiler.org/})
+\end{itemize}
+
+\subsubsection{Old Functional Languages}
+\begin{itemize}
+    \item Lisp dialects: Racket
+\end{itemize}
+
+\subsubsection*{Satifiability Modulo Theories (SMT) solver}
+\begin{itemize}
+    \item Z3, CVC5
+\end{itemize}
+
+\subsubsection*{Languages for Mathematicians}
+\begin{itemize}
+    \item Mathematica
+\end{itemize}
     
 \subsection{Functional Programming}
 \begin{itemize}
@@ -1221,15 +1309,19 @@ It is not only about \emph{programming}, but also about \emph{verification}.
     \begin{itemize}
         \item Compulsory:
         \begin{enumerate}
-            \item Computer Architecture
-            \item Compilers
-            \item Operating systems
+
             \item One OOP language  (\emph{Java} is OK, but \emph{C++}/\emph{Python} is not enough), one FP language.
             Basic knowledge suffices.
             \begin{itemize}
                 \item Personally, I recommend \emph{Scala/OCaml/F\#} (personally I think F\# is the best) + \emph{Rust}.
                 They cover almost all the programming paradigms in modern and frequently used languages.
             \end{itemize}
+        \end{enumerate}
+        \item Recommended
+        \begin{enumerate}
+            \item Computer Architecture
+            \item Compilers
+            \item Operating systems
         \end{enumerate}
     \end{itemize}    
 \end{itemize}
@@ -1344,8 +1436,18 @@ It is not only about \emph{programming}, but also about \emph{verification}.
         \end{itemize}
     \end{itemize}
     For those familiar with \emph{pthread}, it is quite easy to learn \textbf{OpenMP}.
+    \item High-level DSLs
+    \begin{enumerate}
+        \item PyTorch
+        \begin{itemize}
+            \item PyTorch 2.0 has been released!
+            \item The official site (\href{https://pytorch.org/}{https://pytorch.org/}) provides enough learning resources of high quality
+        \end{itemize}
+        \item JAX:
+        \href{https://jax.readthedocs.io/en/latest/}{https://jax.readthedocs.io/en/latest/}
+    \end{enumerate}
 \end{itemize}
-\subsection{Categories}\\
+\subsection{Categories}
 The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
 \begin{itemize}
     \item ILP (Instruction-Level Parallelism)\\
@@ -1445,6 +1547,8 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
             \item AVX intrinsics
         \end{enumerate}
     \end{itemize}
+    \item Stanford CS315B Parallel Programming:\\
+    \href{https://web.stanford.edu/class/cs315b/}{https://web.stanford.edu/class/cs315b/}
     \item Stanford CME 323 Distributed Algorithms and Optimization:\\
     \href{https://stanford.edu/~rezab/classes/cme323/S20/}{https://stanford.edu/~rezab/classes/cme323/S20/}
 \end{itemize}
@@ -1461,6 +1565,168 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
             \item Compilers
         \end{enumerate}
     \end{itemize}
+
+\subsection{Memory Model}
+It is also called ``Memory Consistency Model" or ``Memory Order" sometimes.
+
+In my opinion, it is the \emph{trickiest} part in \emph{concurrent programming}.
+
+This is a cross-cutting issue, involving the following fields:
+\begin{enumerate}
+    \item computer architecture: memory consistency;
+    \item concurrent programming: lock-free programming;
+    \item compilers: reordering (including code scheduling, speculation, partial redundancy elimination, common subexpression elimination, copy propagation, redundant read/write elimination, etc), register allocation.
+\end{enumerate}
+This issue occurs in the following scenarios:
+\begin{enumerate}
+    \item lock-free programming,
+    \item compiler development,
+    \item development of concurrency
+    related libraries
+    \item OS development.
+\end{enumerate}
+
+As an example, for C++, the following things are involved:
+\begin{enumerate}
+    \item memory order (served as argument to the functions/methods of the following),
+    \item atomic,
+    \item atomic thread fence,
+    \item atomic signal fence (compiler fence).
+\end{enumerate}
+
+Memory models of mainstream PLs can be divided into several categories:
+\begin{enumerate}
+    \item C++, Rust, Go;
+    \item Java;
+    \item OCaml.
+\end{enumerate}
+Concrete descriptions can be found in their respective official documentation.
+They are worth reading, but too inaccessible for green hands.
+There are some more newbie-friendly resources:
+\begin{enumerate}
+    \item Preshing's blog posts (for C++):\\
+    \href{https://preshing.com/20120913/acquire-and-release-semantics/}{https://preshing.com/20120913/acquire-and-release-semantics/}
+    \begin{itemize}
+        \item There are many related articles in his blogs and I highly recommend them!
+    \end{itemize}
+    \item Rust Atomics and Locks:
+    \href{https://marabos.nl/atomics/preface.html}{https://marabos.nl/atomics/preface.html}
+    \begin{itemize}
+        \item Chapter 2, 3, 7.
+    \end{itemize}
+    \item The Java Memory Model:\\
+    \href{http://www.cs.umd.edu/~pugh/java/memoryModel/}{http://www.cs.umd.edu/~pugh/java/memoryModel/}
+\end{enumerate}
+
+There are also some paper worth reading:
+\begin{enumerate}
+    \item Boehm's papers for the C++ memory model:
+    \begin{enumerate}
+        \item Threads Cannot be Implemented as a Library:\\
+        \href{https://www.hpl.hp.com/techreports/2004/HPL-2004-209.pdf}{https://www.hpl.hp.com/techreports/2004/HPL-2004-209.pdf}
+        \item  Foundations of the C++ Concurrency Memory Model:\\
+        \href{https://www.hpl.hp.com/techreports/2008/HPL-2008-56.pdf}{https://www.hpl.hp.com/techreports/2008/HPL-2008-56.pdf}
+    \end{enumerate}
+    \item The Java Memory Model:\\
+    \href{https://rsim.cs.uiuc.edu/Pubs/popl05.pdf}{https://rsim.cs.uiuc.edu/Pubs/popl05.pdf}
+    \item Bounding Data Races in Space and Time (for OCaml memory model):\\
+    \href{https://dl.acm.org/doi/pdf/10.1145/3192366.3192421}{https://dl.acm.org/doi/pdf/10.1145/3192366.3192421}
+\end{enumerate}
+
+Tips:
+\begin{enumerate}
+    \item Compiler Explorer (\href{https://godbolt.org/}{https://godbolt.org/}) will be your good friend.
+    \item Try different PLs and ISAs!
+    \item Sometimes you need to refer to ISA specifications.
+\end{enumerate}
+
+\section{Asynchronous Programming}
+\textbf{Notes}
+
+\noindent
+While parallel computing tackles the performance engineering of compute-bound programs, asynchronous programming deals with the performance engineering of I/O-bound programs, and the latter is generally harder than the former.
+
+\subsection{Async Support in Programming Languages}
+
+\subsubsection{Async Framework}
+They come in two flavors:
+\begin{enumerate}
+    \item \textbf{Stackful Coroutines}
+
+    They are also called user threads or green threads.
+    Their programming model is the same as kernel threads.
+    
+    List of famous PL that supports this:
+    \begin{enumerate}
+        \item Java 21 virtual threads.
+        \item Go goroutines.
+    \end{enumerate}
+    \item \textbf{Stackless Coroutines}
+    
+    This is sometimes just called asynchronous programming in the manual/tutorials of PLs.
+
+    Typically this kind of programming paradigm involves two keywords:
+    async, await
+
+    List of famous PL that supports this:
+    \begin{enumerate}
+        \item Rust asynchronous programming.
+        \item Kotlin coroutines.
+        \item C\#/F\# asynchronous programming.
+        \item Python asyncio
+        \item JavaScript
+        \item Swift concurrency.
+        \item C++ 20 coroutines (not mature yet).
+    \end{enumerate}
+\end{enumerate}
+\subsubsection{Support for Asynchronous Operations}
+
+Support for asynchronous operations (e.g., asynchronous I/O operations, asynchronous synchronization mechanisms) is also essential.
+I consider this as part of the ecosystem of asynchronous programming of a PL.
+
+C\#/F\#, Rust, JavaScript do well here, but Kotlin (due to the lack of asynchrony of JVM), Swift currently don't.
+Worse still, C++ doesn't even has a first-party networking library...
+
+\subsection{Async Support in System Calls Level}
+
+\subsubsection{Non-blocking Syscalls}
+\begin{itemize}
+    \item Sockets have nice support for this, while regular files generally don't.
+    \item Linux man page is a good resource.
+\end{itemize}
+\subsubsection{I/O Multiplexing}
+\begin{enumerate}
+    \item Reactive: select (deprecated), poll (deprecated), epoll
+    \begin{itemize}
+        \item epoll has two modes, level-triggered and edge-triggered; both are worth learning;
+        \item these are mainly for network programming, and works poorly for file I/O;
+        \item Linux man page is a good resource for these syscalls.
+    \end{itemize}
+    \item Proactive: io\_uring
+    \begin{itemize}
+        \item Lord of io\_uring:
+        \href{https://unixism.net/loti/}{https://unixism.net/loti/}
+        \item Efficient IO with io\_uring:
+        \href{https://kernel.dk/io_uring.pdf}{https://kernel.dk/io\_uring.pdf}
+        \item Though powerful (and arguably the future of Linux), io\_uring is still in an early stage -- incomplete and sometimes poor docs, dramatic improvement over versions, lots of vulnerabilities.
+        \item Manually installed liburing may not work with your OS.
+        \item io\_uring provides true asynchrony of file I/O (aio is implemented by a thread pool).
+        \item Personally, I think io\_uring has profound implications.
+        Asking for services from OS no longer requires syscalls.
+        \item Two key idea of io\_uring:
+        Reduce kernel crossing and memory copy.
+    \end{itemize}
+\end{enumerate}
+\subsection{Kernel Bypassing Techniques}
+These require support from hardware.
+\begin{enumerate}
+    \item RDMA
+    \item DPDK
+    \item SPDK
+\end{enumerate}
+I don't know much about these.
+Mark them here and hopefully one day I will come back.
+
 
 \section{Databases (DB)}
 \textbf{Special Notes}
@@ -1571,11 +1837,19 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
                 \href{https://www.mongodb.com/docs/}{https://www.mongodb.com/docs/}
             \end{enumerate}
         \end{itemize}
+        \item Redis
+        \begin{enumerate}
+            \item \href{https://redis.io/}{https://redis.io/}
+        \end{enumerate}
         \item Spark
         \begin{itemize}
             \item Quick Start:
             \href{https://spark.apache.org/docs/latest/quick-start.html}{https://spark.apache.org/docs/latest/quick-start.html}
         \end{itemize}
+        \item .NET LINQ
+            \begin{enumerate}
+                \item \href{https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/}{https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/}
+            \end{enumerate}
         \item DB-Engines Ranking:
             \href{https://db-engines.com/en/ranking}{https://db-engines.com/en/ranking}
             \begin{itemize}
@@ -1660,19 +1934,21 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
 \begin{enumerate}
     \item CMU 15-719 Advanced Cloud Computing:\\
     \href{https://www.cs.cmu.edu/~15719/old/spring2019/syllabus.html}{https://www.cs.cmu.edu/~15719/old/spring2019/syllabus.html}
+    \item Stanford CS349D Cloud Computing Technology:\\
+    \href{http://web.stanford.edu/class/cs349d/}{http://web.stanford.edu/class/cs349d/}
+    \item Containers and container management systems
+    \begin{enumerate}
+        \item Docker
+        \item Kubernetes (K8s)
+    \end{enumerate}
     \item Prerequisites:
     \begin{itemize}
         \item Compulsory:
         \begin{enumerate}
-            \item Computer Architecture
             \item Operating Systems
             \item Computer Networks
             \item Distributed Systems
             \item Databases
-        \end{enumerate}
-        \item Recommended:
-        \begin{enumerate}
-            \item Parallel Computing
         \end{enumerate}
     \end{itemize}
     \item \textbf{Suggestions}
@@ -1682,6 +1958,20 @@ The essence of \emph{parallel computing} is \emph{the lack of dependencies}.
         \item When reading cutting-edge papers concerning \emph{OS}, \emph{computer network} or \emph{computer architecture}, you may encounter issues of \emph{cloud computing}.
         At that moment, you had better have some basic knowledge about it before reading those papers.
     \end{enumerate}
+\end{enumerate}
+
+\section{Graphics}
+\begin{enumerate}
+    \item Stanford CS 248A
+    Computer Graphics:
+Rendering, Geometry, and Image Manipulation\\
+\href{https://cs248a.stanford.edu}{https://cs248a.stanford.edu}
+    \item Stanford CS 348K
+    Visual Computing Systems\\
+    \href{https://cs348k.stanford.edu}{https://cs348k.stanford.edu}
+    \item Only systems-related courses are listed.
+    For other graphics-related courses, please search CS *48 (* stands for one digit) with any suffix at \\
+    \href{https://explorecourses.stanford.edu/}{https://explorecourses.stanford.edu/}
 \end{enumerate}
 
 \section{Big Data}
@@ -1758,7 +2048,7 @@ Applied Cryptography\\
         \item Stanford CS 350 Secure Compilation:\\
         \href{https://theory.stanford.edu/~mp/mp/CS350-2019.html}{https://theory.stanford.edu/~mp/mp/CS350-2019.html}
         \item Stanford CS 355 Advanced Topics in Cryptography:\\
-        \href{https://crypto.stanford.edu/cs355/22sp/}{https://crypto.stanford.edu/cs355/22sp/}
+        \href{https://cs355.stanford.edu/}{https://cs355.stanford.edu/}
         \item Stanford CS 356 Topics in Computer and Network Security:
         \href{https://cs356.stanford.edu/}{https://cs356.stanford.edu/}    \end{enumerate}
 
@@ -2032,5 +2322,21 @@ E.g., machine languages, assembly languages, early high-level languages with \em
     \item Transforms-Actions (Spark)
 \end{enumerate}
 
+\section{List of Interesting and Useful Libraries and Tools}
+\subsection{Protocol Buffer \& gRPC}
+Protobuf:
+\href{https://protobuf.dev/}{https://protobuf.dev/}
 
+gRPC:
+\href{https://grpc.io/}{https://grpc.io/}
+\subsection{Google Test \& Google Mock}
+\href{https://google.github.io/googletest/}{https://google.github.io/googletest/}
+\subsection{OpenTelemetry}
+\href{https://opentelemetry.io/}{https://opentelemetry.io/}
+
+Some observability tools like DataDog are really nice, but they are not free.
+Free ones like Jaeger are also good alternatives.
+\subsection{AWS SDK}
+\subsection{JAX}
+\href{https://jax.readthedocs.io/en/latest/}{https://jax.readthedocs.io/en/latest/}
 \end{document}
