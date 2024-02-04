@@ -1,4 +1,4 @@
-# Computer Systems Learning Resources: A Recommended List
+# Computer Systems Learning Resources: A Recommendation List
 
 See [here](https://www.overleaf.com/read/txqjnjxyxqqx) for the latest version!
 
